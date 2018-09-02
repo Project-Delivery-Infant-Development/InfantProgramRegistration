@@ -3,11 +3,11 @@ import { Meteor } from 'meteor/meteor';
 import { ReactiveVar } from 'meteor/reactive-var';
 
 
-import './attendence.html';
-import './attendence.js';
-//import './feed.js ';
-
-import '../routes.js';
+import '../Facilitator/attendence.js';
+import '../Facilitator/attendence.html';
+// import './feed.js ';
+// import './feed.html ';
+import './routes.js';
 
 
 ReactiveTabs.createInterface({
