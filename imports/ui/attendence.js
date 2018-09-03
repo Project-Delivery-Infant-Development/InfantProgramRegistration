@@ -1,14 +1,14 @@
 import { Template } from 'meteor/templating';
-import { Tasks } from '../../api/task.js';
-import { Tasks1 } from '../../api/task.js';
+import { Tasks } from '../api/task.js';
+import { Tasks1 } from '../api/task.js';
 import { ReactiveDict } from 'meteor/reactive-dict';
 
 
 import './attendence.html';
-import '../Others/feed.js';
-import '../top.html';
-// import './sidebar.html';
-// import '../Others/routes.js';
+import './feed.js';
+import './top.html';
+//import './sidebar.html';
+// import '../routes.js';
 
 
 

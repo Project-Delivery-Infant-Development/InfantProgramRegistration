@@ -1,10 +1,7 @@
 import './feed.html';
-import './routes.js';
+import '../routes.js';
 import './body.js';
-// import '../Facilitator/attendence.js';
-// import '../Facilitator/attendence.html';
-
-
+import './top.html';
 function htmlbodyHeightUpdate(){
 		var height3 = $( window ).height()
 		var height1 = $('.nav').height()+50
@@ -18,7 +15,7 @@ function htmlbodyHeightUpdate(){
 			$('html').height(Math.max(height1,height3,height2));
 			$('body').height(Math.max(height1,height3,height2));
 		}
-		
+
 	}
 	$(document).ready(function () {
 		htmlbodyHeightUpdate()
