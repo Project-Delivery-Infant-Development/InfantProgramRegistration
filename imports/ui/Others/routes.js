@@ -26,3 +26,8 @@ Router.route('/attendence', function (){
   //name:'attendence',
   this.render('attendence');
 });
+
+Router.route('/parent', function (){
+  //name:'attendence',
+  this.render('parent');
+});
