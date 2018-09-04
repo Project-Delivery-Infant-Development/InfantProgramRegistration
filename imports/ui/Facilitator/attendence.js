@@ -7,6 +7,7 @@ import { ReactiveDict } from 'meteor/reactive-dict';
 import './attendence.html';
 import '../Others/feed.js';
 import '../top.html';
+import './addGroup.js';
 // import './sidebar.html';
 // import '../Others/routes.js';
 
@@ -22,7 +23,7 @@ Template.attendence.helpers({
             return Tasks.find({checked: {$eq: true}}, {sort: {createdAt: -1}});
         }
         else{
-        return Tasks.find({}, {sort: {createdAt: -1}});
+        return Tasks.find({"ID":"G1"},{sort: {createdAt: -1}});
         }
     },
     tasks1(){
@@ -34,7 +35,7 @@ Template.attendence.helpers({
             return Tasks1.find({checked: {$eq: true}}, {sort: {createdAt: -1}});
         }
         else{
-        return Tasks1.find({}, {sort: {createdAt: -1}});
+        return Tasks1.find({sort: {createdAt: -1}});
         }
     },
 });
@@ -48,13 +49,19 @@ Template.attendence.events({
         event.preventDefault();
 
         var t = event.target.text.value;
+        var b = event.target.text2.value;
 
         Tasks.insert({
-            Fn:t,
-            createdAt: new Date(),
+            ID: b,
+            data: {
+                Fn: t,
+                createdAt: new Date(),
+            },
+            
         });
 
       event.target.text.value="";
+      event.target.text2.value="";
     },
 
     'submit .new-task1': function(event){

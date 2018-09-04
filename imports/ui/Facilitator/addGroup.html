@@ -1,0 +1,29 @@
+<template name="addGroup">
+        {{> def}}
+    <div class="container">
+
+        <form class="addGroupForm">
+            <label for="groupID">GroupID </label>
+            <input type="text" name="groupID" placeholder="Enter GroupID"/>
+            <br>
+            <label for="location">Location </label>
+            <div class="dropdown">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"> Locations
+                    </button>
+                    <div class="dropdown-menu">
+                            <a class="dropdown-item" value="Sunshine" href="#">Sunshine</a>
+                            <a class="dropdown-item" value="Burwood" href="#">Burwood</a>
+                            <a class="dropdown-item" value="Docklands" href="#">Docklands</a>
+                          </div>
+            </div>
+            <input type="text" name="location" placeholder="Enter Location"/>
+            <br>
+            <input type="text" name="spots" placeholder="Enter Maximum Spots"/> 
+            <br>
+            <input type="submit" value="Done">
+        </form>
+    </div>
+<div class="container">
+    <a href="{{pathFor route='def'}}">Home</a>
+    </div>
+</template>

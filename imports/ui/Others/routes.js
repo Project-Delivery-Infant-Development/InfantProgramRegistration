@@ -26,3 +26,7 @@ Router.route('/attendence', function (){
   //name:'attendence',
   this.render('attendence');
 });
+
+Router.route('/addGroup', function(){
+  this.render('addGroup');
+});
