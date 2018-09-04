@@ -28,6 +28,9 @@ Router.route('/attendence', function (){
 });
 
 Router.route('/parent', function (){
-  //name:'attendence',
   this.render('parent');
+});
+
+Router.route('/changeRequest', function (){
+  this.render('changeRequest');
 });
