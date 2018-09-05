@@ -26,3 +26,11 @@ Router.route('/attendence', function (){
   //name:'attendence',
   this.render('attendence');
 });
+
+Router.route('/parent', function (){
+  this.render('parent');
+});
+
+Router.route('/changeRequest', function (){
+  this.render('changeRequest');
+});
