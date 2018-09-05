@@ -6,7 +6,6 @@ import { ReactiveDict } from 'meteor/reactive-dict';
 
 import './attendence.html';
 import '../Others/feed.js';
-import '../top.html';
 import './addGroup.js';
 // import './sidebar.html';
 // import '../Others/routes.js';

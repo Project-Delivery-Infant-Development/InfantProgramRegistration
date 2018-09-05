@@ -14,12 +14,12 @@
 
 Router.route('/', function (){
   //name:'def',
-  this.render('def');
+  this.render('home');
 });
 
-Router.route('/def', function (){
+Router.route('/home', function (){
   //name:'def',
-  this.render('def');
+  this.render('home');
 });
 
 Router.route('/attendence', function (){
@@ -27,6 +27,30 @@ Router.route('/attendence', function (){
   this.render('attendence');
 });
 
-Router.route('/addGroup', function(){
-  this.render('addGroup');
+Router.route('/parent', function (){
+  this.render('parent');
 });
+
+Router.route('/changeRequest', function (){
+  this.render('changeRequest');
+});
+
+Router.route('/about', function (){
+  this.render('about');
+});
+
+Router.route('/contact', function (){
+  this.render('contact');
+});
+
+Router.route('/faqs', function (){
+  this.render('faqs');
+});
+
+Router.route('/for_providers', function (){
+  this.render('for_providers');
+});
+
+// Router.route('/def', function (){
+//   this.render('def');
+// });

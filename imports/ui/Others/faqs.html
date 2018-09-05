@@ -1,0 +1,119 @@
+<template name="faqs">
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Deakin University</title>
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+		<link href="styles/main.css" type="text/css" rel="stylesheet">
+
+	</head>
+	<body>
+		
+		<div id="wrapper">
+		
+			<header>
+			<div id="login-button">
+<button class="login">LOGIN</button>
+	</div>
+	
+				<img src="images/logo.jpg"/>
+				
+				
+				
+				<nav id="primary_nav_wrap">
+<ul style="background-color: #000;">
+		<li class="nav-bar"><a href="{{pathFor route='home'}}"><b style="color:black">Home</b></a></li>
+		<li class="nav-active"><a href="{{pathFor route='about'}}"><b style="color:black">About</b></a></li>
+		<li class="nav-bar"><a href="{{pathFor route='faqs'}}"><b style="color:black">FAQ's</b></a></li>
+		<li class="nav-bar"><a href="{{pathFor route='contact'}}"><b style="color:black">Contact</b></a></li>
+		<li class="nav-bar"><a href="{{pathFor route='for_providers'}}"><b style="color:black">For Providers</b></a></li>
+ </ul>
+</nav>
+				<div id="banner"><br/>
+				
+				</div>
+				
+			</header>	
+		<div class="book">
+	
+	<section id="contain">
+			
+				<div class="container">
+				<h1>Frequently Asked Question</h1>
+				<p>You can find some frequently asked questions below. If you cant find your please write to us at the email id:</p>
+				<i style="color:#d89d53"><b>contact@infantprogram.org</b></i>
+				<br>
+				</div>
+				<div class="container-div">
+				
+				
+  
+	<button style=" border: 2px solid black;" class="accordion">Section 1</button>
+<div class="panel">
+  <p>Answer for the Question 1.</p>
+</div>
+
+<button style=" border: 2px solid black;" class="accordion">Section 2</button>
+<div class="panel">
+   <p>Answer for the Question 2.</p>
+</div>
+
+<button style=" border: 2px solid black;" class="accordion">Section 3</button>
+<div class="panel">
+   <p>Answer for the Question 3.</p>
+</div>
+<button style=" border: 2px solid black;" class="accordion">Section 4</button>
+<div class="panel">
+  <p>Answer for the Question 4.</p>
+</div>
+<button style=" border: 2px solid black;" class="accordion">Section 5</button>
+<div class="panel">
+  <p>Answer for the Question 5.</p>
+</div>
+	
+				</div>
+				</section>
+				</div>
+							
+			
+			</div>
+			<div id="join-button">
+			<button class="button-join">Join Now</button>
+		</div>
+		
+		<div id="join-button2">
+			<button class="button-join2">Join Now</button>
+		</div>
+	
+	<img class="logo-footer" src="images/logo2.jpg"/>
+	
+			<div class="book" style="padding-top: 10px;">
+			<section class="footer">
+				<b>Research by Deakin University in Association with  ....</b>
+				
+				</section>
+				
+					
+			</div>
+		
+</body>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+}
+</script>
+
+	
+</html>
+</template>

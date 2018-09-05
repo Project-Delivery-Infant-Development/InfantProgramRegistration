@@ -1,0 +1,34 @@
+<!-- Main Template-->
+<template name="changeRequest">
+        <body>
+            <img src="logo.PNG" alt="logo">
+            <a href="{{pathFor route='attendence'}}" style="float:right;"> Logout</a>
+            <center><h2>Contact Provider</h2></center>
+            <div class="container" style="margin:15px;  ">
+                <b>Request a change in the session.</b>
+                <p>You are registered under the Provider:</p>
+                <p>Your group ID:</p>
+                <p>Specify your Request: <select>
+                    <option>Request for Change of session.</option>
+                    <option>Special Access Request.</option>
+                </select></p>
+                <p>Select the session you want to change:<select>
+                    <option>Session 1</option>
+                    <option>Session 2</option>
+                    <option>Session 3</option>
+                    <option>Session 4</option>
+                </select></p>
+                <p>The Actual session date:<input type="date" readonly></p>
+                <p>The date you want to Change:<input type="date"></p>
+                <p>Remarks(Brief your request): <textarea></textarea></p>
+                <input type="submit" id="submit" value="Submit">
+
+            </div>
+      
+            <footer>
+            <center>&copy; All rights Reserved. Reasearch by Deakin University with </center>                   
+            </footer>
+    
+        </body>
+    </template>
+    
