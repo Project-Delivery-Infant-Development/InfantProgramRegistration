@@ -30,13 +30,14 @@
 
           <form class="new-task">
               <input type="text" name="text" placeholder="Enter data" />
+              <input type="text" name="text2" placeholder="Enter ID" />
               <input type="submit" value="Done">
           </form>
       </div>
-      <div class="container">
+      <!-- <div class="container">
         <a href="{{pathFor route='home'}}"> Home
         </a>
-      </div>
+      </div> -->
       </header>
 
 
@@ -71,10 +72,10 @@
               <input type="submit" value="Done">
           </form>
       </div>
-      <div class="container">
+      <!-- <div class="container">
         <a href="{{pathFor route='home'}}"> Home
         </a>
-      </div>
+      </div> -->
       </header>
 
 
@@ -93,7 +94,7 @@
 
     <span class="text">
     <strong>
-      {{Fn}}
+      {{data.Fn}}
     </strong>
     {{formatDate date}}
     </span>

@@ -1,0 +1,36 @@
+<template name="addGroup">
+        {{> def}}
+    <div class="container">
+
+        <form class="addGroupForm">
+            <label for="groupID">GroupID </label>
+            <input type="text" name="groupID" placeholder="Enter GroupID"/>
+            <br>
+            <label for="location">Location </label>
+            <div>
+                    {{> Template.dynamic template=templateName data=templateData}}
+                    {{>dropdown name='example'}}
+            </div>
+            <br>
+            <input type="text" name="spots" placeholder="Enter Maximum Spots"/> 
+            <br>
+            <input type="submit" value="Done">
+        </form>
+    </div>
+<!-- <div class="container">
+    <a href="{{pathFor route='def'}}">Home</a>
+    </div> -->
+</template>
+
+<template name="dropdown">
+        {{#if open}}
+            <ul class="dropdown-menu x">
+                <li><a href="#">Option 1</a></li>
+                <li><a href="#">Option 2</a></li>
+                <li><a href="#">Option 3</a></li>
+            </ul>
+            <button class="invisible btn">Try this</button>
+        {{else}}
+            <button class="btn">Try this</button>
+        {{/if}}
+    </template>

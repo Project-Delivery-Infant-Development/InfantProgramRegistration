@@ -5,8 +5,16 @@ import { ReactiveVar } from 'meteor/reactive-var';
 
 import '../Facilitator/attendence.js';
 import '../Facilitator/attendence.html';
-import '../Parent/parent.html';
-import '../Parent/changeRequest.html';
+//import '../Parent/parent.html';
+//import '../Parent/changeRequest.html';
+import './about.html';
+import './contact.html';
+import './faqs.html';
+import './home.html';
+import './providers.html';
+import '../Parent/parent.js';
+import '../Parent/changeRequest.js';
+
 
 // import './feed.js ';
 // import './feed.html ';
