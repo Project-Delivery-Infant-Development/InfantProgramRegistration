@@ -14,12 +14,12 @@
 
 Router.route('/', function (){
   //name:'def',
-  this.render('def');
+  this.render('home');
 });
 
-Router.route('/def', function (){
+Router.route('/home', function (){
   //name:'def',
-  this.render('def');
+  this.render('home');
 });
 
 Router.route('/attendence', function (){
