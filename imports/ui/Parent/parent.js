@@ -1,11 +1,15 @@
 import { Template } from 'meteor/templating';
-import {Parents} from '../../api/task.js';
+import {parent} from '../../api/task.js';
 
 import './parent.html';
-import '../Others/routes.js'
+import './changeRequest.js';
+import './changePwd.js';
+import './genSettings.js';
+import '../Others/routes.js';
+
 Template.body.helpers({
     parents(){
-        return Parents.find({});
+        return parent.find({});
     },
 });
 
@@ -13,6 +17,5 @@ Template.parent.events({
     'click .insert': function(e){
         e.preventDefault();
         console.log("Buttonclicked");
-        
     }
 });

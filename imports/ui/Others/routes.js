@@ -34,3 +34,11 @@ Router.route('/parent', function (){
 Router.route('/changeRequest', function (){
   this.render('changeRequest');
 });
+
+Router.route('/changePwd', function (){
+  this.render('changePwd');
+});
+
+Router.route('/genSettings', function (){
+  this.render('genSettings');
+});
