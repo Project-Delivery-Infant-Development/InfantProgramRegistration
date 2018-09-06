@@ -34,3 +34,7 @@ Router.route('/for_providers', function (){
 Router.route('/addGroup', function (){
   this.render('addGroup');
 });
+
+Router.route('/changeRequest', function(){
+  this.render('changeRequest');
+});

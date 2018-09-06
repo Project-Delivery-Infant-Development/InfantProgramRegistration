@@ -14,6 +14,9 @@ import '../Parent/parent.js';
 import '../Parent/changeRequest.js';
 import '../Facilitator/addGroup.js';
 import '../Facilitator/addGroup.html';
+import '../Parent/changeRequest.js';
+import '../Parent/changeRequest.html';
+
 
 import './routes.js';
 
