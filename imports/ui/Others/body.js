@@ -55,3 +55,10 @@ Template.attendence.helpers({
 // Router.route('/another', function(){
 //   this.render('another');
 // });
+
+
+Template.home.events({
+  'click #login':function(e){
+    Router.go('login');
+  },
+});

@@ -51,6 +51,14 @@ Router.route('/for_providers', function (){
   this.render('for_providers');
 });
 
-// Router.route('/def', function (){
-//   this.render('def');
-// });
+Router.route('/admin', function (){
+   this.render('admin');
+ });
+
+Router.route('/login', function (){
+  this.render('login');
+});
+
+Router.route('/atten', function (){
+  this.render('atten');
+});
