@@ -8,8 +8,7 @@
             <br>
             <label for="location">Location </label>
             <div>
-                    {{> Template.dynamic template=templateName data=templateData}}
-                    {{>dropdown name='example'}}
+                    {{> dropdown1}}
             </div>
             <br>
             <input type="text" name="spots" placeholder="Enter Maximum Spots"/> 
@@ -22,15 +21,31 @@
     </div> -->
 </template>
 
-<template name="dropdown">
-        {{#if open}}
-            <ul class="dropdown-menu x">
-                <li><a href="#">Option 1</a></li>
-                <li><a href="#">Option 2</a></li>
-                <li><a href="#">Option 3</a></li>
-            </ul>
-            <button class="invisible btn">Try this</button>
-        {{else}}
-            <button class="btn">Try this</button>
-        {{/if}}
+<template name="dropdown1">
+        <!-- <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="mt-command-dd"
+                       data-toggle="dropdown">Command
+                      <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                      <li role="presentation">
+                         <a role="menuitem" tabindex="-1"
+                             id="config-request-command" href="#">Option 1</a>
+                      </li>
+                      <li role="presentation">
+                         <a role="menuitem" tabindex="-1" href="#">Option 2</a>
+                      </li>
+                      <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="#">Option 3</a>
+                      </li>
+                      <li role="presentation">
+                         <a role="menuitem" tabindex="-1" href="#">Option 4</a>
+                       </li>
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation">
+                         <a role="menuitem" tabindex="-1" href="#">Other</a>
+                      </li>
+             </ul>
+         </div> -->
+         nothing
     </template>

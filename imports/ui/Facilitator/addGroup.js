@@ -1,5 +1,6 @@
 import './addGroup.html';
 import '../Others/feed.js';
+import '../Others/routes.js';
 
 $(document).keyup(function(evt) {
     if (evt.keyCode === 27) {
@@ -7,8 +8,6 @@ $(document).keyup(function(evt) {
     }
 });
 
-// You will need to change the word "layout" here to be a template
-// that you define which covers your entire webpage
 Template.addGroup.events({
     'click': function() {
         Session.set('dropdown', null);

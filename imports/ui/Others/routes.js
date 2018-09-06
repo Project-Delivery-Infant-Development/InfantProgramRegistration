@@ -1,29 +1,12 @@
-//import { Template } from 'meteor/templating';
-
-
-// Router.route('/', function (){
-//   name:'attendence',
-//   this.render('attendence');
-// });
-//
-// Router.route('/attendence', function (){
-//   name:'attendence',
-//   this.render('attendence');
-// });
-
-
 Router.route('/', function (){
-  //name:'def',
   this.render('home');
 });
 
 Router.route('/home', function (){
-  //name:'def',
   this.render('home');
 });
 
 Router.route('/attendence', function (){
-  //name:'attendence',
   this.render('attendence');
 });
 
@@ -31,9 +14,6 @@ Router.route('/parent', function (){
   this.render('parent');
 });
 
-Router.route('/changeRequest', function (){
-  this.render('changeRequest');
-});
 
 Router.route('/about', function (){
   this.render('about');
@@ -51,6 +31,6 @@ Router.route('/for_providers', function (){
   this.render('for_providers');
 });
 
-// Router.route('/def', function (){
-//   this.render('def');
-// });
+Router.route('/addGroup', function (){
+  this.render('addGroup');
+});
