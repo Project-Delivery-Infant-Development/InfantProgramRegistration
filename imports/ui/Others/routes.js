@@ -54,3 +54,6 @@ Router.route('/for_providers', function (){
 // Router.route('/def', function (){
 //   this.render('def');
 // });
+Router.route('/addGroup', function(){
+  this.render('addGroup');
+});
