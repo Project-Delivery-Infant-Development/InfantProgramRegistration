@@ -3,9 +3,20 @@
         <div class="container">
                 <header>
                         <h1>Facilitator List</h1>
+                        <label class="hide-completed">
+                                <input type="checkbox" />
+                                Hide Suspended Facilitators
+                              </label>
                       </header>
                    
-                      <ul>
+                      
+                      <ul class="facilitator">
+                          <li>
+                                <span class="delete">Delete</span>
+                                <span class="toggle-checked">Suspend</span>
+                            <span class="text less-margin">Name of Facilitator</span>
+
+                            </li>
                         {{#each facilitatorData}}
                           {{> facilitatorList}}
                         {{/each}}
@@ -16,5 +27,11 @@
         
         
         <template name="facilitatorList">
-                <li>{{text}}</li>
+                <li class="{{#if checked}}checked{{/if}}">
+                    <button class="delete">&times;</button>
+                 
+                    <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
+                 
+                    <span class="text more-margin">{{text}}</span>
+                  </li>
               </template>
