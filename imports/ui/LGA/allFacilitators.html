@@ -1,0 +1,20 @@
+<template name="allFacilitators">
+        {{> lga_dash}}
+        <div class="container">
+                <header>
+                        <h1>Facilitator List</h1>
+                      </header>
+                   
+                      <ul>
+                        {{#each facilitatorData}}
+                          {{> facilitatorList}}
+                        {{/each}}
+                      </ul>
+                      <a href="{{pathFor route='addFacilitators'}}">Add New Facilitator</a>
+        </div>
+        </template>
+        
+        
+        <template name="facilitatorList">
+                <li>{{text}}</li>
+              </template>

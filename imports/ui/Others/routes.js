@@ -1,38 +1,17 @@
-//import { Template } from 'meteor/templating';
-
-
-// Router.route('/', function (){
-//   name:'attendence',
-//   this.render('attendence');
-// });
-//
-// Router.route('/attendence', function (){
-//   name:'attendence',
-//   this.render('attendence');
-// });
-
-
 Router.route('/', function (){
-  //name:'def',
   this.render('home');
 });
 
 Router.route('/home', function (){
-  //name:'def',
   this.render('home');
 });
 
 Router.route('/attendence', function (){
-  //name:'attendence',
   this.render('attendence');
 });
 
 Router.route('/parent', function (){
   this.render('parent');
-});
-
-Router.route('/changeRequest', function (){
-  this.render('changeRequest');
 });
 
 Router.route('/about', function (){
@@ -61,4 +40,28 @@ Router.route('/login', function (){
 
 Router.route('/atten', function (){
   this.render('atten');
+});
+Router.route('/addGroup', function (){
+  this.render('addGroup');
+});
+
+Router.route('/changeRequest', function(){
+  this.render('changeRequest');
+});
+
+Router.route('/lgaDashboard', function(){
+  this.render('lgaDashboard');
+});
+
+Router.route('/allFacilitators', function(){
+  this.render('allFacilitators');
+});
+
+
+Router.route('/addFacilitators', function(){
+  this.render('addFacilitators');
+});
+
+Router.route('/viewRecords', function(){
+  this.render('viewRecords');
 });
