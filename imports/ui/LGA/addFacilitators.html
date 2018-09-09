@@ -1,0 +1,43 @@
+<template name="addFacilitators">
+    {{> lga_dash}}
+<div class="container">
+
+    <form class="addFacilitators">
+        <label for="groupID">Facilitator ID </label>
+        <input type="text" name="groupID" placeholder="Enter FacilitatorID"/>
+        <br>
+        <label for="location">Location </label>
+        <div>
+                <!-- {{> dropdown1}} -->
+        </div>
+        <br>
+        <input type="text" name="spots" placeholder="Enter Maximum Spots"/> 
+        <br>
+        <input type="submit" value="Done">
+    </form>
+</div>
+<!-- <div class="container">
+<a href="{{pathFor route='def'}}">Home</a>
+</div> -->
+</template>
+
+<!-- <template name="dropdown1">
+    <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="mt-command-dd"
+                   data-toggle="dropdown">Location
+                  <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                  <li role="presentation">
+                     <a role="menuitem" tabindex="-1"
+                         id="config-request-command" href="#">Sunshine</a>
+                  </li>
+                  <li role="presentation">
+                     <a role="menuitem" tabindex="-1" href="#">Burwood</a>
+                  </li>
+                  <li role="presentation">
+                    <a role="menuitem" tabindex="-1" href="#">Docklands</a>
+                  </li>
+         </ul>
+     </div>
+</template> -->

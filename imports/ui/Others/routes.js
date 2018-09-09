@@ -38,3 +38,20 @@ Router.route('/addGroup', function (){
 Router.route('/changeRequest', function(){
   this.render('changeRequest');
 });
+
+Router.route('/lgaDashboard', function(){
+  this.render('lgaDashboard');
+});
+
+Router.route('/allFacilitators', function(){
+  this.render('allFacilitators');
+});
+
+
+Router.route('/addFacilitators', function(){
+  this.render('addFacilitators');
+});
+
+Router.route('/viewRecords', function(){
+  this.render('viewRecords');
+});
