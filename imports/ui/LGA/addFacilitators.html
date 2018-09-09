@@ -1,25 +1,19 @@
 <template name="addFacilitators">
     {{> lga_dash}}
 <div class="container">
+        <header>
+                <h1>Add New Facilitator</h1>
+              </header>
 
-    <form class="addFacilitators">
-        <label for="groupID">Facilitator ID </label>
-        <input type="text" name="groupID" placeholder="Enter FacilitatorID"/>
-        <br>
-        <label for="location">Location </label>
-        <div>
-                <!-- {{> dropdown1}} -->
-        </div>
-        <br>
-        <input type="text" name="spots" placeholder="Enter Maximum Spots"/> 
-        <br>
-        <input type="submit" value="Done">
-    </form>
+              <form class="new-task">
+                    <input type="text" name="text" placeholder="Facilitator Name" />
+                    <!-- <input type="text" name="text" placeholder="Facilitator Mobile" /> -->
+                  </form>
+           <a href="{{pathFor route='allFacilitators'}}">List of Facilitators</a>
 </div>
-<!-- <div class="container">
-<a href="{{pathFor route='def'}}">Home</a>
-</div> -->
 </template>
+
+
 
 <!-- <template name="dropdown1">
     <div class="dropdown">
