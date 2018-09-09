@@ -45,3 +45,9 @@ Template.attendence.helpers({
     //return Session.get('activeTab');
   }
 });
+
+Template.home.events({
+  'click #login':function(e){
+    Router.go('login');
+  },
+});

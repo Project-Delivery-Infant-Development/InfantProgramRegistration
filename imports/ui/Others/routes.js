@@ -14,7 +14,6 @@ Router.route('/parent', function (){
   this.render('parent');
 });
 
-
 Router.route('/about', function (){
   this.render('about');
 });
@@ -31,6 +30,17 @@ Router.route('/for_providers', function (){
   this.render('for_providers');
 });
 
+Router.route('/admin', function (){
+   this.render('admin');
+ });
+
+Router.route('/login', function (){
+  this.render('login');
+});
+
+Router.route('/atten', function (){
+  this.render('atten');
+});
 Router.route('/addGroup', function (){
   this.render('addGroup');
 });
