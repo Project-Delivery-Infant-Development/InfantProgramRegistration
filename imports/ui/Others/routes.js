@@ -14,12 +14,21 @@ Router.route('/parent', function (){
   this.render('parent');
 });
 
+
 Router.route('/about', function (){
   this.render('about');
+
+Router.route('/changeRequest', function (){
+  this.render('changeRequest');
 });
 
-Router.route('/contact', function (){
-  this.render('contact');
+Router.route('/changePwd', function (){
+  this.render('changePwd');
+
+});
+
+Router.route('/genSettings', function (){
+  this.render('genSettings');
 });
 
 Router.route('/faqs', function (){
