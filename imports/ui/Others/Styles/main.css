@@ -1,0 +1,312 @@
+
+   
+
+* { margin: 10; padding: 20; }
+html { overflow-y: scroll;}
+body { background:#ffffff; font-size: 16px;  font-family: Geneva, helvetica, sans-serif;border: 2px solid #000; border-radius: 5px;  padding: 0px 0px 300px 0px;}
+ol, ul {  margin: 0;}
+ul li { margin: 0; padding: 0;}
+h1 {color: #111111;font-size: 30px;}	
+	small{color: #111111;font-size: 30px;}
+a, img { outline: none; border:none;  font-weight: bold;}
+p { margin: 0px 0px 0px 20px; line-height: 1.4em; font-size: 1.2em;}
+img { display: block; margin-bottom: 10px;}
+aside { font-style: bold; font-size: 0.9em;}
+button{cursor: pointer;}
+/* article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section { 
+  
+	} */
+	
+	
+	.about{ list-style: inline !important; margin: 0;}
+	
+	.line{
+		background-color:blue;
+		height:1px;
+		margin:20px;
+		
+	}
+	
+	.productrdcorner {
+    border-radius: 10px;
+    border: 2px solid #73AD21;
+    padding: 20px; 
+	background-color:#dada91c4;
+	padding:10px;
+	border: 2px solid pink;
+	position: relative;
+	clear:left;
+	margin-top:10px;
+	margin-bottom: 20px;
+  
+}
+	
+	
+	/*menu start*/
+#primary_nav_wrap
+{
+margin-top:15px;
+border: 1px solid black; border-radius: 5px;
+}
+
+#primary_nav_wrap ul
+{
+list-style:none;
+position:relative;
+float:left;
+margin:0;
+padding:0
+}
+
+#primary_nav_wrap ul a
+{
+display:block;
+
+text-decoration:none;
+font-weight:700;
+font-size:18px;
+line-height:32px;
+padding:0 15px;
+font-family:"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif
+}
+
+#primary_nav_wrap ul li
+{
+position:relative;
+float:left;
+margin:0;
+padding:0
+}
+
+#primary_nav_wrap ul li.current-menu-item
+{
+background:#ddd
+}
+
+#primary_nav_wrap ul li:hovera
+{
+color:red;
+}
+
+#primary_nav_wrap ul ul
+{
+display:none;
+position:absolute;
+top:100%;
+left:0;
+background:#fff;
+padding:0
+}
+
+#primary_nav_wrap ul ul li
+{
+float:none;
+width:200px
+}
+
+#primary_nav_wrap ul ul a
+{
+line-height:120%;
+padding:10px 15px;
+width: 300px;
+}
+
+#primary_nav_wrap ul ul ul
+{
+top:0;
+left:100%
+}
+
+#primary_nav_wrap ul li:hover > ul
+{
+display:block
+}
+
+
+
+.submit{
+	  background-color: #c1c1; /* Green */
+    border: none;
+    padding: 10px;
+    color: blue;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+	font-weight:bold;
+}
+
+.submit:hover{
+	  background-color: blue; /* Green */
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+font-weight:bold;
+	}
+
+
+		
+	
+	
+		
+
+/*footer*/
+
+/* Structure */
+#wrapper {
+	width: 96%;	
+	max-width: 1200px;
+	margin: auto;
+	padding: 2%;
+	} 
+.book{
+	
+	float:left;
+}
+
+
+		
+
+header nav {
+	float: left;
+	margin-top: 40px; 
+	}
+	
+
+
+	aside {
+		
+		float: right;
+		
+		}
+		
+		.login{
+			
+			float:right; background-color: #fdc373;
+   border-radius: 7px;
+    border: 2px solid #000;
+    padding: 1px 18px;
+    font-size: 16px;
+	font-weight: bold;
+			
+		}
+		
+		.nav-active{
+			border: 1px solid black;
+			border-radius: 5px;
+			padding: 6px 20px 5px 20px!important;
+			background-color: #ffffff;
+		}
+
+.nav-bar{
+			border: 1px solid black;
+			background-color: #bfbfbf;
+			padding: 6px 20px 5px 20px!important;
+			
+		}
+		
+		.container{
+		        border: 2px solid black;border-radius: 5px;padding: 0px 10px 20px 5px;
+		}
+		#login-button{
+			padding-right: 180px;
+		}
+		#contain{
+			padding: 5px 0px 0px 40px;
+		}
+		#join-button{
+			padding-top: 250px;
+		}
+		#join-button-about{
+			padding-top: 160px;
+		}
+		#join-button2{
+			padding-top: 100px;
+		}
+		
+		.container-div{
+			
+			padding: 10px 0px 10px 30px;
+		}
+		.container-button{
+			background-color: #bfbfbf;border-radius: 5px;border: 2px solid #000;
+    padding: 100px 250px 10px 0px;
+    font-size: 16px;
+	font-weight: bold;
+		}
+		
+		.button-join{
+			float:right; background-color: #009933;
+   border-radius: 7px;
+    border: 2px solid #000;
+    padding: 1px 18px;
+    font-size: 16px;
+	font-weight: bold;
+		}
+		.button-join2{
+			float:right; background-color: #009933;
+   border-radius: 7px;
+    border: 2px solid #000;
+    padding: 1px 18px;
+    font-size: 16px;
+	font-weight: bold;
+		}
+		.button-about{
+	background-color: #009933;
+   border-radius: 7px;
+    border: 2px solid #000;
+    padding: 1px 18px;
+    font-size: 16px;
+	font-weight: bold;
+		}
+		.logo-footer{
+			padding: 10px 150px 0px 0px;float: right;
+		}
+		.footer{
+			padding: 40px 260px 40px 260px;border: 2px solid black;border-radius: 5px;
+		}
+	.marquee-container{
+		border: 2px solid black;
+    border-radius: 5px;
+    padding: 30px 10px 30px 5px;
+	background-color:#c1e4fa;
+	}
+	.container-contact{
+		 border: 2px solid black;
+    border-radius: 5px;
+    padding: 0px 600px 10px 5px;
+
+	}
+	
+	.wrapper{position:relative;} .right,.left{width:100%; position:relative;} .right{right:0px;} .left{left:0;} 
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 50%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #fff; 
+}
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+}
+
+		
