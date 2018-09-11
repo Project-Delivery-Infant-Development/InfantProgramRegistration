@@ -74,3 +74,8 @@ Router.route('/addFacilitators', function(){
 Router.route('/viewRecords', function(){
   this.render('viewRecords');
 });
+
+Router.route('/parentGetSession', function(){
+  this.render('parentGetSession');
+});
+

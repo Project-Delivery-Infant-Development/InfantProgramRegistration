@@ -17,6 +17,9 @@ import '../Facilitator/addGroup.js';
 import '../Facilitator/addGroup.html';
 import '../Parent/changeRequest.js';
 import '../Parent/changeRequest.html';
+import '../Parent/parentGetSession.html';
+import '../Parent/parentGetSession.js';
+
 
 
 
