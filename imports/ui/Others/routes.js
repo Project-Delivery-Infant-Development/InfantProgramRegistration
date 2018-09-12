@@ -31,15 +31,7 @@ Router.route('/for_providers', function (){
   this.render('for_providers');
 });
 
-<<<<<<< HEAD
-// Router.route('/def', function (){
-//   this.render('def');
-// });
 Router.route('/addGroup', function(){
-  this.render('addGroup');
-});
-=======
-Router.route('/addGroup', function (){
   this.render('addGroup');
 });
 
@@ -63,4 +55,3 @@ Router.route('/addFacilitators', function(){
 Router.route('/viewRecords', function(){
   this.render('viewRecords');
 });
->>>>>>> ddc5b9749c8481bae0bbca0b996cd416c33c855e
