@@ -17,7 +17,7 @@ Router.route('/parent', function (){
 
 Router.route('/about', function (){
   this.render('about');
-
+});
 Router.route('/changeRequest', function (){
   this.render('changeRequest');
 });
@@ -54,9 +54,7 @@ Router.route('/addGroup', function (){
   this.render('addGroup');
 });
 
-Router.route('/changeRequest', function(){
-  this.render('changeRequest');
-});
+
 
 Router.route('/lgaDashboard', function(){
   this.render('lgaDashboard');
