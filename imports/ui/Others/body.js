@@ -4,6 +4,7 @@ import { ReactiveVar } from 'meteor/reactive-var';
 
 import '../Facilitator/attendence.js';
 import '../Facilitator/attendence.html';
+
 import '../Parent/parent.html';
 import './about.html';
 import './contact.html';
@@ -17,6 +18,11 @@ import '../Facilitator/addGroup.html';
 import '../Parent/changeRequest.js';
 import '../Parent/changeRequest.html';
 
+
+
+
+// import './feed.js ';
+// import './feed.html ';
 
 import './routes.js';
 
