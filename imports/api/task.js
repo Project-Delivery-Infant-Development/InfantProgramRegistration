@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-
-import { Mongo } from 'meteor/mongo';
-
-export const Sessions = new Mongo.Collection('sessions');
-export const Tasks1 = new Mongo.Collection('tasks1');
-export const Parents = new Mongo.Collection('parent');
-export const Attendence = new Mongo.Collection('attendence');
-export const Facilitators = new Mongo.Collection('facilitatorData');
-=======
-
 import { Mongo } from 'meteor/mongo';
 
 export const Tasks = new Mongo.Collection('tasks');
@@ -23,6 +12,3 @@ export const admin=new Mongo.Collection('admin');
 export const facilitator=new Mongo.Collection('facilitator');
 
 export const Facilitators = new Mongo.Collection('facilitatorData');
-
-
->>>>>>> upstream/master
