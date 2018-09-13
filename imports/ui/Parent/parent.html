@@ -5,12 +5,25 @@
         <a href="{{pathFor route='attendence'}}" style="float:right;"> Logout</a>
         <center><h2>Parent Dashboard</h2></center>
         <nav>
-            <a href="{{pathFor route='parent_dash'}}">Dashboard</a>
-            <a href="{{pathFor route='settings'}}">Settings</a>
+            <a href="{{pathFor route='parent'}}">Dashboard</a>
+            <a href="{{pathFor route='changePwd'}}">Settings</a>
         </nav>
         <div class="container" style="margin:15px;  ">
-            {{>parent_dash}}
+        <div class="" style=" float:left; width:65%; height:200px; border-style:solid; border-width:2px;">
+                <h3>Your details</h3>
+                <ul>
+                    <li>You are registered under the provider:</li> 
+                    <li>Your group ID:</li>
+                    <li>Your sessions are planned on below dates:</li>
+                </ul>
+            </div>
+            <div style="margin:auto 10px auto auto; width:25%; height: 200px; border-style:solid; border-width:2px; " >
+                <h3>News/Updates</h3>
+            </div>
+            <strong style="color:red">Unable to attend the next session?/ For any other requests.</strong>
+            <a href="{{pathFor route='changeRequest'}}"><h4>CONTACT PROVIDER</h4></a>
         </div>
+        
         <footer>
             <center>&copy; All rights Reserved. Reasearch by Deakin University with </center>         
         </footer>
@@ -19,23 +32,8 @@
     </body>
 </template>
 
-<!--Dashboard Template-->
-<template name="parent_dash">
-    <div class="" style=" float:left; width:65%; height:200px; border-style:solid; border-width:2px;">
-        <h3>Your details</h3>
-        <ul>
-           <li>You are registered under the provider:</li> 
-           <li>Your group ID:</li>
-           <li>Your sessions are planned on below dates:</li>
-        </ul>
-    </div>
-    <div style="margin:auto 10px auto auto; width:25%; height: 200px; border-style:solid; border-width:2px; " >
-        <h3>News/Updates</h3>
-    </div>
-    <strong style="color:red">Unable to attend the next session?/ For any other requests.</strong>
-    <a href="{{pathFor route='changeRequeset'}}"><h4>CONTACT PROVIDER</h4></a>
-
-    
+<template name="test">
+<p>{{Fname}}</p>
 </template>
 
 <!--Settings Template-->

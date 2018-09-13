@@ -18,9 +18,17 @@ Router.route('/parent', function (){
 Router.route('/about', function (){
   this.render('about');
 });
+Router.route('/changeRequest', function (){
+  this.render('changeRequest');
+});
 
-Router.route('/contact', function (){
-  this.render('contact');
+Router.route('/changePwd', function (){
+  this.render('changePwd');
+
+});
+
+Router.route('/genSettings', function (){
+  this.render('genSettings');
 });
 
 Router.route('/faqs', function (){
@@ -31,12 +39,19 @@ Router.route('/for_providers', function (){
   this.render('for_providers');
 });
 
-Router.route('/addGroup', function(){
-  this.render('addGroup');
+Router.route('/admin', function (){
+   this.render('admin');
+ });
+
+Router.route('/login', function (){
+  this.render('login');
 });
 
-Router.route('/changeRequest', function(){
-  this.render('changeRequest');
+Router.route('/atten', function (){
+  this.render('atten');
+});
+Router.route('/addGroup', function (){
+  this.render('addGroup');
 });
 
 Router.route('/lgaDashboard', function(){
