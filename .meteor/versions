@@ -63,6 +63,7 @@ npm-mongo@3.0.11
 observe-sequence@1.0.16
 ordered-dict@1.1.0
 promise@0.11.1
+rafaelhdr:google-charts@0.0.8
 random@1.1.0
 reactive-dict@1.2.1
 reactive-var@1.0.11

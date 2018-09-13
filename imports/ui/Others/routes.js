@@ -1,17 +1,3 @@
-//import { Template } from 'meteor/templating';
-
-
-// Router.route('/', function (){
-//   name:'attendence',
-//   this.render('attendence');
-// });
-//
-// Router.route('/attendence', function (){
-//   name:'attendence',
-//   this.render('attendence');
-// });
-
-
 Router.route('/', function (){
   //name:'def',
   this.render('home');
@@ -62,3 +48,8 @@ Router.route('/login', function (){
 Router.route('/atten', function (){
   this.render('atten');
 });
+
+Router.route('/satisfaction', function (){
+  this.render('satisfaction');
+});
+
