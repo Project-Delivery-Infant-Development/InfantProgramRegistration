@@ -55,3 +55,7 @@ Router.route('/addFacilitators', function(){
 Router.route('/viewRecords', function(){
   this.render('viewRecords');
 });
+
+Router.route('/sessionChangeRequest', function(){
+  this.render('sessionChangeRequest');
+});
