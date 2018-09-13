@@ -17,14 +17,11 @@ Router.route('/parent', function (){
 
 Router.route('/about', function (){
   this.render('about');
+});  
 
-Router.route('/changeRequest', function (){
-  this.render('changeRequest');
-});
 
 Router.route('/changePwd', function (){
   this.render('changePwd');
-
 });
 
 Router.route('/genSettings', function (){
@@ -66,16 +63,14 @@ Router.route('/allFacilitators', function(){
   this.render('allFacilitators');
 });
 
-
 Router.route('/addFacilitators', function(){
   this.render('addFacilitators');
 });
 
 Router.route('/viewRecords', function(){
   this.render('viewRecords');
-});
+}); 
 
-Router.route('/parentGetSession', function(){
-  this.render('parentGetSession');
+Router.route('/parentgetsession', function(){
+  this.render('parentgetsession');
 });
-

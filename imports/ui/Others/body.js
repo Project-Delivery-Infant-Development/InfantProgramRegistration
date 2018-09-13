@@ -12,18 +12,17 @@ import './faqs.html';
 import './home.html';
 import './providers.html';
 import '../Parent/parent.js';
-import '../Parent/changeRequest.js';
 import '../Facilitator/addGroup.js';
 import '../Facilitator/addGroup.html';
 import '../Parent/changeRequest.js';
 import '../Parent/changeRequest.html';
-import '../Parent/parentGetSession.html';
-import '../Parent/parentGetSession.js';
+import '../Parent/parentgetsession.js';
+import '../Parent/parentgetsession.html';
 
 
 
 
-
+ 
 // import './feed.js ';
 // import './feed.html ';
 

@@ -8,3 +8,4 @@ export const Facilitators = new Mongo.Collection('facilitatorData');
 
 export const parent = new Mongo.Collection('parent');
 
+export const parent1 = new Mongo.Collection('parent1');

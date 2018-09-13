@@ -1,7 +1,33 @@
-<template name = "parentGetSession">
-    {{> pgs}}
 
-        </template>
-<template name = "pgs">
-    <h1>Parentgetsession</h1>
+
+<body>
+    <h1>Sessions List</h1>
+
+    {{> parentgetsession}}
+</body>
+
+<template name="parentgetsession">
+    <div class='container'>
+        <table class='table'>
+            <thead>
+                <tr>
+                    <th>Sessions List</th>
+                    <th>Infant Month</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                {{#each parent1 }}
+                <tr>
+                     <td>{{SessionList}}</td>
+                     <td>{{InfantMonth}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    <ul class="pager">
+        <li class='previous'><a href="#">Previous</a></li>
+        <li class='next'><a href="#">Next</a></li> 
+    </ul>
+    </div>
 </template>
