@@ -12,3 +12,4 @@ export const admin=new Mongo.Collection('admin');
 export const facilitator=new Mongo.Collection('facilitator');
 
 export const Facilitators = new Mongo.Collection('facilitatorData');
+export const ChangeRequests = new Mongo.Collection('changeRequestsData');
