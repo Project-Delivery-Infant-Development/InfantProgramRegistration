@@ -15,7 +15,7 @@ Router.route('home',{
   },
   action: function(){
     this.render('home');
-  }
+  },
 });
 
 Router.route('faqs',{
@@ -85,6 +85,32 @@ Router.route('parent',{
   },
 });
 
+Router.route('changeRequest',{
+  templateLayout: 'changeRequest',
+  path: '/parents/changeRequest',
+  template: 'changeRequest',
+  onBeforeFunction: function(){
+    import '../imports/ui/Parent/changeRequest.html';
+    this.next();
+  },
+  action: function(){
+    this.render('changeRequest');
+  },
+});
+
+Router.route('settings',{
+  templateLayout: 'settings',
+  path: '/parents/settings',
+  template: 'settings',
+  onBeforeFunction: function(){
+    import '../imports/ui/Parent/parent.html';
+    this.next();
+  },
+  action: function(){
+    this.render('settings');
+  },
+});
+
 
 //<--------Facilitator Page Routes------------>
 
@@ -143,7 +169,7 @@ Router.route('admin', {
   },
 });
 
-
+//<-------------Login Template Route------------->
 
 Router.route('login',{
   templateLayout: 'login',
@@ -155,19 +181,6 @@ Router.route('login',{
   },
   action: function(){
     this.render('login');
-  },
-});
-
-Router.route('changeRequest',{
-  templateLayout: 'changeRequest',
-  path: '/facilitator/changeRequest',
-  template: 'changeRequest',
-  onBeforeFunction: function(){
-    import '../imports/ui/Parent/changeRequest.html';
-    this.next();
-  },
-  action: function(){
-    this.render('changeRequest');
   },
 });
 
@@ -227,19 +240,6 @@ Router.route('viewRecords',{
   },
 });
 
-
-Router.route('settings',{
-  templateLayout: 'settings',
-  path: '/parents/settings',
-  template: 'settings',
-  onBeforeFunction: function(){
-    import '../imports/ui/Parent/parent.html';
-    this.next();
-  },
-  action: function(){
-    this.render('settings');
-  },
-});
 
 // Router.route('/genSettings', function (){
 //   this.render('genSettings');

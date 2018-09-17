@@ -1,10 +1,10 @@
 import { Template } from 'meteor/templating';
-import { Meteor } from 'meteor/meteor';
 import { ReactiveVar } from 'meteor/reactive-var';
+import { Meteor } from 'meteor/meteor';
 
+import './routes.js';
 import '../Facilitator/attendence.js';
 import '../Facilitator/attendence.html';
-
 import '../Parent/parent.html';
 import './about.html';
 import './contact.html';
@@ -17,14 +17,12 @@ import '../Facilitator/addGroup.js';
 import '../Facilitator/addGroup.html';
 import '../Parent/changeRequest.js';
 import '../Parent/changeRequest.html';
-
-
-
-
-// import './feed.js ';
-// import './feed.html ';
-
-import './routes.js';
+import '../Login/login.js';
+import '../Login/login.html';
+import '../Admin/admin.js';
+import '../Admin/atten.js';
+import '../../api/task.js';
+import '../Others/feed.js';
 
 
 ReactiveTabs.createInterface({

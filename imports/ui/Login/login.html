@@ -1,5 +1,5 @@
 <template name="login">
-        {{#basicTabs name="temp" tabs=tabs}}
+        {{#basicTabs name="" tabs=tabs}}
         
       
         {{#tabContent slug="session1"}} 
@@ -7,7 +7,8 @@
                 <h3>Admin Login</h3>
                 <p>E-mail</p><input type="text" >
                 <p>password</p><input type="text" ><br><br><br>
-            <a href="{{pathFor route='admin'}}" >Login</a>
+            <a href="{{pathFor route='admin'}}"> Login</a>
+            <input type="submit" value="Done">
         </form>
       
             {{/tabContent}}
@@ -18,14 +19,9 @@
                 <h3>User Login</h3>
                 <p>E-mail</p><input type="email">
                 <p>password</p><input type="password" ><br><br><br>        
-            <a href="{{pathFor route='attendence'}}" >Login</a>
+                <input type="submit" value="Done">
         </form>
     
             {{/tabContent}}
-      
-      
-      
         {{/basicTabs}}
       </template>
-          
-      
