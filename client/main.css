@@ -149,3 +149,102 @@ body,html{
 	section{
 		padding-left: 15px;
 	}
+	.delete {
+		float: right;
+		font-weight: bold;
+		background: none;
+		font-size: 1em;
+		border: none;
+		position: relative;
+	  }
+	  .facilitator li {
+		position: relative;
+		list-style: none;
+		padding: 15px;
+		border-bottom: #eee solid 1px;
+	  }
+	   
+	  .facilitator li .text {
+		margin-left: 10px;
+	  }
+	   
+	  .facilitator li.checked {
+		color: #888;
+	  }
+	   
+	  .facilitator li.checked .text {
+		text-decoration: line-through;
+	  }
+	   
+	  .facilitator li.private {
+		background: #eee;
+		border-color: #ddd;
+	  }
+	  li.submenu a{
+		  margin-left:10px;
+	  }
+	  li.submenu{
+		background-color:#363636 !important;
+	  }
+	.sessionChangeData, .sessionChangeList{
+		width:100%;
+		float:left;
+		border-bottom:1px solid gray;
+
+	}
+	.sessionChangeData{
+		padding:10px;
+	}
+
+	.sessionChangeList{
+		padding:20px;
+	}
+	  .s-item{
+		width:10%;
+		float:left;
+	  }
+
+	  .more-margin{
+		  margin-left:66px !important;
+	  }
+
+	  .code-box{
+		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+		padding:10px;
+		background-color:rgb(119, 119, 119);
+		color:black;
+		margin-top:20px;
+	  }
+	  .info-box1{
+		border:1px solid green;
+		background-color:greenyellow;
+		float:left;
+		margin-top:30px;
+		border-radius:5px;
+		padding:20px;
+	  }
+
+	  .info-code{
+		  color:black;
+		  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	  }
+
+	  .respond button{
+		display:inline-block;
+		background-color:white;
+		border:0px solid white;
+	  }
+
+	  .name{
+		  width:15%;
+	  }
+	  .respond{
+		  width:30%;
+	  }
+	  .decline{
+		  color:red;
+	  }
+
+	  .approve{
+		  color:green;
+	  }

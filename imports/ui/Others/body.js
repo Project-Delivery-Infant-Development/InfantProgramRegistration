@@ -1,12 +1,11 @@
 import { Template } from 'meteor/templating';
-import { Meteor } from 'meteor/meteor';
 import { ReactiveVar } from 'meteor/reactive-var';
+import { Meteor } from 'meteor/meteor';
 
-
+import './routes.js';
 import '../Facilitator/attendence.js';
 import '../Facilitator/attendence.html';
-//import '../Parent/parent.html';
-//import '../Parent/changeRequest.html';
+import '../Parent/parent.html';
 import './about.html';
 import './contact.html';
 import './faqs.html';
@@ -14,11 +13,16 @@ import './home.html';
 import './providers.html';
 import '../Parent/parent.js';
 import '../Parent/changeRequest.js';
-
-
-// import './feed.js ';
-// import './feed.html ';
-import './routes.js';
+import '../Facilitator/addGroup.js';
+import '../Facilitator/addGroup.html';
+import '../Parent/changeRequest.js';
+import '../Parent/changeRequest.html';
+import '../Login/login.js';
+import '../Login/login.html';
+import '../Admin/admin.js';
+import '../Admin/atten.js';
+import '../../api/task.js';
+import '../Others/feed.js';
 
 
 ReactiveTabs.createInterface({
@@ -45,17 +49,6 @@ Template.attendence.helpers({
     //return Session.get('activeTab');
   }
 });
-// Router.route('/', function (){
-//   // render the Home template with a custom data context
-//   this.render('home');
-// });
-
-
-
-// Router.route('/another', function(){
-//   this.render('another');
-// });
-
 
 Template.home.events({
   'click #login':function(e){
