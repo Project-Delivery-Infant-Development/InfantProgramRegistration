@@ -2,7 +2,7 @@ import './allFacilitators.html';
 import '../Others/feed.js';
 import '../Others/routes.js';
 import { Template } from 'meteor/templating';
-import { Facilitators } from '../../api/task';
+import { Facilitators } from '../../api/task.js';
 
 Template.allFacilitators.onCreated(function bodyOnCreated() {
     this.state = new ReactiveDict();

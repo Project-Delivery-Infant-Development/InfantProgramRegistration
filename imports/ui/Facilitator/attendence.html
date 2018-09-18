@@ -1,9 +1,6 @@
 <!-- Tab 1 starts here -->
 
 <template name="attendence">
-  <!-- <head>
-  {{> t}}
-</head> -->
 {{> def}}
   {{#basicTabs name="temp" tabs=tabs}}
   
@@ -24,29 +21,22 @@
               {{#each tasks}}
                   {{> task}}
               {{/each}}
-              <!-- {{> yield}} -->
           </ul>
       <div class="container">
 
           <form class="new-task">
               <input type="text" name="text" placeholder="Enter data" />
-              <input type="text" name="text2" placeholder="Enter ID" />
               <input type="submit" value="Done">
           </form>
       </div>
-      <!-- <div class="container">
-        <a href="{{pathFor route='home'}}"> Home
-        </a>
-      </div> -->
       </header>
-
-
   </body>
   {{/tabContent}}
 
   <!-- Tabs2 HTML starts here -->
 
   {{#tabContent slug="session2"}}
+  
   <body>
 
       <header>
@@ -63,7 +53,6 @@
               {{#each tasks1}}
                   {{> task1}} 
               {{/each}}
-              <!-- {{> yield}} -->
           </ul>
       <div class="container1">
 
@@ -72,14 +61,8 @@
               <input type="submit" value="Done">
           </form>
       </div>
-      <!-- <div class="container">
-        <a href="{{pathFor route='home'}}"> Home
-        </a>
-      </div> -->
       </header>
-
-
-  </body>
+  </body> 
   {{/tabContent}}
 
 <!-- Tab2 HTML ends here -->
@@ -94,7 +77,7 @@
 
     <span class="text">
     <strong>
-      {{data.Fn}}
+      {{Fn}}
     </strong>
     {{formatDate date}}
     </span>
@@ -105,7 +88,7 @@
 
 <!-- Tab2 Task template starts here  -->
 
-<template name="task1">
+ <template name="task1"> 
     <li class="{{#if checked}}checked{{else}}unchecked{{/if}}">
     <button class="delete1">Remove</button>
     <input type="checkbox" checked="{{checked}}" class="toggle-checked1" value="Present"/>
