@@ -2,7 +2,7 @@ import './sessionChangeRequest.html';
 import '../Others/feed.js';
 import '../Others/routes.js';
 import { Template } from 'meteor/templating';
-import { ChangeRequests } from '../../api/task';
+import { ChangeRequests } from '../../api/task.js';
 
 Template.sessionChangeRequest.onCreated(function bodyOnCreated() {
     this.state = new ReactiveDict();
