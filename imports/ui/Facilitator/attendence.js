@@ -1,17 +1,12 @@
 import { Template } from 'meteor/templating';
-import { Sessions } from '../../api/task.js';
 import { Tasks1 } from '../../api/task.js';
 import { ReactiveDict } from 'meteor/reactive-dict';
-import { Attendence } from '../../api/task.js';
 
+import '../Others/body.js';
 import './attendence.html';
-//import '../Others/feed.js';
+import '../Others/feed.js';
 import './addGroup.js';
-import '../Others/routes.js';
-
-// import './sidebar.html';
-import '../Others/routes.js';
-import '../Login/login.js';
+import { Sessions } from '../../api/task.js';
 
 Template.attendence.helpers({
     tasks(){
@@ -59,7 +54,6 @@ Template.attendence.events({
             // },
             
         });
-
       event.target.text.value="";
       //event.target.text2.value="";
     },
