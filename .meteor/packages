@@ -37,5 +37,8 @@ google-config-ui
 useraccounts:bootstrap
 accounts-base
 aldeed:simple-schema
+
+anychart:anychart
+
 autopublish
 insecure@1.0.7

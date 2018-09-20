@@ -11,3 +11,4 @@ export const Admin=new Mongo.Collection('admin');
 export const Facilitator=new Mongo.Collection('facilitator');
 export const Facilitators = new Mongo.Collection('facilitatorData');
 export const ChangeRequests = new Mongo.Collection('changeRequestsData');
+export const Satisfactiondata = new Meteor.Collection('Satisfactiondata');
