@@ -111,6 +111,32 @@ Router.route('settings',{
   },
 });
 
+Router.route('update-email',{
+  templateLayout: 'update-email',
+  path: '/parents/update-email',
+  template: 'update-email',
+  onBeforeFunction: function(){
+    import '../imports/ui/Parent/parent.html';
+    this.next();
+  },
+  action: function(){
+    this.render('update-email');
+  },
+});
+
+Router.route('register_parent',{
+  templateLayout: 'register_parent',
+  path: '/parents/register_parent',
+  template: 'register_parent',
+  onBeforeFunction: function(){
+    import '../imports/ui/Parent/parent.html';
+    this.next();
+  },
+  action: function(){
+    this.render('register_parent');
+  },
+});
+
 
 //<--------Facilitator Page Routes------------>
 
@@ -168,6 +194,33 @@ Router.route('admin', {
     this.render('atten');
   },
 });
+
+Router.route('satisfaction',{
+  templateLayout: 'satisfaction',
+  path: '/admin/satisfaction',
+  template: 'satisfaction',
+  onBeforeFunction: function(){
+    import '../imports/ui/Admin/satisfaction.html';
+    this.next();
+  },
+  action: function(){
+    this.render('satisfaction');
+  },
+});
+
+Router.route('facilitators',{
+  templateLayout: 'facilitators',
+  path: '/admin/facilitators',
+  template: 'facilitators',
+  onBeforeFunction: function(){
+    import '../imports/ui/Admin/facilitators.html';
+    this.next();
+  },
+  action: function(){
+    this.render('facilitators');
+  },
+});
+
 
 //<-------------Login Template Route------------->
 

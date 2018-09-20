@@ -7,9 +7,31 @@ import '../Others/routes.js';
 import '../Others/feed.js';
 import '../Facilitator/attendence.js';
 import '../Admin/admin.js';
+import '../Others/feed.js';
 import './schema.js';
+import '../Facilitator/attendence.js';
 
 
+Template.login.helpers({
+  tabs: function(){
+    return[
+      { name: 'User', slug: 'ses1'},
+      { name: 'Admin', slug: 'ses2'},
+     
+    ];
+  },
+
+  activeTab: function(){
+    console.log("Active tab here");
+  }
+});
+
+Template.dashboard.events({
+  'click .logout': function(event){
+      event.preventDefault();
+      Meteor.logout();
+  }
+});
 
 AccountsTemplates.addField({
   _id: 'phone',

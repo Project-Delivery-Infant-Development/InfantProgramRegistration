@@ -12,6 +12,7 @@ aldeed:collection2-core@2.1.2
 aldeed:simple-schema@1.5.4
 allow-deny@1.1.0
 autopublish@1.0.7
+anychart:anychart@1.4.3
 autoupdate@1.4.1
 babel-compiler@7.1.1
 babel-runtime@1.2.7
