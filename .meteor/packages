@@ -20,10 +20,8 @@ shell-server@0.3.1            # Server-side component of the `meteor shell` comm
 iron:router
 reactive-dict@1.2.0
 semantic:ui-sidebar
-insecure@1.0.7
 templates:tabs
 coffeescript
-
 twbs:bootstrap
 fortawesome:fontawesome
 aldeed:collection2
@@ -39,3 +37,5 @@ google-config-ui
 useraccounts:bootstrap
 accounts-base
 aldeed:simple-schema
+autopublish
+insecure@1.0.7
