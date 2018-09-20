@@ -195,6 +195,19 @@ Router.route('admin', {
   },
 });
 
+Router.route('dashboard',{
+  templateLayout: 'dashboard',
+  path: '/admin/dashboard',
+  template: 'dashboard',
+  onBeforeFunction: function(){
+    import '../imports/ui/Admin/dashboard.html';
+    this.next();
+  },
+  action: function(){
+    this.render('dashboard');
+  },
+});
+
 Router.route('satisfaction',{
   templateLayout: 'satisfaction',
   path: '/admin/satisfaction',
