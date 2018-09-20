@@ -39,3 +39,5 @@ google-config-ui
 useraccounts:bootstrap
 accounts-base
 aldeed:simple-schema
+mrt:bootstrap-3
+anychart:anychart

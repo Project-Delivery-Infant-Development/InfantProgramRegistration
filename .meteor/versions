@@ -11,6 +11,7 @@ aldeed:collection2@3.0.0
 aldeed:collection2-core@2.1.2
 aldeed:simple-schema@1.5.4
 allow-deny@1.1.0
+anychart:anychart@1.4.3
 autoupdate@1.4.1
 babel-compiler@7.1.1
 babel-runtime@1.2.7
@@ -81,6 +82,7 @@ momentjs:moment@2.10.6
 mongo@1.5.1
 mongo-dev-server@1.1.0
 mongo-id@1.0.7
+mrt:bootstrap-3@0.3.8
 npm-bcrypt@0.9.3
 npm-mongo@3.0.11
 oauth@1.2.3

@@ -10,6 +10,12 @@ import '../Admin/admin.js';
 import './schema.js';
 
 
+Template.dashboard.events({
+  'click .logout': function(event){
+      event.preventDefault();
+      Meteor.logout();
+  }
+});
 
 AccountsTemplates.addField({
   _id: 'phone',

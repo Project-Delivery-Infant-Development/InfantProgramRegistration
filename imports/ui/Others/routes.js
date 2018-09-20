@@ -169,6 +169,33 @@ Router.route('admin', {
   },
 });
 
+Router.route('satisfaction',{
+  templateLayout: 'satisfaction',
+  path: '/admin/satisfaction',
+  template: 'satisfaction',
+  onBeforeFunction: function(){
+    import '../imports/ui/Admin/satisfaction.html';
+    this.next();
+  },
+  action: function(){
+    this.render('satisfaction');
+  },
+});
+
+Router.route('facilitators',{
+  templateLayout: 'facilitators',
+  path: '/admin/facilitators',
+  template: 'facilitators',
+  onBeforeFunction: function(){
+    import '../imports/ui/Admin/facilitators.html';
+    this.next();
+  },
+  action: function(){
+    this.render('facilitators');
+  },
+});
+
+
 //<-------------Login Template Route------------->
 
 Router.route('login',{
