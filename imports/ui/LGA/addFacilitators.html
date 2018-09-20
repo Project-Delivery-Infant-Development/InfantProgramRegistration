@@ -4,12 +4,28 @@
         <header>
                 <h1>Add New Facilitator</h1>
               </header>
-
+<div class="addFac-container">
               <form class="new-task">
-                    <input type="text" name="text" placeholder="Facilitator Name" />
-                    <!-- <input type="text" name="text" placeholder="Facilitator Mobile" /> -->
+                    <!-- <div class="addFac-group">
+                      <label for="name">Facilitator Name: </label><span class="label-object"><input type="text" id="name" name="name" placeholder="Facilitator Name" /></span>
+                    </div>
+                    <div class="addFac-group">
+                        <label for="location">Location: </label><span class="label-object"><input type="text" id="location" name="location" placeholder="Location" value="Sunshine"/></span>
+                    </div>
+                    <div class="addFac-group">
+                      <label for="tel">Contact Number: </label><span class="label-object"><input type="text" id="tel" name="tel" placeholder="Contact Number" value="+61-" /></span>
+                    </div>
+                    <div class="addFac-group">
+                     <label for="email">Email Address: </label><span class="label-object"><input type="text" id="email" name="email" placeholder="mail@deakin.edu.au"/></span>
+                    </div>
                   </form>
                     <a href="{{pathFor route='allFacilitators'}}">List of Facilitators</a>
-              
+                  </div> -->
+                  <input type="text" id="name" name="name" placeholder="Facilitator Name" />
+                  
+</form>
+</div>
+
+                    <div class="successful-msg"></div>                 
 </div>
 </template>

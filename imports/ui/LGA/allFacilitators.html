@@ -15,7 +15,6 @@
                                 <span class="delete">Delete</span>
                                 <span class="toggle-checked">Suspend</span>
                             <span class="text less-margin">Name of Facilitator</span>
-
                             </li>
                         {{#each facilitatorData}}
                           {{> facilitatorList}}
@@ -27,11 +26,15 @@
         
         
         <template name="facilitatorList">
+                
                 <li class="{{#if checked}}checked{{/if}}">
                     <button class="delete">&times;</button>
-                 
+                
                     <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
                  
-                    <span class="text more-margin">{{text}}</span>
+                    <span class="text more-margin">{{name}}</span>
+                    <span class="text more-margin">{{location}}</span>
+                    <span class="text more-margin">{{tel}}</span>
+                    <span class="text more-margin">{{email}}</span>
                   </li>
               </template>
