@@ -21,14 +21,19 @@
                 <h3>News/Updates</h3>
             </div>
             <strong style="color:red">Unable to attend the next session?/ For any other requests.</strong>
-            <a href="{{pathFor route='changeRequest'}}"><h4>CONTACT PROVIDER</h4></a>
+            <div>
+              <a href="{{pathFor route='changeRequest'}}"><h4>CONTACT PROVIDER</h4></a>
+            </div>
         </div>
-        
+        <hr>
+        <div class="update" style="display:flex; align-items:center; justify-content:space-around;">
+          <a class="btn btn-primary" href="{{pathFor route='update-email'}}">Update Email</a>
+          <a class="btn btn-primary" href="{{pathFor route='register_parent'}}">Register</a>
+        </div>
+        <hr>
         <footer>
             <center>&copy; All rights Reserved. Reasearch by Deakin University with </center>         
         </footer>
-        <!--input type="button" class="insert" name="insert" id="insert" value="Insert"-->
-
     </body>
 </template>
 
@@ -39,4 +44,98 @@
 <!--Settings Template-->
 <template name="settings">
 Setting pages
+</template>
+<!-- Email Updation -->
+<template name="update-email">
+  <style>
+    label {
+      padding-right:0.5em;
+      color:black;
+    }
+  </style>
+  <body>
+    <form name="example" style="padding:2em 2em;">
+      <p>Please provide Email</p>
+      <label for="">Enter email </label>
+      <input type="email" id="oldmail"  name="oldmail">
+      <p>Please provide Another Email to update</p>
+      <label for="">Enter email</label>
+      <input type="email" id="newmail"  name="newmail"><br>
+      <button class="btn btn-primary" type="button" name="B1" value="Calculate" onclick="cal()">Update</button>
+    </form>
+    <div style="display:flex;align-items: center;justify-content: center;">
+      <a class="btn btn-primary" href="{{pathFor route='parent'}}">Back</a>
+    </div>
+  </body>
+  <script>
+    function cal(){
+      var x = document.getElementById("oldmail").value;
+      var y = document.getElementById("newmail").value;
+      if( x === "" ) {
+        alert("Please provide Old Email to search");
+      }
+      else if( y === "" ) {
+        alert("Please provide New Email to update");
+      }
+      else if( x === "Parent1infantprogram@gmail.com") {
+        alert("Your Email is Updated");
+      }
+      else if( x === "Parent2infantprogram@gmail.com") {
+        alert("Your Email is Updated");
+      }
+      else if( x === "Parent3infantprogram@gmail.com") {
+        alert("Your Email is Updated");
+      }
+      else if( x === "Parent4infantprogram@gmail.com") {
+        alert("Your Email is Updated");
+      }
+      else {
+        alert("Provided Email is not found");
+      }
+    }
+  </script>
+</template>
+<!-- Parent registration -->
+<template name="register_parent">
+  <style>
+    label {
+      padding-right:0.5em;
+      color:black;
+      width:125px;
+    }
+  </style>
+  <body>
+    <form name="example" style="padding:2em 2em;">
+      <p>Parent registration</p>
+      <label for="">Enter Name </label>
+      <input type="name" id="name"  name="name"><br>
+      <label for="">Enter Email</label>
+      <input type="email" id="email"  name="email"><br>
+      <label for="">Enter Password</label>
+      <input type="password" id="password"  name="password"><br>
+      <button class="btn btn-primary" type="button" name="B1" value="Calculate" onclick="cal()">Register</button>
+    </form>
+    <div style="display:flex;align-items: center;justify-content: center;">
+      <a class="btn btn-primary" href="{{pathFor route='parent'}}">Back</a>
+    </div>
+  </body>
+  <script>
+    function cal(){
+      var x = document.getElementById("name").value;
+      var y = document.getElementById("email").value;
+      var z = document.getElementById("password").value;
+      if( x === "" ) {
+        alert("Please fill the form details completely");
+      }
+      else if( y === "" ) {
+        alert("Please fill the form details completely");
+      }
+      else if( y === "") {
+        alert("Please fill the form details completely");
+      }
+      else {
+        alert("Registration Succesfull..");
+      }
+    }
+  </script>
 </template>
