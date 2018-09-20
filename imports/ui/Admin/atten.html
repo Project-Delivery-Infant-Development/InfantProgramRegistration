@@ -13,13 +13,13 @@
               </label>
               <ul>
                   {{#each tasks}}
-                      {{> task}}
+                      {{> tas}}
                   {{/each}}
               </ul>
           </header>
     </template>
     
-    <template name="task">
+    <template name="tas">
         <li class="{{#if checked}}checked{{else}}unchecked{{/if}}">
         <button class="delete">Remove</button>
         <input type="checkbox" checked="{{checked}}" class="toggle-checked" value="Present"/>
