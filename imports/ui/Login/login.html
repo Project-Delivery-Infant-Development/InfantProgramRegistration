@@ -1,6 +1,32 @@
 <template name="login">
+    {{#basicTabs name="temp" tabs=tabs}}
+      
+    {{#tabContent slug="ses1"}} 
+
     <body>
-       
+       {{#if currentUser}}
+       <a href="{{pathFor route='attendence'}}">Facilitator</a>
+       <a href="#">LGA</a>
+       {{>logoff}}
+       {{else}}
       {{> atForm}}
+      {{/if}}
       </body>
-      </template>
+      {{/tabContent}}
+
+      {{#tabContent slug="ses2"}}
+      <body>E-mail
+          <input type="text" name="E-mail">
+          Password
+          <input type="password" name ="password">
+          <a href="{{pathFor route='admin'}}">Signin</a>
+      </body>
+      {{/tabContent}}
+      {{/basicTabs}}
+
+    </template>
+
+      <template name="logoff">
+          <p>You're logged in.</p>
+          <p><a href="#" class="logout">Logout</a></p>
+  </template>    

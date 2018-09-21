@@ -25,7 +25,7 @@ Template.sessionChangeRequest.onCreated(function bodyOnCreated() {
         $set: { checked: ! this.checked },
       });
     },
-    'click .delete'() {
+    'click .decline'() {
         ChangeRequests.remove(this._id);
     },
     'change .hide-completed input'(event, instance) {

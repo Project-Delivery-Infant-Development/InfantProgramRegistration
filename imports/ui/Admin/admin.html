@@ -13,20 +13,20 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Admin</a>
+                <a class="navbar-brand" href="{{pathFor route='admin'}}">Admin</a>
             </div>
             <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li ><a href="#">Dashboard<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>  
+                    <li ><a href="{{pathFor route='dashboard'}}">Dashboard<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>  
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Report<span style="font-size:16px;" class="pull-right hidden-xs-down showopacity glyphicons glyphicons-address-book"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Report<span style="font-size:16px;" class="pull-right hidden-xs-down showopacity glyphicon glyphicon-tasks"></span></a>
                         <ul class="dropdown-menu forAnimate" role="menu">
                             <li><a href="{{pathFor route='atten'}}">Attendance Report</a></li>
                             <li><a href="#">Regestered Parent Report</a></li>
                             <li><a href="{{pathFor route='satisfaction'}}">user satisfaction Report</a></li>
                         </ul>
                     </li>
-                    <li ><a href="#">Facilitators<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
+                    <li ><a href="{{pathFor route='facilitators'}}">Facilitators<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Setting<span style="font-size:16px;" class="pull-right hidden-xs-down showopacity glyphicons glyphicons-address-book"></span></a>
                         <ul class="dropdown-menu forAnimate" role="menu">
