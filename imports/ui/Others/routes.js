@@ -306,6 +306,19 @@ Router.route('viewRecords',{
   },
 });
 
+Router.route('sessionChangeRequest',{
+  templateLayout: 'sessionChangeRequest',
+  path: '/lga/sessionChangeRequest',
+  template: 'sessionChangeRequest',
+  onBeforeFunction: function(){
+    import '../imports/ui/LGA/sessionChangeRequest.html';
+    this.next();
+  },
+  action: function(){
+    this.render('sessionChangeRequest');
+  },
+});
+
 
 // Router.route('/genSettings', function (){
 //   this.render('genSettings');
