@@ -293,6 +293,19 @@ Router.route('viewRecords',{
   },
 });
 
+Router.route('createDb',{
+  templateLayout: 'createDb',
+  path: '/createDb',
+  template: 'createDb',
+  onBeforeFunction: function(){
+    import '../imports/api/createDb.html';
+    this.next();
+  },
+  action: function(){
+    this.render('createDb');
+  },
+});
+
 
 // Router.route('/genSettings', function (){
 //   this.render('genSettings');
