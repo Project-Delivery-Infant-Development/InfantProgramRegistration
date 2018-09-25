@@ -34,18 +34,17 @@ Template.createDb.events({
             list+="Facilitator "
             event.target.list.hidden=false;
             event.target.list.value="Hlelow";
-        console.log(event.target.list);
-        console.log(event.target.option);
+        //console.log(event.target.list);
+        //console.log(event.target.option);
         
         var option=event.target.option.value;
         console.log(option);
 if(option=="justcreate")
-            //createDb();
-         console.log("Pobey");
+            createDb();
 else if(option=="dropncreate")
 {
      dropDb();
-     createDb();
+    // createDb();
 }   
             
         window.alert("Database Created Successfully..!");
@@ -57,9 +56,11 @@ else if(option=="dropncreate")
 
 function dropDb()
 {
-    console.log(Parent.drop({}));
+    Parent.find().fetch({}).forEach(_id => {
+        console.log(Parent.remove({id:_id}));
+    });
 }
-
+//Database sample data entry code..
 function createDb()
     {
         User.insert( 
