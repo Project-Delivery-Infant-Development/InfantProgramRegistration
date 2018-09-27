@@ -26,7 +26,7 @@ Template.login.helpers({
   }
 });
 
-Template.dashboard.events({
+Template.logoff.events({
   'click .logout': function(event){
       event.preventDefault();
       Meteor.logout();

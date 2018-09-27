@@ -195,6 +195,19 @@ Router.route('admin', {
   },
 });
 
+Router.route('dashboard',{
+  templateLayout: 'dashboard',
+  path: '/admin/dashboard',
+  template: 'dashboard',
+  onBeforeFunction: function(){
+    import '../imports/ui/Admin/dashboard.html';
+    this.next();
+  },
+  action: function(){
+    this.render('dashboard');
+  },
+});
+
 Router.route('satisfaction',{
   templateLayout: 'satisfaction',
   path: '/admin/satisfaction',
@@ -293,6 +306,7 @@ Router.route('viewRecords',{
   },
 });
 
+
 Router.route('createDb',{
   templateLayout: 'createDb',
   path: '/createDb',
@@ -303,6 +317,18 @@ Router.route('createDb',{
   },
   action: function(){
     this.render('createDb');
+
+Router.route('sessionChangeRequest',{
+  templateLayout: 'sessionChangeRequest',
+  path: '/lga/sessionChangeRequest',
+  template: 'sessionChangeRequest',
+  onBeforeFunction: function(){
+    import '../imports/ui/LGA/sessionChangeRequest.html';
+    this.next();
+  },
+  action: function(){
+    this.render('sessionChangeRequest');
+
   },
 });
 
