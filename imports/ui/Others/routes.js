@@ -306,6 +306,18 @@ Router.route('viewRecords',{
   },
 });
 
+
+Router.route('createDb',{
+  templateLayout: 'createDb',
+  path: '/createDb',
+  template: 'createDb',
+  onBeforeFunction: function(){
+    import '../imports/api/createDb.html';
+    this.next();
+  },
+  action: function(){
+    this.render('createDb');
+
 Router.route('sessionChangeRequest',{
   templateLayout: 'sessionChangeRequest',
   path: '/lga/sessionChangeRequest',
@@ -316,6 +328,7 @@ Router.route('sessionChangeRequest',{
   },
   action: function(){
     this.render('sessionChangeRequest');
+
   },
 });
 
