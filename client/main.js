@@ -10,7 +10,6 @@ import '../imports/ui/Others/body.js';
  import '../imports/ui/Admin/admin.js';
  import '../imports/ui/Login/login.js';
  import '../imports/ui/Admin/atten.js';
- import '../imports/ui/Admin/dashboard.js';
  import '../imports/ui/Admin/satisfaction.js';
  import '../imports/ui/Admin/facilitators.js';
 import '../imports/ui/Others/feed.js';
@@ -24,3 +23,6 @@ import '../imports/ui/LGA/lgaDashboard.js';
 import '../imports/ui/LGA/viewRecords.js';
 import '../imports/ui/LGA/allFacilitators.js';
 import '../imports/ui/LGA/sessionChangeRequest.js';
+import '../imports/ui/Parent/parentGetSession.js';
+
+

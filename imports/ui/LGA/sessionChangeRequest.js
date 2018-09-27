@@ -7,6 +7,7 @@ import { ChangeRequests } from '../../api/task.js';
 Template.sessionChangeRequest.onCreated(function bodyOnCreated() {
     this.state = new ReactiveDict();
   });
+  
 
   Template.sessionChangeRequest.helpers({
     sessionChangeRequestData() {
