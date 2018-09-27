@@ -317,6 +317,8 @@ Router.route('createDb',{
   },
   action: function(){
     this.render('createDb');
+  }
+});
 
 Router.route('sessionChangeRequest',{
   templateLayout: 'sessionChangeRequest',

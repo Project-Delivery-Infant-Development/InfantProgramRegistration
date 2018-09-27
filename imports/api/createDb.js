@@ -1,64 +1,39 @@
+import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import { Parent, User, Request, Groups, Session, Lga, Admin, Facilitator } from './task.js';
 
 import './createDb.html';
 import '../ui/Others/routes.js';
 
-var count=0;
 
 Template.body.helpers({
     parents(){
         return Parent.find({});
     },
+    
 });
 
 Template.createDb.events({
-    'submit .frmRequest': function(event){
+        'submit .frmRequest': function(event){
         event.preventDefault();
-        var list="";
-        if(Parent.find({}).fetch({}.length > 0))
-            list+="Parent, ";
-        if(User.find({}).fetch({}).length > 0)
-            list+="User, ";
-        if(Request.find({}).fetch({}).length > 0)
-            list+="Request, ";
-        if(Groups.find({}).fetch({}).length > 0)
-            list+="Groups, ";
-        if(Session.find({}).fetch({}).length > 0)
-            list+="Sessions, " ;
-        if(Lga.find({}).fetch({}).length > 0)
-            list+="Lga, ";
-        if(Admin.find({}).fetch({}).length > 0)
-            list+="Admin, ";
-        if(Facilitator.find({}).fetch({}).length > 0)
-            list+="Facilitator "
-            event.target.list.hidden=false;
-            event.target.list.value="Hlelow";
-        //console.log(event.target.list);
-        //console.log(event.target.option);
         
         var option=event.target.option.value;
         console.log(option);
-if(option=="justcreate")
+        if(option=="justcreate")
+                    createDb();
+        else if(option=="dropncreate")
+        {
+            dropDb();
             createDb();
-else if(option=="dropncreate")
-{
-     dropDb();
-    // createDb();
-}   
-            
+        }   
         window.alert("Database Created Successfully..!");
- //       clearform(event);
-        
     },
 
 });
 
 function dropDb()
 {
-    Parent.find().fetch({}).forEach(_id => {
-        console.log(Parent.remove({id:_id}));
-    });
+    console.log(Meteor.call('removeData'));
 }
 //Database sample data entry code..
 function createDb()

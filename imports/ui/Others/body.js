@@ -24,6 +24,7 @@ import '../Admin/atten.js';
 import '../Admin/dashboard.js';
 import '../../api/task.js';
 import '../Others/feed.js';
+import '../../api/createDb.js';
 
 
 ReactiveTabs.createInterface({
