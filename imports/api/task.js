@@ -103,6 +103,13 @@ Facilitator.schema=new SimpleSchema({
 Facilitator.attachSchema(Facilitator.schema);
 
 
+export const FacilitatorsData = new Mongo.Collection('facilitatorData');
+export const ChangeRequests = new Mongo.Collection('changeRequestsData');
+export const Satisfactiondata = new Meteor.Collection('Satisfactiondata');
+
+export const Tasks1 = new Mongo.Collection('tasks1');
+export const Parent1 = new Mongo.Collection('parent1');
 export const Facilitators = new Mongo.Collection('facilitatorData');
 export const ChangeRequests = new Mongo.Collection('changeRequestsData');
 export const Satisfactiondata = new Meteor.Collection('Satisfactiondata');
+export const Testing = new Mongo.Collection('testing');

@@ -1,9 +1,16 @@
 import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
+import {Parent1} from '../imports/api/task.js';
+import { publishPagination } from 'meteor/kurounin:pagination';
+publishPagination(Parent1);
 import '../imports/ui/Others/routes.js';
 import '../imports/api/task.js';
+ 
 
 Meteor.startup(() => {
+  
+
+    
 //   Meteor.methods({
 //     'saveFile': function(buffer){
 //         Files.insert({data:buffer});        
@@ -12,7 +19,7 @@ Meteor.startup(() => {
 // });  
 });
 // import '../client/main.js';
-
+ 
 // import { Tasks, user,parent,request,group, Sessions, lga, admin, facilitator } from '../imports/api/task.js';
 // if (Meteor.isServer) {
 //     Meteor.startup(function () {
@@ -111,3 +118,4 @@ Meteor.startup(() => {
 
 //     });
 // }
+
