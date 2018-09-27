@@ -317,6 +317,8 @@ Router.route('createDb',{
   },
   action: function(){
     this.render('createDb');
+  },
+});
 
 Router.route('sessionChangeRequest',{
   templateLayout: 'sessionChangeRequest',
@@ -331,9 +333,3 @@ Router.route('sessionChangeRequest',{
 
   },
 });
-
-
-// Router.route('/genSettings', function (){
-//   this.render('genSettings');
-// });
-
