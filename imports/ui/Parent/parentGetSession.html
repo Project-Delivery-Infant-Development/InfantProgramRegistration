@@ -1,33 +1,45 @@
+<template name="parentGetSession">
+    <div class="container">
+        <header>
+             <center><h1>Get Session List</h1></center> 
+                
+        <br/>
+        </header>
+  <div >
+    <span class="s-item no">Session No</span>
+    <span class="s-item infantMonth">Infant Month</span>
+    <span class="s-item sessionLoc">Session Address</span>
+    <span class="s-item start">Start Date</span>
+    <span class="s-item end">End Date</span>
+    <span class="s-item sessionActv">Active Days </span>
+      {{#if isReady}}
+          <ul>
+            {{#each parent1}}
+           
+            {{> getSession}}
+                
+           {{/each}}
+          </ul>
+            {{> defaultBootstrapPaginator  pagination=templatePagination limit=10 containerClass="text-center" onClick=clickEvent}}  
+         
+      {{else}}
+          Loading...
+      {{/if}}
+    
+  </div>
+  </div>
+  
+</template> 
 
+      <template name="getSession">
+          <div class="sessionChangeData">
+                  <span class="s-item no">{{sessionNo}}</span>
+                  <span class="s-item infantMonth">{{infantMonth}}</span>
+                  <span class="s-item sessionLoc">{{sessionLoc}}</span>
+                  <span class="s-item start">{{start}}</span>
+                  <span class="s-item end">{{end}}</span>
+                  <span class="s-item sessionActv">{{sessionActv}}</span>
+                  <input type="button" class="reg" value="Register">                  
+                  </div>
 
-<body>
-    <h1>Sessions List</h1>
-
-    {{> parentgetsession}}
-</body>
-
-<template name="parentgetsession">
-    <div class='container'>
-        <table class='table'>
-            <thead>
-                <tr>
-                    <th>Sessions List</th>
-                    <th>Infant Month</th>
-                    
-                </tr>
-            </thead>
-            <tbody>
-                {{#each parent1 }}
-                <tr>
-                     <td>{{SessionList}}</td>
-                     <td>{{InfantMonth}}</td>
-                </tr>
-                {{/each}}
-            </tbody>
-        </table>
-    <ul class="pager">
-        <li class='previous'><a href="#">Previous</a></li>
-        <li class='next'><a href="#">Next</a></li> 
-    </ul>
-    </div>
-</template>
+                  </template>   

@@ -1,37 +1,55 @@
 
+ 
+//import '../Others/feed.js';
+//import '../Others/routes.js';
 import { Template } from 'meteor/templating';
-import {parent1} from '../../api/task.js';
 
-import './Parent/parentgetsession.html';
+import {Parent1} from '../../api/task.js';
 
-if (Meteor.isClient) {
-     Session.setDefault("skip",0);
-     Deps.autorun(function(){
-           Meteor.subscribe("getSession",Session.get("skip"))
-     });
-     Template.parentgetsession.helpers({
-         parent1 :function() {
-             return parent1.find();
-         }
-     });
 
-     Template.parentgetsession.events({
-         'click .previous':function(){
-             if(Session.get('skip')>2){
-                 Session.set('skip',Session.get('skip')-2);
-             }
-         },
-         'click .next':function(){
-              Session.set('skip',Session.get('skip')+2);
-         }
-     })
-}
 
-if (Meteor.isServer) {
-     Meteor.startup(function () {
-         Meteor.publish('getSession',function(skipCount){
-             return parent1.find({},{limit:2,skip:skipCount});
-         })
-        
-     });
-}
+import './parentGetSession.html';
+
+
+Template.parentGetSession.onCreated(function () {
+    this.pagination = new Meteor.Pagination(Parent1, {
+        sort: {
+            _id: -1
+        }
+    });
+});
+
+Template.parentGetSession.helpers({
+    isReady: function () {
+        return Template.instance().pagination.ready();
+    },
+    templatePagination: function () {
+        return Template.instance().pagination;
+    },
+    parent1: function () {
+     
+        return Template.instance().pagination.getPage();
+    },
+    // optional helper used to return a callback that should be executed before changing the page
+   
+    clickEvent: function() {
+        return function(e, templateInstance, clickedPage) {
+            e.preventDefault();
+            console.log('Changing page from ', templateInstance.data.pagination.currentPage(), ' to ', clickedPage);
+        };
+    }
+});
+
+Template.getSession.events({
+    'click .reg': function(){
+            console.log(Parent1.find({"text": sessionNo}).fetch());
+    },
+});
+
+
+
+
+
+
+
+

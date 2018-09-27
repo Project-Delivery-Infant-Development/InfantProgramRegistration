@@ -1,11 +1,16 @@
-
 import { Mongo } from 'meteor/mongo';
 
-export const Tasks = new Mongo.Collection('tasks');
 export const Tasks1 = new Mongo.Collection('tasks1');
-
+export const Parent = new Mongo.Collection('parent');
+export const Parent1 = new Mongo.Collection('parent1');
+export const User =new Mongo.Collection('user');
+export const Request=new Mongo.Collection('request');
+export const Lga=new Mongo.Collection('lga');
+export const Group=new Mongo.Collection('group');
+export const Sessions = new Mongo.Collection('sessions');
+export const Admin=new Mongo.Collection('admin');
+export const Facilitator=new Mongo.Collection('facilitator');
 export const Facilitators = new Mongo.Collection('facilitatorData');
-
-export const parent = new Mongo.Collection('parent');
-
-export const parent1 = new Mongo.Collection('parent1');
+export const ChangeRequests = new Mongo.Collection('changeRequestsData');
+export const Satisfactiondata = new Meteor.Collection('Satisfactiondata');
+export const Testing = new Mongo.Collection('testing');
