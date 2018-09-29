@@ -90,7 +90,10 @@ Session.attachSchema(Session.schema);
 export const Admin=new Mongo.Collection('admin');
 Admin.schema=new SimpleSchema({
    Id	: {type: String },
-   LgaId:{type: String }
+   Name: {type: String},
+   Email: {type: String},
+   Password:{type: String},
+   LgaId :{type: String }
 });
 Admin.attachSchema(Admin.schema);
 

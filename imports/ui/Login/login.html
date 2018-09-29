@@ -16,11 +16,13 @@
 
       {{#tabContent slug="ses2"}}
       <body>E-mail
-          <input type="text" name="E-mail">
+          <form class="adminlogin">
+          <input type="text" name="adminEmail">
           Password
-          <input type="password" name ="password">
-          <a href="{{pathFor route='admin'}}">Signin</a>
-      </body>
+          <input type="password" name ="adminPassword">
+          <input type="submit" value="Sign In"/>
+        </form> 
+        </body>
       {{/tabContent}}
       {{/basicTabs}}
 
