@@ -1,6 +1,7 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
 import { Meteor } from 'meteor/meteor';
+import { Admin } from '../../api/task.js';
 
 import './login.html';
 import '../Others/routes.js';
@@ -23,16 +24,35 @@ Template.login.helpers({
 
   activeTab: function(){
     console.log("Active tab here");
-  }
+    
+  },
+
+
 });
 
 Template.dashboard.events({
   'click .logout': function(event){
       event.preventDefault();
       Meteor.logout();
-  }
-});
+  },
 
+  'submit .adminlogin': function(event){
+      event.preventDefault();
+      
+      var em = event.target.adminEmail.value;
+      var pass = event.target.adminPassword.value;
+      
+
+  },
+});
+AccountsTemplates.addField({
+  _id: 'name',
+  type: 'text',
+  required: true,
+  displayName: "Full Name",
+  minLength: 1,
+  maxLength: 30,
+});
 AccountsTemplates.addField({
   _id: 'phone',
   type: 'tel',
@@ -75,7 +95,6 @@ AccountsTemplates.addField({
     },
   ],
 });
-
 
 
 // Template.login.events({
