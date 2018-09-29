@@ -1,73 +1,51 @@
+import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import { Parent, User, Request, Groups, Session, Lga, Admin, Facilitator } from './task.js';
 
 import './createDb.html';
 import '../ui/Others/routes.js';
 
-var count=0;
+var bcrypt = require('bcryptjs');
+
 
 Template.body.helpers({
     parents(){
         return Parent.find({});
     },
+    
 });
 
 Template.createDb.events({
-    'submit .frmRequest': function(event){
+        'submit .frmRequest': function(event){
         event.preventDefault();
-        var list="";
-        if(Parent.find({}).fetch({}.length > 0))
-            list+="Parent, ";
-        if(User.find({}).fetch({}).length > 0)
-            list+="User, ";
-        if(Request.find({}).fetch({}).length > 0)
-            list+="Request, ";
-        if(Groups.find({}).fetch({}).length > 0)
-            list+="Groups, ";
-        if(Session.find({}).fetch({}).length > 0)
-            list+="Sessions, " ;
-        if(Lga.find({}).fetch({}).length > 0)
-            list+="Lga, ";
-        if(Admin.find({}).fetch({}).length > 0)
-            list+="Admin, ";
-        if(Facilitator.find({}).fetch({}).length > 0)
-            list+="Facilitator "
-            event.target.list.hidden=false;
-            event.target.list.value="Hlelow";
-        //console.log(event.target.list);
-        //console.log(event.target.option);
         
         var option=event.target.option.value;
         console.log(option);
-if(option=="justcreate")
+        if(option=="justcreate")
+                    createDb();
+        else if(option=="dropncreate")
+        {
+            dropDb();
             createDb();
-else if(option=="dropncreate")
-{
-     dropDb();
-    // createDb();
-}   
-            
+        }   
         window.alert("Database Created Successfully..!");
- //       clearform(event);
-        
     },
 
 });
 
 function dropDb()
 {
-    Parent.find().fetch({}).forEach(_id => {
-        console.log(Parent.remove({id:_id}));
-    });
+    console.log(Meteor.call('removeData'));
 }
 //Database sample data entry code..
 function createDb()
     {
+        var hash = bcrypt.hashSync("defaultpass", 10);
         User.insert( 
             {
                 _id:"PA001",
                 Id:"PA001",
-                Password: "default",
+                Password: hash,
                 fname: "PA",
                 lname: "L",
                 address: "string",
@@ -83,7 +61,7 @@ function createDb()
             {
                 _id:"PA002",
                 Id:"PA002",
-                Password: "default",
+                Password: hash,
                 fname: "PA",
                 lname: "L",
                 address: "string",
@@ -99,7 +77,7 @@ function createDb()
             {
                 _id:"PA003",
                 Id:"PA003",
-                Password: "default",
+                Password: hash,
                 fname: "PA",
                 lname: "L",
                 address: "string",
@@ -115,7 +93,7 @@ function createDb()
             {
                 _id:"AD001",
                 Id:"AD001",
-                Password: "default",
+                Password: hash,
                 fname: "PA",
                 lname: "L",
                 address: "string",
@@ -131,7 +109,7 @@ function createDb()
             {
                 _id:"AD002",
                 Id:"AD002",
-                Password: "default",
+                Password: hash,
                 fname: "PA",
                 lname: "L",
                 address: "string",
@@ -148,7 +126,7 @@ function createDb()
             {
                 _id:"FA001",
                 Id:"FA001",
-                Password: "default",
+                Password: hash,
                 fname: "PA",
                 lname: "L",
                 address: "string",
@@ -165,7 +143,7 @@ function createDb()
             {
                 _id:"FA002",
                 Id:"FA002",
-                Password: "default",
+                Password: hash,
                 fname: "PA",
                 lname: "L",
                 address: "string",
@@ -235,30 +213,33 @@ function createDb()
 
         //Start: Request table records............................................
         Request.insert({
-            _id:"Req001",
+            _id:"001",
             From:"PA001",
             Type:"Session Change",
             DateFrom:new Date(),
             DateTo:new Date(2018,12,11),
-            Remarks:"Request for Change"
+            Remarks:"Request for Change",
+            createdAt: new Date()
         });
 
         Request.insert({
-            _id:"Req002",
+            _id:"002",
             From:"PA002",
             Type:"Access Request",
             DateFrom:new Date(),
             DateTo:new Date(2018,12,11),
-            Remarks:"Request for Change"
+            Remarks:"Request for Change",
+            createdAt: new Date()
         });
 
         Request.insert({
-            _id:"Req003",
+            _id:"003",
             From:"PA003",
             Type:"Session Change",
             DateFrom:new Date(),
             DateTo:new Date(2018,12,11),
-            Remarks:"Request for Change"
+            Remarks:"Request for Change",
+            createdAt: new Date()
         });
 
         //End: Request table records............................................
