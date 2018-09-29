@@ -43,10 +43,11 @@ User.attachSchema(User.schema);
 export const Request=new Mongo.Collection('request');
 Request.schema=new SimpleSchema({
      From: {type: String},
-     Type: {type:String },
-     DateFrom:{type:Date },
+     Type: {type: String },
+     DateFrom:{type: Date },
      DateTo:{type: Date },
-     Remarks:{type:String}
+     Remarks:{type: String},
+     createdAt: {type: Date}
 });
 Request.attachSchema(Request.schema);
 

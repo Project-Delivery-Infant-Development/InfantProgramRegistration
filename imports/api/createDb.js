@@ -5,6 +5,8 @@ import { Parent, User, Request, Groups, Session, Lga, Admin, Facilitator } from 
 import './createDb.html';
 import '../ui/Others/routes.js';
 
+var bcrypt = require('bcryptjs');
+
 
 Template.body.helpers({
     parents(){
@@ -38,11 +40,12 @@ function dropDb()
 //Database sample data entry code..
 function createDb()
     {
+        var hash = bcrypt.hashSync("defaultpass", 10);
         User.insert( 
             {
                 _id:"PA001",
                 Id:"PA001",
-                Password: "default",
+                Password: hash,
                 fname: "PA",
                 lname: "L",
                 address: "string",
@@ -58,7 +61,7 @@ function createDb()
             {
                 _id:"PA002",
                 Id:"PA002",
-                Password: "default",
+                Password: hash,
                 fname: "PA",
                 lname: "L",
                 address: "string",
@@ -74,7 +77,7 @@ function createDb()
             {
                 _id:"PA003",
                 Id:"PA003",
-                Password: "default",
+                Password: hash,
                 fname: "PA",
                 lname: "L",
                 address: "string",
@@ -90,7 +93,7 @@ function createDb()
             {
                 _id:"AD001",
                 Id:"AD001",
-                Password: "default",
+                Password: hash,
                 fname: "PA",
                 lname: "L",
                 address: "string",
@@ -106,7 +109,7 @@ function createDb()
             {
                 _id:"AD002",
                 Id:"AD002",
-                Password: "default",
+                Password: hash,
                 fname: "PA",
                 lname: "L",
                 address: "string",
@@ -123,7 +126,7 @@ function createDb()
             {
                 _id:"FA001",
                 Id:"FA001",
-                Password: "default",
+                Password: hash,
                 fname: "PA",
                 lname: "L",
                 address: "string",
@@ -140,7 +143,7 @@ function createDb()
             {
                 _id:"FA002",
                 Id:"FA002",
-                Password: "default",
+                Password: hash,
                 fname: "PA",
                 lname: "L",
                 address: "string",
@@ -210,30 +213,33 @@ function createDb()
 
         //Start: Request table records............................................
         Request.insert({
-            _id:"Req001",
+            _id:"001",
             From:"PA001",
             Type:"Session Change",
             DateFrom:new Date(),
             DateTo:new Date(2018,12,11),
-            Remarks:"Request for Change"
+            Remarks:"Request for Change",
+            createdAt: new Date()
         });
 
         Request.insert({
-            _id:"Req002",
+            _id:"002",
             From:"PA002",
             Type:"Access Request",
             DateFrom:new Date(),
             DateTo:new Date(2018,12,11),
-            Remarks:"Request for Change"
+            Remarks:"Request for Change",
+            createdAt: new Date()
         });
 
         Request.insert({
-            _id:"Req003",
+            _id:"003",
             From:"PA003",
             Type:"Session Change",
             DateFrom:new Date(),
             DateTo:new Date(2018,12,11),
-            Remarks:"Request for Change"
+            Remarks:"Request for Change",
+            createdAt: new Date()
         });
 
         //End: Request table records............................................
