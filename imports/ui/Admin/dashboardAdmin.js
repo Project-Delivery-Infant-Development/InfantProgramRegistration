@@ -5,13 +5,15 @@ import { ReactiveDict } from 'meteor/reactive-dict';
 import './atten.js';
 import './admin.js';
 import { DataSource } from './DataSource.js';
-import './dashboard.html';
+import './dashboardAdmin.html';
 import '../Others/routes.js';
+import '../Others/feed.js';
+
 
 
 var chart;
 var chart1;
-Template.dashboard.rendered=function(){
+Template.dashboardAdmin.rendered=function(){
     var container = this.find("#container");
     var data = DataSource.find({}).fetch();
 chart = anychart.pie(data);

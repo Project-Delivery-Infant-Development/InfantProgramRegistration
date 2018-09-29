@@ -7,11 +7,7 @@
        {{#if currentUser}}
        <a href="{{pathFor route='attendence'}}">Facilitator</a>
        <a href="#">LGA</a>
-<<<<<<< HEAD
-       {{>logoff}}
-=======
-       {{>dashboard}}
->>>>>>> a42d7b7b451db37c02f9995293bf39d2a6d65214
+       {{> dashboard}}
        {{else}}
       {{> atForm}}
       {{/if}}
@@ -30,14 +26,7 @@
 
     </template>
 
-<<<<<<< HEAD
-      <template name="logoff">
-          <p>You're logged in.</p>
-          <p><a href="#" class="logout">Logout</a></p>
-  </template>    
-=======
       <template name="dashboard">
           <p>You're logged in.</p>
           <p><a href="#" class="logout">Logout</a></p>
   </template>    
->>>>>>> a42d7b7b451db37c02f9995293bf39d2a6d65214
