@@ -15,7 +15,7 @@ Template.allFacilitators.onCreated(function bodyOnCreated() {
           // If hide completed is checked, filter tasks
           return Facilitators.find({ checked: { $ne: true } }, { sort: { createdAt: -1 } });
         }
-        return Facilitators.find({});
+        return Facilitators.find({}, { sort: { createdAt: -1 } });
     },
   });
   Template.allFacilitators.events({

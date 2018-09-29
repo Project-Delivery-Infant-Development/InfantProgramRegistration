@@ -137,6 +137,18 @@ Router.route('register_parent',{
   },
 });
 
+Router.route('parentGetSession',{
+  templateLayout: 'parentGetSession',
+  path: '/parents/parentGetSession',
+  template: 'parentGetSession',
+  onBeforeFunction: function(){
+    import '../imports/ui/Parent/parentGetSession.html';
+    this.next();
+  },
+  action: function(){
+    this.render('parentGetSession');
+  },
+});
 
 //<--------Facilitator Page Routes------------>
 
@@ -195,16 +207,16 @@ Router.route('admin', {
   },
 });
 
-Router.route('dashboard',{
-  templateLayout: 'dashboard',
-  path: '/admin/dashboard',
-  template: 'dashboard',
+Router.route('dashboardAdmin',{
+  templateLayout: 'dashboardAdmin',
+  path: '/admin/dashboardAdmin',
+  template: 'dashboardAdmin',
   onBeforeFunction: function(){
-    import '../imports/ui/Admin/dashboard.html';
+    import '../imports/ui/Admin/dashboardAdmin.html';
     this.next();
   },
   action: function(){
-    this.render('dashboard');
+    this.render('dashboardAdmin');
   },
 });
 
@@ -317,6 +329,8 @@ Router.route('createDb',{
   },
   action: function(){
     this.render('createDb');
+  },
+});
 
 Router.route('sessionChangeRequest',{
   templateLayout: 'sessionChangeRequest',
@@ -331,9 +345,3 @@ Router.route('sessionChangeRequest',{
 
   },
 });
-
-
-// Router.route('/genSettings', function (){
-//   this.render('genSettings');
-// });
-

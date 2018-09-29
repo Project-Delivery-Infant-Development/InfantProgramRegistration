@@ -90,7 +90,10 @@ Session.attachSchema(Session.schema);
 export const Admin=new Mongo.Collection('admin');
 Admin.schema=new SimpleSchema({
    Id	: {type: String },
-   LgaId:{type: String }
+   Name: {type: String},
+   Email: {type: String},
+   Password:{type: String},
+   LgaId :{type: String }
 });
 Admin.attachSchema(Admin.schema);
 
@@ -103,6 +106,9 @@ Facilitator.schema=new SimpleSchema({
 Facilitator.attachSchema(Facilitator.schema);
 
 
-export const Facilitators = new Mongo.Collection('facilitatorData');
 export const ChangeRequests = new Mongo.Collection('changeRequestsData');
+
+export const Parent1 = new Mongo.Collection('parent1');
+export const Facilitators = new Mongo.Collection('facilitatorData');
 export const Satisfactiondata = new Meteor.Collection('Satisfactiondata');
+export const Testing = new Mongo.Collection('testing');
