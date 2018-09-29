@@ -1,0 +1,42 @@
+<template name="changePwd">
+    <body>
+        <style>
+         .container *{ margin:5px;}
+        </style>
+    {{> nav_parent}}
+    <img src="/logo.PNG" alt="logo">
+        <center><h3>Change Password</h3></center>
+        <div class="container" style="margin:15px; ">
+            <form name="frmPwd" id="frmPwd" class="frmPwd">
+            <div class="row">
+            <div class="col">
+                <label>Current Password:</label>
+            </div>
+            <div class="col">
+            <input required type="password" id="old_Pwd" name="old_Pwd" >
+            </div>
+            <div class="col">
+                <label>New Password:</label>
+            </div>
+            <div class="col">
+                <input required type="password" id="new_Pwd" name="new_Pwd" >
+            </div>
+            <div class="col">
+                <label>Confirm-Password:</label>
+            </div>
+            <div class="col">
+                <input required type="password" id="cnf_new_Pwd" name="cnf_new_Pwd" >
+            </div>
+            <div class="col-md-3">
+                <input type="submit" value="Update" id="submit" name="submit">     &nbsp;&nbsp;&nbsp;
+                <input type="button" value="Cancel" id="cancel" name="cancel">
+            </div>
+            </div>
+            </form>
+            <footer>
+                <center>&copy; All rights Reserved. Reasearch by Deakin University with </center>         
+            </footer>
+        </div>
+        
+    </body>
+</template>
