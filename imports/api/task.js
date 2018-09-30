@@ -26,10 +26,11 @@ Parent.attachSchema(Parent.schema);
 export const Request=new Mongo.Collection('request');
 Request.schema=new SimpleSchema({
      From: {type: String},
-     Type: {type:String },
-     DateFrom:{type:Date },
+     Type: {type: String },
+     DateFrom:{type: Date },
      DateTo:{type: Date },
-     Remarks:{type:String}
+     Remarks:{type: String},
+     createdAt: {type: Date}
 });
 Request.attachSchema(Request.schema);
 
@@ -73,9 +74,6 @@ Session.attachSchema(Session.schema);
 export const Admin=new Mongo.Collection('admin');
 Admin.schema=new SimpleSchema({
    Id	: {type: String },
-   Name: {type: String},
-   Email: {type: String},
-   Password:{type: String},
    LgaId :{type: String }
 });
 Admin.attachSchema(Admin.schema);

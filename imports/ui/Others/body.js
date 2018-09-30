@@ -13,6 +13,8 @@ import './home.html';
 import './providers.html';
 import '../Parent/parent.js';
 import '../Parent/changeRequest.js';
+import '../Parent/genSettings.js';
+import '../Parent/changePwd.js';
 import '../Facilitator/addGroup.js';
 import '../Facilitator/addGroup.html';
 import '../Parent/changeRequest.js';
@@ -26,7 +28,8 @@ import '../Admin/admin.js';
 import '../Admin/atten.js';
 import '../../api/task.js';
 import '../Others/feed.js';
-
+import '../../api/createDb.js';
+import '../Others/addUser.js'
 
 ReactiveTabs.createInterface({
   template:'basicTabs',
