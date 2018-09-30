@@ -45,6 +45,7 @@ Template.dashboard.events({
 
   },
 });
+
 AccountsTemplates.addField({
   _id: 'name',
   type: 'text',
@@ -53,6 +54,7 @@ AccountsTemplates.addField({
   minLength: 1,
   maxLength: 30,
 });
+
 AccountsTemplates.addField({
   _id: 'phone',
   type: 'tel',

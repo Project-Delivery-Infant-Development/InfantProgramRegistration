@@ -334,7 +334,7 @@ Router.route('viewRecords',{
 
 Router.route('createDb',{
   templateLayout: 'createDb',
-  path: '/createDb',
+  path: '/admin/createDb',
   template: 'createDb',
   onBeforeFunction: function(){
     import '../imports/api/createDb.html';
@@ -346,10 +346,10 @@ Router.route('createDb',{
 });
 Router.route('addUser',{
   templateLayout: 'addUser',
-  path: '/addUser',
+  path: '/admin/addUser',
   template: 'addUser',
   onBeforeFunction: function(){
-    import '../imports/ui/Others/addUser.html';
+    import '../imports/ui/Admin/addUser.html';
     this.next();
   },
   action: function(){

@@ -29,7 +29,7 @@ import '../Admin/atten.js';
 import '../../api/task.js';
 import '../Others/feed.js';
 import '../../api/createDb.js';
-import '../Others/addUser.js'
+import '../Admin/addUser.js'
 
 ReactiveTabs.createInterface({
   template:'basicTabs',
