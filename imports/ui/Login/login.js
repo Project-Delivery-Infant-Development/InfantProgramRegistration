@@ -4,15 +4,15 @@ import { Meteor } from 'meteor/meteor';
 import { Admin } from '../../api/task.js';
 
 import './login.html';
+import '../Others/home.html';
 import '../Others/routes.js';
 import '../Others/feed.js';
 import '../Facilitator/attendence.js';
 import '../Admin/admin.js';
 import '../Others/feed.js';
 import './schema.js';
-import '../Facilitator/attendence.js';
 import '../Parent/parent.js';
-
+import '../Others/body.js';
 
 Template.login.helpers({
   tabs: function(){

@@ -1,5 +1,5 @@
 import { Template } from 'meteor/templating';
-import {Parent} from '../../api/task.js';
+import { Parent } from '../../api/task.js';
 
 import './parent.html';
 import './nav_parent.js';
@@ -10,7 +10,10 @@ import '../Others/routes.js';
 
 Template.parent.helpers({
     parents(){
-        return Parent.find({Id:"PA001"});
+        return Parent.find({});
+    },
+    n(){
+        return Meteor.users.find({}).fetch()[0].profile.name;
     },
 });
 

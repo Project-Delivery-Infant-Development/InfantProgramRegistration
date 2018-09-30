@@ -13,6 +13,7 @@ Template.changePwd.helpers({
 
 Template.changePwd.events({
     'submit .frmPwd': function(event){
+        
         event.preventDefault();
         var userid="PA001"; //Should be taken from the session.
         var col=User.find({Id:userid}).fetch({});
