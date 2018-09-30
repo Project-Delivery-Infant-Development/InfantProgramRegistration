@@ -17,17 +17,16 @@ import { Facilitators } from '../../api/task';
    
       // Get value from form element
       const target = event.target;
-      const name = target.name.value;
-      
+      const text = target.text.value;
+   
       // Insert a task into the collection
       Facilitators.insert({
-        name,
+        text,
         createdAt: new Date(), // current time
       });
    
       // Clear form
-      target.name.value = '';
-     
+      target.text.value = '';
     },
   });
   // Template.addFacilitators.helpers({
