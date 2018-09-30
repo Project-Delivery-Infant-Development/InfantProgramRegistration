@@ -344,6 +344,18 @@ Router.route('createDb',{
     this.render('createDb');
   }
 });
+Router.route('addUser',{
+  templateLayout: 'addUser',
+  path: '/addUser',
+  template: 'addUser',
+  onBeforeFunction: function(){
+    import '../imports/ui/Others/addUser.html';
+    this.next();
+  },
+  action: function(){
+    this.render('addUser');
+  }
+});
 
 Router.route('sessionChangeRequest',{
   templateLayout: 'sessionChangeRequest',
