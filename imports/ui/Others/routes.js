@@ -72,18 +72,18 @@ Router.route('for_providers',{
 
 //<----------------Parents Page Routes------------------>
 
-Router.route('parent',{
-  layoutTemplate: 'parent',
-  path: '/parents/parent',
-  template: 'parent',
-  onBeforeAction: function(){
-    import '../imports/ui/Parent/parent.html';
-    this.next();
-  },
-  action: function(){
-    this.render('parent');
-  },
-});
+// Router.route('parent',{
+//   layoutTemplate: 'parent',
+//   path: '/parents/parent',
+//   template: 'parent',
+//   onBeforeAction: function(){
+//     import '../imports/ui/Parent/parent.html';
+//     this.next();
+//   },
+//   action: function(){
+//     this.render('parent');
+//   },
+// });
 
 Router.route('changeRequest',{
   templateLayout: 'changeRequest',
