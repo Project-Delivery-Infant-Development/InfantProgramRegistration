@@ -1,4 +1,5 @@
 export const DataSource = new Meteor.Collection('DataSource');
+export const DataSource1 = new Meteor.Collection('DataSource1');
 
 if(Meteor.isClient) {
   Meteor.startup(function() {
@@ -15,4 +16,15 @@ if(Meteor.isClient) {
     }
   });
 }
-       
+if(Meteor.isClient) {
+  Meteor.startup(function() {
+    if (!DataSource1.find({}).fetch().length) {
+      DataSource1.insert({x: 'session 1 Good', value: 63});
+      DataSource1.insert({x: 'session 1 Bad', value: 72});
+      DataSource1.insert({x: 'session 2 Good', value: 78});
+      DataSource1.insert({x: 'session 2 Bad', value: 90});
+      DataSource1.insert({x: 'session 3 Good', value: 90});
+      DataSource1.insert({x: 'session 3 Bad', value: 90});
+    }
+  });
+}
