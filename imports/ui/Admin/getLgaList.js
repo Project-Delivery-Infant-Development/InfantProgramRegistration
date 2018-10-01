@@ -18,6 +18,11 @@ Template.viewlga.onCreated(function bodyOnCreated(){
             return Lga.find({});
      }
 });
+Template.viewlga.events({
+    'click .delete' : function(event){
+        Lga.remove(this._id);
+    }, 
+});
 
 
  
