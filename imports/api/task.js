@@ -3,7 +3,6 @@ import SimpleSchema  from 'simpl-schema';
 export const test=new Mongo.Collection('test');
   
 export const Tasks1 = new Mongo.Collection('tasks1');
-
 export const Parent = new Mongo.Collection('parent');
 Parent.schema = new SimpleSchema({
       Id:{type: String} ,

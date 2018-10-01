@@ -1,0 +1,57 @@
+<template name="admin_lga">
+    {{>admin}}
+    <h1>Adding LGA</h1>
+<!--     
+    {{#autoForm id="afInsertDemo" type="insert" collection=Lga}}
+    <fieldset>
+  <div class="form-group {{#if afFieldIsInvalid name='LgaId'}}has-error{{/if}}">
+    <label class="control-label">{{afFieldLabelText name='LgaId'}}</label>
+    {{> afFieldInput name='LgaId'}}
+    {{#if afFieldIsInvalid name='LgaId'}}
+    <span class="help-block">{{{afFieldMessage name='LgaId'}}}</span>
+    {{/if}}
+  </div>
+  <div class="form-group {{#if afFieldIsInvalid name='lastName'}}has-error{{/if}}">
+    <label class="control-label">{{afFieldLabelText name='lastName'}}</label>
+    {{> afFieldInput name='lastName'}}
+    {{#if afFieldIsInvalid name='lastName'}}
+    <span class="help-block">{{{afFieldMessage name='lastName'}}}</span>
+    {{/if}}
+  </div>
+  <div class="form-group {{#if afFieldIsInvalid name='age'}}has-error{{/if}}">
+    <label class="control-label">{{afFieldLabelText name='age'}}</label>
+    {{> afFieldInput name='age'}}
+    {{#if afFieldIsInvalid name='age'}}
+    <span class="help-block">{{{afFieldMessage name='age'}}}</span>
+    {{/if}}
+  </div>
+  <div class="form-group">
+    <button type="submit" >Add Person</button>
+    <button type="reset" >Reset Form</button>
+  </div>
+</fieldset>
+{{/autoForm}} -->
+
+<form class="addlga">
+    <label for="LgaId">LgaId :</label>
+    <input type="text" name="lgaid"  placeholder="LgaId"><br>
+    
+    <label for="Address">Address :</label>
+    <input type="text"  name="address" placeholder="Address"><br>
+    
+    <label for="Pcode">Pcode :</label>
+    <input type="number" name="pcode"   placeholder="pin code"><br>
+    
+    <label for="Phone">Phone :</label>
+    <input type="number" name="phone"  placeholder="phone number"><br>
+    
+    <label for="Email">Email :</label>
+    <input type="text"  name="email" placeholder="email"><br>
+
+    <label for="Sess_Mode">Sess_Mode :</label>
+    <input type="text"  name="Sess_Mode" placeholder="session mode"><br>
+    
+    <input type="submit"  value="Done"  >
+									
+</form>
+</template>

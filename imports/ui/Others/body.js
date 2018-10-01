@@ -24,6 +24,8 @@ import '../Login/login.js';
 import '../Login/login.html';
 import '../Admin/admin.js';
 import '../Admin/atten.js';
+import '../Admin/admin_lga.html';
+import '../Admin/admin_lga.js';
 import '../../api/task.js';
 import '../Others/feed.js';
 

@@ -219,6 +219,18 @@ Router.route('dashboardAdmin',{
     this.render('dashboardAdmin');
   },
 });
+Router.route('admin_lga',{
+  templateLayout: 'admin_lga',
+  path: '/admin/admin_lga',
+  template: 'admin_lga',
+  onBeforeFunction: function(){
+    import '../imports/ui/Admin/admin_lga.html';
+    this.next();
+  },
+  action: function(){
+    this.render('admin_lga');
+  },
+});
 
 Router.route('satisfaction',{
   templateLayout: 'satisfaction',
