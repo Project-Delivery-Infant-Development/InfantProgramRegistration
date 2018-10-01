@@ -72,18 +72,18 @@ Router.route('for_providers',{
 
 //<----------------Parents Page Routes------------------>
 
-Router.route('parent',{
-  layoutTemplate: 'parent',
-  path: '/parents/parent',
-  template: 'parent',
-  onBeforeAction: function(){
-    import '../imports/ui/Parent/parent.html';
-    this.next();
-  },
-  action: function(){
-    this.render('parent');
-  },
-});
+// Router.route('parent',{
+//   layoutTemplate: 'parent',
+//   path: '/parents/parent',
+//   template: 'parent',
+//   onBeforeAction: function(){
+//     import '../imports/ui/Parent/parent.html';
+//     this.next();
+//   },
+//   action: function(){
+//     this.render('parent');
+//   },
+// });
 
 Router.route('changeRequest',{
   templateLayout: 'changeRequest',
@@ -98,19 +98,70 @@ Router.route('changeRequest',{
   },
 });
 
-Router.route('settings',{
-  templateLayout: 'settings',
-  path: '/parents/settings',
-  template: 'settings',
+Router.route('genSettings',{
+  templateLayout: 'genSettings',
+  path: '/parents/Settings',
+  template: 'genSettings',
+  onBeforeFunction: function(){
+    import '../imports/ui/Parent/genSettings.html';
+    this.next();
+  },
+  action: function(){
+    this.render('genSettings');
+  },
+});
+
+Router.route('changePwd',{
+  templateLayout: 'changePwd',
+  path: '/User/ChangePassword',
+  template: 'changePwd',
+  onBeforeFunction: function(){
+    import '../imports/ui/Parent/changePwd.html';
+    this.next();
+  },
+  action: function(){
+    this.render('changePwd');
+  },
+});
+
+Router.route('update-email',{
+  templateLayout: 'update-email',
+  path: '/parents/update-email',
+  template: 'update-email',
   onBeforeFunction: function(){
     import '../imports/ui/Parent/parent.html';
     this.next();
   },
   action: function(){
-    this.render('settings');
+    this.render('update-email');
   },
 });
 
+Router.route('register_parent',{
+  templateLayout: 'register_parent',
+  path: '/parents/register_parent',
+  template: 'register_parent',
+  onBeforeFunction: function(){
+    import '../imports/ui/Parent/parent.html';
+    this.next();
+  },
+  action: function(){
+    this.render('register_parent');
+  },
+});
+
+Router.route('parentGetSession',{
+  templateLayout: 'parentGetSession',
+  path: '/parents/parentGetSession',
+  template: 'parentGetSession',
+  onBeforeFunction: function(){
+    import '../imports/ui/Parent/parentGetSession.html';
+    this.next();
+  },
+  action: function(){
+    this.render('parentGetSession');
+  },
+});
 
 //<--------Facilitator Page Routes------------>
 
@@ -168,6 +219,58 @@ Router.route('admin', {
     this.render('atten');
   },
 });
+
+Router.route('dashboardAdmin',{
+  templateLayout: 'dashboardAdmin',
+  path: '/admin/dashboardAdmin',
+  template: 'dashboardAdmin',
+  onBeforeFunction: function(){
+    import '../imports/ui/Admin/dashboardAdmin.html';
+    this.next();
+  },
+  action: function(){
+    this.render('dashboardAdmin');
+  },
+});
+Router.route('admin_lga',{
+  templateLayout: 'admin_lga',
+  path: '/admin/admin_lga',
+  template: 'admin_lga',
+  onBeforeFunction: function(){
+    import '../imports/ui/Admin/admin_lga.html';
+    this.next();
+  },
+  action: function(){
+    this.render('admin_lga');
+  },
+});
+
+Router.route('satisfaction',{
+  templateLayout: 'satisfaction',
+  path: '/admin/satisfaction',
+  template: 'satisfaction',
+  onBeforeFunction: function(){
+    import '../imports/ui/Admin/satisfaction.html';
+    this.next();
+  },
+  action: function(){
+    this.render('satisfaction');
+  },
+});
+
+Router.route('facilitators',{
+  templateLayout: 'facilitators',
+  path: '/admin/facilitators',
+  template: 'facilitators',
+  onBeforeFunction: function(){
+    import '../imports/ui/Admin/facilitators.html';
+    this.next();
+  },
+  action: function(){
+    this.render('facilitators');
+  },
+});
+
 
 //<-------------Login Template Route------------->
 
@@ -241,7 +344,41 @@ Router.route('viewRecords',{
 });
 
 
-// Router.route('/genSettings', function (){
-//   this.render('genSettings');
-// });
+Router.route('createDb',{
+  templateLayout: 'createDb',
+  path: '/admin/createDb',
+  template: 'createDb',
+  onBeforeFunction: function(){
+    import '../imports/api/createDb.html';
+    this.next();
+  },
+  action: function(){
+    this.render('createDb');
+  }
+});
+Router.route('addUser',{
+  templateLayout: 'addUser',
+  path: '/admin/addUser',
+  template: 'addUser',
+  onBeforeFunction: function(){
+    import '../imports/ui/Admin/addUser.html';
+    this.next();
+  },
+  action: function(){
+    this.render('addUser');
+  }
+});
 
+Router.route('sessionChangeRequest',{
+  templateLayout: 'sessionChangeRequest',
+  path: '/lga/sessionChangeRequest',
+  template: 'sessionChangeRequest',
+  onBeforeFunction: function(){
+    import '../imports/ui/LGA/sessionChangeRequest.html';
+    this.next();
+  },
+  action: function(){
+    this.render('sessionChangeRequest');
+
+  },
+});

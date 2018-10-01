@@ -7,6 +7,7 @@ import { ChangeRequests } from '../../api/task.js';
 Template.sessionChangeRequest.onCreated(function bodyOnCreated() {
     this.state = new ReactiveDict();
   });
+  
 
   Template.sessionChangeRequest.helpers({
     sessionChangeRequestData() {
@@ -25,7 +26,7 @@ Template.sessionChangeRequest.onCreated(function bodyOnCreated() {
         $set: { checked: ! this.checked },
       });
     },
-    'click .delete'() {
+    'click .decline'() {
         ChangeRequests.remove(this._id);
     },
     'change .hide-completed input'(event, instance) {

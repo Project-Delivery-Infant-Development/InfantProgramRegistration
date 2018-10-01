@@ -1,0 +1,31 @@
+<template name="createDb">
+    <body>
+        <style>
+            .container *{ margin:5px;}
+        </style>
+        <img src="/logo.PNG" alt="logo">
+        <div class="container" style="margin:15px; ">
+        <form id="frmRequest" class="frmRequest" >
+                <h2 style="color:red">If you are here by MISTAKE.. GO BACK!!!!!!!!</h2>            
+                <div class="row">
+                    You are about to play with the database of your application.
+                </div>
+                <div class="row">
+                    Select the option you want to perform.
+                </div>
+                <div class="row">
+                    <div class="col" >
+                        <input type="radio" checked name="option" value="justcreate"> Create Tables only (If not exist).
+                    </div>
+                    <div class="col" style="color:red">
+                        <input type="radio" name="option" value="dropncreate"> Reset Database (Delete all data and reset to default state).
+                    </div>
+                </div>
+                    <input type="submit" value="Create DB" id="Submit" name="Submit"> &nbsp; &nbsp; &nbsp;
+        </form>
+        </div>
+        <footer>
+            <center>&copy; All rights Reserved. Reasearch by Deakin University with </center>         
+        </footer>
+    </body>
+</template>

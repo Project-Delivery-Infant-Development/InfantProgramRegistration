@@ -13,17 +13,25 @@ import './home.html';
 import './providers.html';
 import '../Parent/parent.js';
 import '../Parent/changeRequest.js';
+import '../Parent/genSettings.js';
+import '../Parent/changePwd.js';
 import '../Facilitator/addGroup.js';
 import '../Facilitator/addGroup.html';
 import '../Parent/changeRequest.js';
 import '../Parent/changeRequest.html';
+import '../Parent/parentGetSession.js';
+import '../Parent/parentGetSession.html';
+
 import '../Login/login.js';
 import '../Login/login.html';
 import '../Admin/admin.js';
 import '../Admin/atten.js';
+import '../Admin/admin_lga.html';
+import '../Admin/admin_lga.js';
 import '../../api/task.js';
 import '../Others/feed.js';
-
+import '../../api/createDb.js';
+import '../Admin/addUser.js'
 
 ReactiveTabs.createInterface({
   template:'basicTabs',

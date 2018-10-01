@@ -248,3 +248,12 @@ body,html{
 	  .approve{
 		  color:green;
 	  }
+	  .addFac-container {
+		width: 50%;
+	}
+	.addFac-group {
+		padding: 10px;
+	}
+	span.label-object {
+		float: right;
+	}
