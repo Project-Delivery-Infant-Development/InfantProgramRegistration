@@ -9,48 +9,6 @@ import './admin_lga.html';
 
 import {  Lga } from '../../api/task.js';
 
-// import SimpleSchema from 'simpl-schema';
-// import { Tracker } from 'meteor/tracker';
-
-// Schemas = {};
-
-// Template.registerHelper("Schemas", Schemas);
-
-// Schemas.Person = new SimpleSchema({
-//   firstName: {
-//     type: String,
-//     index: 1,
-//     unique: true
-//   },
-//   lastName: {
-//     type: String,
-//     optional: true
-//   },
-//   age: {
-//     type: String,
-//     optional: true
-//   }
-// }, { tracker: Tracker });
-
-// var Collections = {};
-
-// Template.registerHelper("Collections", Collections);
-
-// People = Collections.People = new Mongo.Collection("People");
-// People.attachSchema(Schemas.Person);
-
-// Meteor.publish(null, function () {
-//   return Lga.find();
-// });
-
-// Lga.allow({
-//   insert: function () {
-//     return true;
-//   },
-//   remove: function () {
-//     return true;
-//   }
-// });
 Template.admin_lga.onCreated(function bodyOnCreated(){
     this.state = new ReactiveDict();
 });
