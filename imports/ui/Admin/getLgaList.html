@@ -1,0 +1,77 @@
+<template name="viewlga">
+    {{>admin}}
+    <div class="container">
+    <h1>View LGA</h1>
+    <table style="width:75%">
+            <tr>
+              <th>LgaId</th>
+              <th>Address</th> 
+              <th>Pin code</th>
+              <th>Phone</th>
+              <th>Email</th>
+              <th>Session mode</th>
+            </tr>
+            {{#each lgaview}}
+              {{> lgadisplay}}
+            {{/each}}
+          </table>
+        </div>     
+</template>
+
+<template name="lgadisplay">
+    <tr>
+    <td>{{LgaId}}</td>
+    <td>{{Address}}</td>
+    <td>{{Pcode}}</td>
+    <td>{{Phone}}</td>
+    <td>{{Email}}</td>
+    <td>{{Sess_Mode}}</td>
+    </tr>
+</template>
+
+<!-- <template name="lgaview">
+    <div class="container">
+        <header>
+             <center><h1>Get Session List</h1></center> 
+                
+        <br/>
+        </header>
+  <div >
+    <span class="s-item no">LGA ID</span>
+    <span class="s-item infantMonth">Addres</span>
+    <span class="s-item sessionLoc">Pcode</span>
+    <span class="s-item start">Phone</span>
+    <span class="s-item end">Email</span>
+    <span class="s-item sessionActv">Sess_Mode </span>
+      {{#if isReady}}
+          <ul>
+            {{#each lga1}}
+           
+            {{> getlga}}
+                
+           {{/each}}
+          </ul>
+            {{> defaultBootstrapPaginator  pagination=templatePagination limit=10 containerClass="text-center" onClick=clickEvent}}  
+         
+      {{else}}
+          Loading...
+      {{/if}}
+    
+  </div>
+  </div>
+  
+</template> 
+
+      <template name="getlga">
+          {{#each lga2}}
+          <div class="sessionChangeData">
+                  <span class="s-item no">{{LgaId}}</span>
+                  <span class="s-item infantMonth">{{Addres}}}</span>
+                  <span class="s-item sessionLoc">{{Pcode}}</span>
+                  <span class="s-item start">{{Phone}}</span>
+                  <span class="s-item end">{{Email}}</span>
+                  <span class="s-item sessionActv">{{Sess_mode}}</span>
+                   <input type="button" class="reg" value="Register">                   -->
+                  <!-- </div> -->
+        <!-- {{/each}} -->
+                  <!-- </template>    --> 
