@@ -98,16 +98,29 @@ Router.route('changeRequest',{
   },
 });
 
-Router.route('settings',{
-  templateLayout: 'settings',
-  path: '/parents/settings',
-  template: 'settings',
+Router.route('genSettings',{
+  templateLayout: 'genSettings',
+  path: '/parents/Settings',
+  template: 'genSettings',
   onBeforeFunction: function(){
-    import '../imports/ui/Parent/parent.html';
+    import '../imports/ui/Parent/genSettings.html';
     this.next();
   },
   action: function(){
-    this.render('settings');
+    this.render('genSettings');
+  },
+});
+
+Router.route('changePwd',{
+  templateLayout: 'changePwd',
+  path: '/User/ChangePassword',
+  template: 'changePwd',
+  onBeforeFunction: function(){
+    import '../imports/ui/Parent/changePwd.html';
+    this.next();
+  },
+  action: function(){
+    this.render('changePwd');
   },
 });
 
@@ -219,6 +232,18 @@ Router.route('dashboardAdmin',{
     this.render('dashboardAdmin');
   },
 });
+Router.route('admin_lga',{
+  templateLayout: 'admin_lga',
+  path: '/admin/admin_lga',
+  template: 'admin_lga',
+  onBeforeFunction: function(){
+    import '../imports/ui/Admin/admin_lga.html';
+    this.next();
+  },
+  action: function(){
+    this.render('admin_lga');
+  },
+});
 
 Router.route('satisfaction',{
   templateLayout: 'satisfaction',
@@ -321,7 +346,7 @@ Router.route('viewRecords',{
 
 Router.route('createDb',{
   templateLayout: 'createDb',
-  path: '/createDb',
+  path: '/admin/createDb',
   template: 'createDb',
   onBeforeFunction: function(){
     import '../imports/api/createDb.html';
@@ -329,7 +354,19 @@ Router.route('createDb',{
   },
   action: function(){
     this.render('createDb');
+  }
+});
+Router.route('addUser',{
+  templateLayout: 'addUser',
+  path: '/admin/addUser',
+  template: 'addUser',
+  onBeforeFunction: function(){
+    import '../imports/ui/Admin/addUser.html';
+    this.next();
   },
+  action: function(){
+    this.render('addUser');
+  }
 });
 
 Router.route('sessionChangeRequest',{
