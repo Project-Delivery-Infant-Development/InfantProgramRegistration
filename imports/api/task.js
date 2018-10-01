@@ -22,30 +22,14 @@ Parent.schema = new SimpleSchema({
 Parent.attachSchema(Parent.schema);
 
 
-export const User =new Mongo.Collection('user');
-User.schema=new SimpleSchema({
-   Id: { type: String  },
-   Password: {type: String },
-   fname: {type: String },
-   lname: {type: String },
-   address: {type: String },
-   pcode: {type: Number },
-   phone: {type: Number },
-   email: {type: String },
-   photo: { type: String },
-   role: { type: String },
-   status:{ type: String },
-   lastPassUpdate:{ type: Date }
-});
-User.attachSchema(User.schema);
-
 export const Request=new Mongo.Collection('request');
 Request.schema=new SimpleSchema({
      From: {type: String},
-     Type: {type:String },
-     DateFrom:{type:Date },
+     Type: {type: String },
+     DateFrom:{type: Date },
      DateTo:{type: Date },
-     Remarks:{type:String}
+     Remarks:{type: String},
+     createdAt: {type: Date}
 });
 Request.attachSchema(Request.schema);
 
@@ -89,9 +73,6 @@ Session.attachSchema(Session.schema);
 export const Admin=new Mongo.Collection('admin');
 Admin.schema=new SimpleSchema({
    Id	: {type: String },
-   Name: {type: String},
-   Email: {type: String},
-   Password:{type: String},
    LgaId :{type: String }
 });
 Admin.attachSchema(Admin.schema);
@@ -104,6 +85,13 @@ Facilitator.schema=new SimpleSchema({
 });
 Facilitator.attachSchema(Facilitator.schema);
 
+export const Attendence = new Mongo.Collection('attendence');
+Attendence.schema = new SimpleSchema({
+    ParentID:{type: String},
+    SessionID: {type: String},
+    Attended: {type: Boolean},
+});
+Attendence.attachSchema(Attendence.schema);
 
 export const ChangeRequests = new Mongo.Collection('changeRequestsData');
 

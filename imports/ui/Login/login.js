@@ -11,6 +11,7 @@ import '../Admin/admin.js';
 import '../Others/feed.js';
 import './schema.js';
 import '../Facilitator/attendence.js';
+import '../Parent/parent.js';
 
 
 Template.login.helpers({
@@ -35,16 +36,19 @@ Template.dashboard.events({
       event.preventDefault();
       Meteor.logout();
   },
+});
 
+Template.login.events({
   'submit .adminlogin': function(event){
-      event.preventDefault();
-      
-      var em = event.target.adminEmail.value;
-      var pass = event.target.adminPassword.value;
-      
-
+    event.preventDefault();
+    
+    var em = event.target.adminEmail.value;
+    var pass = event.target.adminPassword.value;
+    
+    var a = Admin.find({$and:[{Email:em, Password:pass}]}).fetch()[0].Name;
   },
 });
+
 AccountsTemplates.addField({
   _id: 'name',
   type: 'text',
@@ -53,6 +57,7 @@ AccountsTemplates.addField({
   minLength: 1,
   maxLength: 30,
 });
+
 AccountsTemplates.addField({
   _id: 'phone',
   type: 'tel',
