@@ -244,7 +244,18 @@ Router.route('admin_lga',{
     this.render('admin_lga');
   },
 });
-
+Router.route('viewlga',{
+  templateLayout: 'viewlga',
+  path: '/admin/lga/lga_list',
+  template: 'viewlga',
+  onBeforeFunction: function(){
+    import '../imports/ui/Admin/getLgaList.html';
+    this.next();
+  },
+  action: function(){
+    this.render('viewlga');
+  },
+});
 Router.route('satisfaction',{
   templateLayout: 'satisfaction',
   path: '/admin/satisfaction',

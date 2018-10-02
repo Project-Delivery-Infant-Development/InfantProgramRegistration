@@ -28,6 +28,7 @@ import '../Admin/admin.js';
 import '../Admin/atten.js';
 import '../Admin/admin_lga.html';
 import '../Admin/admin_lga.js';
+import '../Admin/getLgaList.js';
 import '../../api/task.js';
 import '../Others/feed.js';
 import '../../api/createDb.js';
