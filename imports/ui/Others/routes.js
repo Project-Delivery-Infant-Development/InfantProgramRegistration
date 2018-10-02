@@ -113,7 +113,7 @@ Router.route('genSettings',{
 
 Router.route('changePwd',{
   templateLayout: 'changePwd',
-  path: '/User/ChangePassword',
+  path: '/parent/changePwd',
   template: 'changePwd',
   onBeforeFunction: function(){
     import '../imports/ui/Parent/changePwd.html';

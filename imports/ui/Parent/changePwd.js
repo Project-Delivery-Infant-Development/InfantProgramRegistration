@@ -3,6 +3,8 @@ import {User, Parent} from '../../api/task.js';
 import './changePwd.html';
 import './parent.html';
 import './genSettings.html';
+import '../Others/routes.js';
+import './nav_parent.js';
 
 
 Template.changePwd.helpers({
