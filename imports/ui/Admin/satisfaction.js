@@ -17,8 +17,7 @@ if(Meteor.isClient) {
 }
 
 
-    var chart;
-
+var chart;
 Template.satisfaction.rendered=function(){
     var container = this.find("#container");
     var data = Satisfactiondata.find({}).fetch();
@@ -33,5 +32,5 @@ chart.legend()
 
 chart.animation(true);
 chart.container(container).draw();
-
 }
+

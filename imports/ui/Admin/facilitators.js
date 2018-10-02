@@ -3,47 +3,37 @@ import './facilitators.html';
 import '../Others/routes.js';
 import '../Others/feed.js';
 
-Meteor.subscribe("crud");
 
-Template.data.events({
-	'submit form':function(e){
-		e.preventDefault();
-		var title=e.target.title.value;//get value from field title
-		var description=e.target.description.value;//get value from field description
-		var obj={
-			title:title,
-			description:description
-		}
-		if(this._id){
-			//update data
-			Meteor.call('update',this._id,obj);
-			Router.go('/');
-		}else{
-			//insert data
-			Meteor.call('insertCrud',obj);
-		}
-		e.target.title.value="";//clear form
-		e.target.description.value="";//clear form
+
+import { Template } from 'meteor/templating';
+import { fac } from '../../api/task.js';
+import { ReactiveDict } from 'meteor/reactive-dict';
+
+
+Template.facilitators.helpers({
+    ta(){
+            return fac.find({}); 
 	},
-	'click #remove':function(e){
-		e.preventDefault();
-		var result=confirm('Do you want to delete?');
-		if(result){
-			crud.remove(this._id);
-		}
-		
-		
-	}
-})
-Template.data.helpers({
-	getData:function(){
-		return crud.find();
-	},
-	updateTitle:function(){
-		if(this._id){
-			return true;
-		}else{
-			return false;
-		}
-	}
-})
+});
+Template.facilitators.onCreated(function bodyOnCreated(){
+    this.state = new ReactiveDict();
+});
+
+Template.facilitators.events({
+    'submit .add': function(event){
+
+        event.preventDefault();
+
+        var title = event.target.text.value;
+        var number = event.target.num.value
+        fac.insert({
+			title: title,
+			num: number,
+            
+        });
+      event.target.text.value="";
+      event.target.num.value="";
+       },
+
+});
+
