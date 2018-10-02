@@ -1,9 +1,14 @@
 <template name="login">
     {{#basicTabs name="temp" tabs=tabs}}
-      
-    {{#tabContent slug="ses1"}} 
+
+    {{#tabContent slug="ses1"}}
+
+    <style>
+      #wrapper {max-width: 800px; margin:0 auto;}
+    </style>
 
     <body>
+      <div id="wrapper">
        {{#if currentUser}}
        <a href="{{pathFor route='attendence'}}">Facilitator</a>
        <a href="#">LGA</a>
@@ -11,7 +16,9 @@
        {{else}}
       {{> atForm}}
       {{/if}}
+        </div>
       </body>
+
       {{/tabContent}}
 
       {{#tabContent slug="ses2"}}
@@ -21,7 +28,7 @@
           Password
           <input type="password" name ="adminPassword">
           <input type="submit" value="Sign In"/>
-        </form> 
+        </form>
         </body>
       {{/tabContent}}
       {{/basicTabs}}
@@ -31,4 +38,4 @@
       <template name="dashboard">
           <p>You're logged in.</p>
           <p><a href="#" class="logout">Logout</a></p>
-  </template>    
+  </template>
