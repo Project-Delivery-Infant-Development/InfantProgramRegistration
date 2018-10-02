@@ -72,18 +72,18 @@ Router.route('for_providers',{
 
 //<----------------Parents Page Routes------------------>
 
-// Router.route('parent',{
-//   layoutTemplate: 'parent',
-//   path: '/parents/parent',
-//   template: 'parent',
-//   onBeforeAction: function(){
-//     import '../imports/ui/Parent/parent.html';
-//     this.next();
-//   },
-//   action: function(){
-//     this.render('parent');
-//   },
-// });
+Router.route('parent',{
+  layoutTemplate: 'parent',
+  path: '/parents/parent',
+  template: 'parent',
+  onBeforeAction: function(){
+    import '../imports/ui/Parent/parent.html';
+    this.next();
+  },
+  action: function(){
+    this.render('parent');
+  },
+});
 
 Router.route('changeRequest',{
   templateLayout: 'changeRequest',
@@ -244,7 +244,18 @@ Router.route('admin_lga',{
     this.render('admin_lga');
   },
 });
-
+Router.route('viewlga',{
+  templateLayout: 'viewlga',
+  path: '/admin/lga/lga_list',
+  template: 'viewlga',
+  onBeforeFunction: function(){
+    import '../imports/ui/Admin/getLgaList.html';
+    this.next();
+  },
+  action: function(){
+    this.render('viewlga');
+  },
+});
 Router.route('satisfaction',{
   templateLayout: 'satisfaction',
   path: '/admin/satisfaction',
