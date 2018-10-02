@@ -11,7 +11,6 @@ import '../Others/routes.js';
 import '../Others/feed.js';
 
 
-
 var chart;
 var chart1;
 Template.dashboardAdmin.rendered=function(){
