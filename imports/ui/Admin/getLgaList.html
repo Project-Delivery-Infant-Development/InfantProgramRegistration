@@ -1,0 +1,31 @@
+<template name="viewlga">
+    {{>admin}}
+    <div class="container">
+    <h1>View LGA</h1>
+    <table style="width:75%">
+            <tr>
+              <th>LgaId</th>
+              <th>Address</th> 
+              <th>Pin code</th>
+              <th>Phone</th>
+              <th>Email</th>
+              <th>Session mode</th>
+            </tr>
+            {{#each lgaview}}
+              {{> lgadisplay}}
+            {{/each}}
+          </table>
+        </div>     
+</template>
+
+<template name="lgadisplay">
+    <tr>
+    <td>{{LgaId}}</td>
+    <td>{{Address}}</td>
+    <td>{{Pcode}}</td>
+    <td>{{Phone}}</td>
+    <td>{{Email}}</td>
+    <td>{{Sess_Mode}}</td>
+    <button class='delete'>Delete</button>
+    </tr>
+</template>

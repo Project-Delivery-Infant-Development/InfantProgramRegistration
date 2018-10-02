@@ -1,15 +1,16 @@
 import { Template } from 'meteor/templating';
-import { parent } from '../../api/task.js';
+import {Parent} from '../../api/task.js';
 
 import './parent.html';
+import './nav_parent.js';
 import './changeRequest.js';
-//import './changePwd.js';
-//import './genSettings.js';
+import './changePwd.js';
+import './genSettings.js';
 import '../Others/routes.js';
 
-Template.body.helpers({
+Template.parent.helpers({
     parents(){
-        return parent.find({});
+        return Parent.find({Id:"PA001"});
     },
 });
 

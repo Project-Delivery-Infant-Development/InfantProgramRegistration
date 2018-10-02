@@ -1,0 +1,85 @@
+<template name="addUser">
+    <body>
+        <style>
+            .container *{ margin:5px;}
+        </style>
+        {{> nav_parent}}
+        <img src="/logo.PNG" alt="logo">
+        <center><h3>Add User(For Testing/ Admin Use Only)</h3></center>
+        <div class="container" style="margin:15px; ">
+        <form name="frmUser" id="frmUser" class="frmUser">
+            <div class="col">
+                <label>UserId:</label>
+            </div>
+            <div class="col">
+                <input type="text" name="userid" id="userid">
+            </div>
+            <div class="col">
+                    <label>First Name: </label>
+            </div>
+            <div class="col">
+                <input type="text" name="fname" id="fname">
+            </div>
+            <div class="col">
+                <label>Last Name: </label>
+            </div>
+            <div class="col">
+                <input type="text" name="lname" id="lname">
+            </div>
+            <div class="col">
+                <label>Address:</label>
+            </div>
+            <div class="col">
+                <textarea name="address" id="address"></textarea> 
+            </div>
+            <div class="col">
+                    <label>Postcode:</label>
+            </div>
+            <div class="col">
+                <input type="number" name="pcode" id="pcode">
+            </div>
+            <div class="col">
+                <label>Mobile No:</label>
+            </div>
+            <div class="col">
+                <input type="number" name="phone" id="phone">
+            </div>
+            <div class="col">
+                <label>Email Id:</label>
+            </div>
+            <div class="col">
+                <input type="email" name="email" id="email">
+            </div>
+            
+            <div class="col">
+                <label>Role:</label>
+            </div>
+            <div class="col">
+                <select name="role" id="role">
+                    <option value="Admin">Admin</option>
+                    <option value="Facilitator">Facilitator</option>
+                </select>
+            </div>
+            
+            <div class="col">
+                <label>Lga Id:</label>
+            </div>
+            <div class="col">
+                <select name="lgaid" id="lgaid">
+                    {{#each lgas}}
+                    <option value='{{LgaId}}'>{{LgaId}}</option>
+                    {{/each }}
+                </select>
+            </div>
+
+            <div class="col-md-3">
+                <input type="submit" value="Create" id="create" name="create"> &nbsp;&nbsp;&nbsp;
+                <input type="reset" value="Cancel" id="cancel" name="cancel">
+            </div>                
+        </form>
+        </div>
+        <footer>
+            <center>&copy; All rights Reserved. Reasearch by Deakin University with </center>         
+        </footer>
+    </body>
+</template>

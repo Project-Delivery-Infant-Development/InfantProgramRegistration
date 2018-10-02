@@ -1,8 +1,12 @@
 import { Mongo } from 'meteor/mongo';
 import SimpleSchema  from 'simpl-schema';
 export const test=new Mongo.Collection('test');
+<<<<<<< HEAD
 
+=======
+>>>>>>> upstream/master
 export const Tasks1 = new Mongo.Collection('tasks1');
+export const fac = new Mongo.Collection('fac');
 
 export const Parent = new Mongo.Collection('parent');
 Parent.schema = new SimpleSchema({
@@ -23,30 +27,14 @@ Parent.schema = new SimpleSchema({
 Parent.attachSchema(Parent.schema);
 
 
-export const User =new Mongo.Collection('user');
-User.schema=new SimpleSchema({
-   Id: { type: String  },
-   Password: {type: String },
-   fname: {type: String },
-   lname: {type: String },
-   address: {type: String },
-   pcode: {type: Number },
-   phone: {type: Number },
-   email: {type: String },
-   photo: { type: String },
-   role: { type: String },
-   status:{ type: String },
-   lastPassUpdate:{ type: Date }
-});
-User.attachSchema(User.schema);
-
 export const Request=new Mongo.Collection('request');
 Request.schema=new SimpleSchema({
      From: {type: String},
-     Type: {type:String },
-     DateFrom:{type:Date },
+     Type: {type: String },
+     DateFrom:{type: Date },
      DateTo:{type: Date },
-     Remarks:{type:String}
+     Remarks:{type: String},
+     createdAt: {type: Date}
 });
 Request.attachSchema(Request.schema);
 
@@ -90,7 +78,7 @@ Session.attachSchema(Session.schema);
 export const Admin=new Mongo.Collection('admin');
 Admin.schema=new SimpleSchema({
    Id	: {type: String },
-   LgaId:{type: String }
+   LgaId :{type: String }
 });
 Admin.attachSchema(Admin.schema);
 
@@ -102,11 +90,25 @@ Facilitator.schema=new SimpleSchema({
 });
 Facilitator.attachSchema(Facilitator.schema);
 
+export const Attendence = new Mongo.Collection('attendence');
+Attendence.schema = new SimpleSchema({
+    ParentID:{type: String},
+    SessionID: {type: String},
+    Attended: {type: Boolean},
+});
+Attendence.attachSchema(Attendence.schema);
 
+<<<<<<< HEAD
 export const FacilitatorsData = new Mongo.Collection('facilitatorData');
-
-export const Tasks1 = new Mongo.Collection('tasks1');
-export const Parent1 = new Mongo.Collection('parent1');
+=======
 export const ChangeRequests = new Mongo.Collection('changeRequestsData');
+>>>>>>> upstream/master
+
+export const Parent1 = new Mongo.Collection('parent1');
+<<<<<<< HEAD
+export const ChangeRequests = new Mongo.Collection('changeRequestsData');
+=======
+export const Facilitators = new Mongo.Collection('facilitatorData');
+>>>>>>> upstream/master
 export const Satisfactiondata = new Meteor.Collection('Satisfactiondata');
 export const Testing = new Mongo.Collection('testing');
