@@ -29,4 +29,9 @@ $(document).ready(function () {
 	});
 });
 
-  
+Template.nav_parent.events({
+    'click .logout': function(event){
+        event.preventDefault();
+		Meteor.logout();
+    }
+});

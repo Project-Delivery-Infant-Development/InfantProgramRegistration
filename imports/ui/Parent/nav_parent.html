@@ -1,5 +1,6 @@
 
 <template name="nav_parent">
+    {{#if currentUser}}
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -22,11 +23,12 @@
                 <li ><a href="{{pathFor route='parent'}}">Dashboard<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a></li>
                 <li ><a href="{{pathFor route='changePwd'}}">Change Password<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-cog"></span></a></li>
                 <li ><a href="{{pathFor route='genSettings'}}">Profile Settings<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-cog"></span></a></li>
-                <li ><a href="{{pathFor route='attendence'}}">Logout<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-log-out"></span></a></li>
+                <li ><a href="#" class="logout">Logout<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-log-out"></span></a></li>
             </ul>
         </div>
         </div>
     </nav>
+{{/if}}
 </template>
         
         

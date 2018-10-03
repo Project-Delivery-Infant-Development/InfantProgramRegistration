@@ -1,11 +1,12 @@
 <template name="changePwd">
+    {{#if currentUser}}
     <body>
         <style>
          .container *{ margin:5px;}
         </style>
     {{> nav_parent}}
     <img src="/logo.PNG" alt="logo">
-        <center><h3>Change Password</h3></center>
+        <center><h3>Change Password {{>loginButtons}}</h3></center>
         <div class="container" style="margin:15px; ">
             <form name="frmPwd" id="frmPwd" class="frmPwd">
             <div class="row">
@@ -39,4 +40,5 @@
         </div>
         
     </body>
+    {{/if}}
 </template>
