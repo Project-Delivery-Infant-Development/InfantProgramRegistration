@@ -34,6 +34,8 @@ import '../Others/feed.js';
 import '../../api/createDb.js';
 import '../Admin/addUser.js'
 
+import '../LGA/lgaDashboard.js';
+
 ReactiveTabs.createInterface({
   template:'basicTabs',
   onChange: function(slug, template){

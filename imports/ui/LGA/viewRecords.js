@@ -1,3 +1,3 @@
 import './viewRecords.html';
-import '../Others/feed.js';
+import './lgaDashboard.js';
 import '../Others/routes.js';

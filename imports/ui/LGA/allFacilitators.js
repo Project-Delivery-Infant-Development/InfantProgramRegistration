@@ -1,5 +1,5 @@
 import './allFacilitators.html';
-import '../Others/feed.js';
+import './lgaDashboard.js';
 import '../Others/routes.js';
 import { Template } from 'meteor/templating';
 import { Facilitators } from '../../api/task.js';
