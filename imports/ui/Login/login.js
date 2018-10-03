@@ -34,7 +34,7 @@ Template.login.helpers({
 Template.dashboard.events({
   'click .logout': function(event){
       event.preventDefault();
-      Meteor.logout();
+      //Meteor.logout();
   },
 });
 
@@ -101,21 +101,38 @@ AccountsTemplates.addField({
   ],
 });
 
+var mySubmitFunc = function(error, state){
+  if (!error) {
+    if (state === "signIn") {
+      console.log();
+      console.log("idiok"+Meteor.users.find({_id:Meteor.userId()}).fetch()[0].profile.role);
+      if(Meteor.users.find({_id:Meteor.userId()}).fetch()[0].profile.role == "Parent")
+      {
+        Router.go("/parents/parent");
+      }
+      else
+      {
+        Router.go("/parents/Settings");
+       
+      }
+    }
+    if (state === "signUp") {
+      // Successfully registered
+      // ...
+    }
+  }
+};
 
-// Template.login.events({
-//     'submit .loginUser': function(e){
-//     console.log("Login User");
-//     },
-//     'submit .loginAdmin':function(e1){
-//         //Router.go('admin');
-//       console.log("Login Admin");},
-//     });
- 
-//   Template.login.helpers({
-//     tabs: function(){
-//       return[
-//         { name: 'Admin', slug: 'session1'},
-//         { name: 'User', slug: 'session2'},
-//       ]
-//     },
-//  });
+AccountsTemplates.configure({
+    onSubmitHook: mySubmitFunc
+});
+
+
+var myPostLogout = function(){
+  //example redirect after logout
+  Router.go('/home');
+};
+
+AccountsTemplates.configure({
+  onLogoutHook: myPostLogout
+});
