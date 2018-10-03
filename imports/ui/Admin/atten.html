@@ -1,28 +1,93 @@
 <template name="atten">
-    {{> admin}}
-    
+    {{>admin}}
+    <body>
+        <div class="container">
           <header>
-             IPAN
-             <label class="hide-completed">
-                  <input type="checkbox"/> 
-                  Show Absent
-          </label>
-              <label class="show-completed">
-                      <input type="checkbox"/>
-                      Show Present
-              </label>
-              <ul>
-                  {{#each tasks}}
-                      {{> tas}}
-                  {{/each}}
-              </ul>
+            <h1>Generate Attendance Report</h1>
+      
           </header>
-    </template>
+          <h3>Sunshine</h3>
+          <label class="ss1">
+            <input type="radio" name="ssession"/> 
+              Session 1
+          </label>
+          <label class="ss2">
+          <input type="radio" name="ssession"/>
+          Session 2
+          </label>
+          <label class="ss3">
+            <input type="radio" name="ssession"/>
+            Session 3
+          </label>
+          <label class="ss4">
+            <input type="radio" name="ssession"/>
+            Session 4
+          </label>
+                    
+          <h3>Burwood</h3>
+            <label class="bs1">
+            <input type="radio" name="bsession"/> 
+              Session 1
+            </label>
+            <label class="bs2">
+            <input type="radio" name="bsession"/>
+            Session 2
+            </label>
+            <label class="bs3">
+                <input type="radio" name="ssession"/>
+                Session 3
+              </label>
+              <label class="bs4">
+                <input type="radio" name="ssession"/>
+                Session 4
+              </label>
     
-    <template name="tas">
+        
+            <h3>Geelong</h3>
+            <label class="gs1">
+            <input type="radio" name="gsession"/> 
+            Session 1
+            </label>
+            <label class="gs2">
+            <input type="radio" name="gsession"/>
+            Session 2
+            </label>
+            <label class="gs3">
+                <input type="radio" name="ssession"/>
+                Session 3
+              </label>
+              <label class="gs4">
+                <input type="radio" name="ssession"/>
+                Session 4
+              </label>
+    
+          
+            <table style="width:100%">
+            <tr>
+              <th>ParentID</th>
+              <th>SessionID</th> 
+            </tr>
+            {{#each atte}}
+              {{> tas}}
+            {{/each}}
+          </table>
+        </div>
+      </body>
+</template>
+      
+      <template name="tas">
+        <tr>
+        <td>{{ParentID}}</td>
+        <td>{{SessionID}}</td>
+        </tr>
+      </template>
+<!--     
+    
+
+    <template name="tas"> 
         <li class="{{#if checked}}checked{{else}}unchecked{{/if}}">
-        <button class="delete">Remove</button>
-        <input type="checkbox" checked="{{checked}}" class="toggle-checked" value="Present"/>
+        <button class="delete1">Remove</button>
+        <input type="checkbox" checked="{{checked}}" class="toggle-checked1" value="Present"/>
     
         <span class="text">
         <strong>
@@ -31,5 +96,4 @@
         {{formatDate date}}
         </span>
         </li>
-
-    </template>
+    </template> -->

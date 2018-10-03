@@ -113,7 +113,7 @@ Router.route('genSettings',{
 
 Router.route('changePwd',{
   templateLayout: 'changePwd',
-  path: '/User/ChangePassword',
+  path: '/parent/changePwd',
   template: 'changePwd',
   onBeforeFunction: function(){
     import '../imports/ui/Parent/changePwd.html';
@@ -232,7 +232,30 @@ Router.route('dashboardAdmin',{
     this.render('dashboardAdmin');
   },
 });
-
+Router.route('admin_lga',{
+  templateLayout: 'admin_lga',
+  path: '/admin/admin_lga',
+  template: 'admin_lga',
+  onBeforeFunction: function(){
+    import '../imports/ui/Admin/admin_lga.html';
+    this.next();
+  },
+  action: function(){
+    this.render('admin_lga');
+  },
+});
+Router.route('viewlga',{
+  templateLayout: 'viewlga',
+  path: '/admin/lga/lga_list',
+  template: 'viewlga',
+  onBeforeFunction: function(){
+    import '../imports/ui/Admin/getLgaList.html';
+    this.next();
+  },
+  action: function(){
+    this.render('viewlga');
+  },
+});
 Router.route('satisfaction',{
   templateLayout: 'satisfaction',
   path: '/admin/satisfaction',

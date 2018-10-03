@@ -1,8 +1,8 @@
 import { Mongo } from 'meteor/mongo';
 import SimpleSchema  from 'simpl-schema';
 export const test=new Mongo.Collection('test');
-  
 export const Tasks1 = new Mongo.Collection('tasks1');
+export const fac = new Mongo.Collection('fac');
 
 export const Parent = new Mongo.Collection('parent');
 Parent.schema = new SimpleSchema({
@@ -22,23 +22,6 @@ Parent.schema = new SimpleSchema({
 });
 Parent.attachSchema(Parent.schema);
 
-
-export const User =new Mongo.Collection('user');
-User.schema=new SimpleSchema({
-   Id: { type: String  },
-   Password: {type: String },
-   fname: {type: String },
-   lname: {type: String },
-   address: {type: String },
-   pcode: {type: Number },
-   phone: {type: Number },
-   email: {type: String },
-   photo: { type: String },
-   role: { type: String },
-   status:{ type: String },
-   lastPassUpdate:{ type: Date }
-});
-User.attachSchema(User.schema);
 
 export const Request=new Mongo.Collection('request');
 Request.schema=new SimpleSchema({
@@ -103,6 +86,13 @@ Facilitator.schema=new SimpleSchema({
 });
 Facilitator.attachSchema(Facilitator.schema);
 
+export const Attendence = new Mongo.Collection('attendence');
+Attendence.schema = new SimpleSchema({
+    ParentID:{type: String},
+    SessionID: {type: String},
+    Attended: {type: Boolean},
+});
+Attendence.attachSchema(Attendence.schema);
 
 export const ChangeRequests = new Mongo.Collection('changeRequestsData');
 

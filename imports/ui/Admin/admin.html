@@ -17,7 +17,14 @@
             <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
                 <ul class="nav navbar-nav">
 
-                    <li ><a href="{{pathFor route='dashboardAdmin'}}">Dashboard<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>  
+                    <li ><a href="{{pathFor route='dashboardAdmin'}}">Dashboard<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li> 
+                    <li class="admindown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin Lga<span style="font-size:16px;" class="pull-right hidden-xs-down showopacity glyphicon glyphicon-tasks"></span></a>
+                            <ul class="dropdown-menu forAnimate" role="menu">
+                            <li><a href="{{pathFor route='admin_lga'}}" class="dropdown-toggle" data-toggle="admindown">Add LGA<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
+                            <li><a href="{{pathFor route='viewlga'}}">View Added Lga</a></li>
+                                </ul>
+                        </li>  
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Report<span style="font-size:16px;" class="pull-right hidden-xs-down showopacity glyphicon glyphicon-tasks"></span></a>
                         <ul class="dropdown-menu forAnimate" role="menu">
@@ -34,6 +41,7 @@
                             <li><a href="#">General Information</a></li>
                         </ul>
                     </li>
+                    <li ><a href="{{pathFor route='addUser'}}">Add User<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
                 </ul>
             </div>
         </div>

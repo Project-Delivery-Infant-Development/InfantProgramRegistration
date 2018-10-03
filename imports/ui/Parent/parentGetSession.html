@@ -1,7 +1,8 @@
 <template name="parentGetSession">
+    {{#if currentUser}}
     <div class="container">
         <header>
-             <center><h1>Get Session List</h1></center> 
+             <center><h1>Get Session List {{> loginButtons}}</h1></center> 
                 
         <br/>
         </header>
@@ -28,7 +29,7 @@
     
   </div>
   </div>
-  
+  {{/if}}
 </template> 
 
       <template name="getSession">

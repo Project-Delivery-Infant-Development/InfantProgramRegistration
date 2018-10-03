@@ -1,15 +1,18 @@
 <!-- Main Template-->
 <template name="parent">
     <body>
+        {{#if currentUser}}
     {{> nav_parent}}
         <img src="/logo.PNG" alt="logo">
         <center><h2>Parent Dashboard</h2></center>
+        <div>{{>loginButtons}}</div>
         <div class="container" style="margin:15px;  ">
         <div class="col-md-8" style="border-style:solid; border-width:2px;">
                 <h3>Your details</h3>
                 {{#each parents}}
                 <ul>
-                    <li>You are registered under the provider: <b>{{LgaId}}</b></li> 
+                    <li>You are logged in as: {{n}}</li>
+                    <li>You are registered under the provider: <b>{{n}}</b></li> 
                     <li>Your group ID:{{GroupId}}</li>
                     <li>Your sessions are planned on below dates:</li>
                     <li>Session 1: {{S1}}</li>
@@ -31,7 +34,8 @@
         <footer>
             <center>&copy; All rights Reserved. Reasearch by Deakin University with </center>         
         </footer>
-    </body>
+        {{/if}}
+      </body>
 </template>
 
 
