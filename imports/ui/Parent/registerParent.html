@@ -1,0 +1,10 @@
+<template name="registerParent">
+    <body>
+        {{#if currentUser}}
+        {{> parent}}
+        {{else}}
+            <h2>Parent Registration</h2>
+            {{> atForm state='signUp'}}
+        {{/if}}
+      </body>
+  </template>    
