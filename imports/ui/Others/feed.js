@@ -31,7 +31,10 @@ function htmlbodyHeightUpdate(){
 		});
 	});
 
-  // Template.def.onCreated(function(){
-  //
-  //   },
-  // });
+	Template.def.events({
+		'click .logout': function(event){
+			event.preventDefault();
+			Meteor.logout();
+			Router.go('/home/login');
+		}
+	});

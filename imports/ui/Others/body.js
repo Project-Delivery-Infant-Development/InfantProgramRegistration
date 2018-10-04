@@ -21,6 +21,7 @@ import '../Parent/changeRequest.js';
 import '../Parent/changeRequest.html';
 import '../Parent/parentGetSession.js';
 import '../Parent/parentGetSession.html';
+import '../Parent/registerParent.html';
 
 import '../Login/login.js';
 import '../Login/login.html';

@@ -1,4 +1,5 @@
 import { Template } from 'meteor/templating';
+import { Meteor } from 'meteor/meteor';
 import {User, Lga, Admin, Facilitator} from '../../api/task.js';
 import './addUser.html';
 
@@ -17,28 +18,16 @@ Template.addUser.events({
         var id = event.target.userid.value;
         var fname = event.target.fname.value;
         var lname = event.target.lname.value;
+        var gender=event.target.gender.value;
         var address = event.target.address.value;
         var pcode = event.target.pcode.value;
         var phone = event.target.phone.value;
         var email = event.target.email.value;
         var role = event.target.role.value; 
         var lgaid = event.target.lgaid.value;       
-        User.insert( 
-            {
-                _id: id,
-                Id: id,
-                Password: hash,
-                fname: fname,
-                lname: lname,
-                address: address,
-                pcode: pcode,
-                phone: phone,
-                email: email,
-                photo: "Url",
-                role: role,
-                status: "Active",
-                lastPassUpdate:new Date()
-            });
+       console.log( Meteor.call('insertUser', email,'abc123',fname + lname,gender,address, pcode,phone, role));
+     
+        
             if(role == "Admin")
             {
                 Admin.insert({
@@ -59,7 +48,7 @@ Template.addUser.events({
             }
 
 
-        window.alert("User added successfully.! New Password: 'defaultpass' ");
+        window.alert("User added successfully.! New Password: 'abc123' ");
         clearform(event);
         
     },
