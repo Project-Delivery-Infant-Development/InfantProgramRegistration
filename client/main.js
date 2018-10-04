@@ -10,6 +10,8 @@ import '../imports/ui/Others/body.js';
  import '../imports/ui/Admin/admin.js';
  import '../imports/ui/Login/login.js';
  import '../imports/ui/Admin/atten.js';
+ import '../imports/ui/Admin/add_facilitator.js';
+ import '../imports/ui/Admin/facilitatorlist.js';
  import '../imports/ui/Admin/addsession.js';
  import '../imports/ui/Admin/sessionlist.js';
  import '../imports/ui/Admin/satisfaction.js';
