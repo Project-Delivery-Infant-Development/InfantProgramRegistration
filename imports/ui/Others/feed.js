@@ -1,8 +1,6 @@
 import './feed.html';
 import './routes.js';
 import './body.js';
-// import '../Facilitator/attendence.js';
-// import '../Facilitator/attendence.html';
 
 
 function htmlbodyHeightUpdate(){
@@ -31,7 +29,10 @@ function htmlbodyHeightUpdate(){
 		});
 	});
 
-  // Template.def.onCreated(function(){
-  //
-  //   },
-  // });
+	Template.def.events({
+		'click .logout': function(event){
+			event.preventDefault();
+			Meteor.logout();
+			Router.go('/home/login');
+		},
+	});

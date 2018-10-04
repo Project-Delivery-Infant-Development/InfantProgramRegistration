@@ -137,16 +137,16 @@ Router.route('update-email',{
   },
 });
 
-Router.route('register_parent',{
-  templateLayout: 'register_parent',
-  path: '/parents/register_parent',
-  template: 'register_parent',
+Router.route('registerParent',{
+  templateLayout: 'registerParent',
+  path: '/parents/registerParent',
+  template: 'registerParent',
   onBeforeFunction: function(){
-    import '../imports/ui/Parent/parent.html';
+    import '../imports/ui/Parent/registerParent.html';
     this.next();
   },
   action: function(){
-    this.render('register_parent');
+    this.render('registerParent');
   },
 });
 
@@ -272,6 +272,33 @@ Router.route('dashboardAdmin',{
     this.render('dashboardAdmin');
   },
 });
+
+Router.route('add_facilitator',{
+  templateLayout: 'add_facilitator',
+  path: '/admin/add_facilitator',
+  template: 'add_facilitator',
+  onBeforeFunction: function(){
+    import '../imports/ui/Admin/add_facilitator.html';
+    this.next();
+  },
+  action: function(){
+    this.render('add_facilitator');
+  },
+});
+
+Router.route('facilitatorlist',{
+  templateLayout: 'facilitatorlist',
+  path: '/admin/facilitatorlist',
+  template: 'facilitatorlist',
+  onBeforeFunction: function(){
+    import '../imports/ui/Admin/facilitatorlist.html';
+    this.next();
+  },
+  action: function(){
+    this.render('facilitatorlist');
+  },
+});
+
 Router.route('admin_lga',{
   templateLayout: 'admin_lga',
   path: '/admin/admin_lga',
@@ -284,18 +311,7 @@ Router.route('admin_lga',{
     this.render('admin_lga');
   },
 });
-Router.route('viewlga',{
-  templateLayout: 'viewlga',
-  path: '/admin/lga/lga_list',
-  template: 'viewlga',
-  onBeforeFunction: function(){
-    import '../imports/ui/Admin/getLgaList.html';
-    this.next();
-  },
-  action: function(){
-    this.render('viewlga');
-  },
-});
+
 Router.route('satisfaction',{
   templateLayout: 'satisfaction',
   path: '/admin/satisfaction',
@@ -322,7 +338,18 @@ Router.route('facilitators',{
   },
 });
 
-
+Router.route('viewlga',{
+  templateLayout: 'viewlga',
+  path: '/admin/viewlga',
+  template: 'viewlga',
+  onBeforeFunction: function(){
+    import '../imports/ui/Admin/viewlga.html';
+    this.next();
+  },
+  action: function(){
+    this.render('viewlga');
+  },
+});
 //<-------------Login Template Route------------->
 
 Router.route('login',{

@@ -1,0 +1,25 @@
+<template name="facilitatorlist">
+    {{>admin}}
+    <h1>View facilitator </h1>
+    <table style="width:80%">
+            <tr>
+              <th>LgaId</th>
+              <th>FacilitatorId</th> 
+              <th>For</th>
+             </tr>
+            {{#each facview}}
+              {{> facdisplay}}
+            {{/each}}
+          </table>
+</template>
+
+
+<template name="facdisplay">
+    <tr>
+    <td>{{LgaId}}</td>
+    <td>{{FacilitatorId}}</td>
+    <td>{{For}}</td>
+        <button class='delete'>Delete</button>
+    
+    </tr>
+</template>

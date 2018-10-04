@@ -9,19 +9,18 @@ import './genSettings.js';
 import '../Others/routes.js';
 
 Template.parent.helpers({
-    parents(){
-        return Parent.find({});
-    },
+    
     n(){
         return Meteor.users.find({}).fetch()[0].profile.name;
+    },
+    parents(){
+        console.log(Meteor.userId());
+        return Parent.find({Id:Meteor.users.find({}).fetch()[0].profile.name}).fetch();
     },
 });
 
 Template.parent.events({
-    'click .insert': function(e){
-        e.preventDefault();
-        console.log("Buttonclicked");
-    }
+    
 });
 function doFunction() {
     // document.getElementById("clickMe").onclick = doFunction;  

@@ -15,63 +15,47 @@ import '../Parent/parent.js';
 import '../Others/body.js';
 
 Template.login.helpers({
-  tabs: function(){
-    return[
-      { name: 'User', slug: 'ses1'},
-      { name: 'Admin', slug: 'ses2'},
-     
-    ];
-  },
-
-  activeTab: function(){
-    console.log("Active tab here");
+  
+  userId(){
     
-  },
+    if(Meteor.userId() != null)
+   // Meteor.logout();
 
-
-});
-
-Template.dashboard.events({
-  'click .logout': function(event){
-      event.preventDefault();
-      Meteor.logout();
-  },
-});
-
-Template.login.events({
-  'submit .adminlogin': function(event){
-    event.preventDefault();
-    
-    var em = event.target.adminEmail.value;
-    var pass = event.target.adminPassword.value;
-    
-    var a = Admin.find({$and:[{Email:em, Password:pass}]}).fetch()[0].Name;
-  },
+    return Meteor.userId();
+  }
+  
 });
 
 AccountsTemplates.addField({
   _id: 'name',
   type: 'text',
   required: true,
-  displayName: "Full Name",
+  displayName: "Parent Name",
   minLength: 1,
   maxLength: 30,
 });
 
 AccountsTemplates.addField({
-  _id: 'phone',
-  type: 'tel',
+  _id: 'infantName',
+  type: 'text',
   required: true,
-  displayName: "Mobile Number",
-  errStr: 'Invalid Mobile number!',
-  minLength: 10,
-  maxLength: 10,
+  displayName: "Infant Full Name",
+  minLength: 1,
+  maxLength: 30,
 });
 
+AccountsTemplates.addField({
+  _id: 'infantAge',
+  type: 'text',
+  required: true,
+  displayName: "Infant Age (in Months)",
+  minLength: 1,
+  maxLength: 30,
+});
 
 AccountsTemplates.addField({
   _id: "gender",
-  type: "select",
+  type: "radio",
   displayName: "Gender",
   select: [
       {
@@ -85,37 +69,101 @@ AccountsTemplates.addField({
   ],
 });
 
+AccountsTemplates.addField({
+  _id: 'address',
+  type: 'text',
+  required: true,
+  displayName: "Postal Address",
+  errStr: 'Invalid address',
+});
 
+AccountsTemplates.addField({
+  _id: 'postcode',
+  type: 'tel',
+  required: true,
+  displayName: "Postcode",
+  errStr: 'Post code should be 4 digit number',
+  minLength:4,
+  maxLength:4,
+});
+
+AccountsTemplates.addField({
+  _id: 'phone',
+  type: 'tel',
+  required: true,
+  displayName: "Mobile Number",
+  errStr: 'Invalid Mobile number!',
+  minLength: 10,
+  maxLength: 10,
+});
 AccountsTemplates.addField({
   _id: "role",
   type: "radio",
-  displayName: "Your Role",
+  displayName: "Role",
   select: [
-       {
-      text: "LGA",
-      value: "LGA",
-    }, {
-      text: "Parent",
-      value: "Parent",
-    },
+      {
+          text: "Parent",
+          value: "Parent",
+      },
   ],
 });
 
 
-// Template.login.events({
-//     'submit .loginUser': function(e){
-//     console.log("Login User");
-//     },
-//     'submit .loginAdmin':function(e1){
-//         //Router.go('admin');
-//       console.log("Login Admin");},
-//     });
- 
-//   Template.login.helpers({
-//     tabs: function(){
-//       return[
-//         { name: 'Admin', slug: 'session1'},
-//         { name: 'User', slug: 'session2'},
-//       ]
-//     },
-//  });
+
+
+/*AccountsTemplates.addField({
+  _id: "role",
+  type: "radio",
+  displayName: "Your Role",
+  select: [
+        {
+      text: "Parent",
+      value: "Parent",
+    },
+  ],
+});*/
+
+
+var mySubmitFunc = function(error, state){
+  if (!error) {
+    if (state === "signIn") {
+      
+      console.log("idiok"+Meteor.users.find({_id:Meteor.userId()}).fetch()[0].profile.role);
+      var a = Meteor.users.find({_id:Meteor.userId()}).fetch()[0].profile.role;
+      console.log(a);
+      if(a === "Parent")
+      {
+        Router.go("/parents/parent");
+      }
+      else if(Meteor.users.find({_id:Meteor.userId()}).fetch()[0].profile.role == "LGA")
+      {
+        Router.go("/lga/lgaDashboard");
+      }
+      else if(Meteor.users.find({_id:Meteor.userId()}).fetch()[0].profile.role == "Facilitator")
+      {
+        Router.go("/facilitator/attendence");
+      }
+      else if(Meteor.users.find({_id:Meteor.userId()}).fetch()[0].profile.role == "Admin")
+      {
+        Router.go("/admin/dashboardAdmin");
+      }
+    }
+    if (state === "signUp") {
+      window.alert("Account Create successfully..! Please login to continue.");
+      Meteor.logout();
+      Router.go('/home/login');
+    }
+  }
+};
+
+
+var myPostLogout = function(){
+  //example redirect after logout
+  Router.go('/home');
+};
+
+AccountsTemplates.configure({
+  onSubmitHook: mySubmitFunc,
+  onLogoutHook: myPostLogout,
+  hideSignUpLink:true
+});
