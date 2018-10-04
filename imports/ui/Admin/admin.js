@@ -6,6 +6,8 @@ import './satisfaction.js';
 import './facilitators.js';
 import '../Others/feed.js';
 import './dashboardAdmin.js';
+import './addsession.js';
+import './sessionlist.js';
 
 Template.admin.events({
     'click .logout': function(event){
@@ -14,3 +16,4 @@ Template.admin.events({
 		Router.go('/home/login');
     }
 });
+
