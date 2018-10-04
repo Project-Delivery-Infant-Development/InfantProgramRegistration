@@ -338,7 +338,18 @@ Router.route('facilitators',{
   },
 });
 
-
+Router.route('viewlga',{
+  templateLayout: 'viewlga',
+  path: '/admin/viewlga',
+  template: 'viewlga',
+  onBeforeFunction: function(){
+    import '../imports/ui/Admin/viewlga.html';
+    this.next();
+  },
+  action: function(){
+    this.render('viewlga');
+  },
+});
 //<-------------Login Template Route------------->
 
 Router.route('login',{
