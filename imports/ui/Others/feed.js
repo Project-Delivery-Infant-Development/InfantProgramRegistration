@@ -1,8 +1,6 @@
 import './feed.html';
 import './routes.js';
 import './body.js';
-// import '../Facilitator/attendence.js';
-// import '../Facilitator/attendence.html';
 
 
 function htmlbodyHeightUpdate(){
@@ -36,5 +34,5 @@ function htmlbodyHeightUpdate(){
 			event.preventDefault();
 			Meteor.logout();
 			Router.go('/home/login');
-		}
+		},
 	});

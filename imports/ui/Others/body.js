@@ -21,7 +21,7 @@ import '../Parent/changeRequest.js';
 import '../Parent/changeRequest.html';
 import '../Parent/parentGetSession.js';
 import '../Parent/parentGetSession.html';
-import '../Parent/registerParent.html';
+import '../Parent/registerParent.js';
 
 import '../Login/login.js';
 import '../Login/login.html';
@@ -34,6 +34,8 @@ import '../../api/task.js';
 import '../Others/feed.js';
 import '../../api/createDb.js';
 import '../Admin/addUser.js'
+
+import '../LGA/lgaDashboard.js';
 
 ReactiveTabs.createInterface({
   template:'basicTabs',
@@ -64,4 +66,9 @@ Template.home.events({
   'click #login':function(e){
     Router.go('login');
   },
+
+  'click #joinNow': function(event){
+    event.preventDefault();
+    Router.go('registerParent');
+  }
 });

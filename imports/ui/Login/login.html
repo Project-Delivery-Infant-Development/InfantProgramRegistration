@@ -1,8 +1,37 @@
+<!-- <template name="login">
+    <body>
+      <div id="wrapper">
+       {{#if currentUser}} -->
+       <!-- <a href="{{pathFor route='attendence'}}">Facilitator</a>
+       <a href="#">LGA</a> -->
+       <!-- {{> dashboard}}
+       {{else}} -->
+      <!-- {{> atForm}} -->
+      <!-- {{> fullPageAtForm}}
+      {{/if}} -->
+        <!-- </div>
+      </body> -->
+
+      <!-- {{/tabContent}}
+
+      {{#tabContent slug="ses2"}}
+      <body>E-mail
+          <input type="text" name="E-mail">
+          Password
+          <input type="password" name ="password">
+          <a href="{{pathFor route='admin'}}">Signin</a>
+      </body>
+      {{/tabContent}}
+      {{/basicTabs}}
+
+    </template> -->
+
 <template name="login">
     <body>
         {{#if currentUser}}
         
         {{userId}}
+        {{> loginButtons}}
         
         {{else}}
         {{> atForm}}
