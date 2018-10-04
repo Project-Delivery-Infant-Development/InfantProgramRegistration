@@ -11,10 +11,8 @@ aldeed:collection2@3.0.0
 aldeed:collection2-core@2.1.2
 aldeed:simple-schema@1.5.4
 allow-deny@1.1.0
-
-autopublish@1.0.7
 anychart:anychart@1.4.3
-
+autopublish@1.0.7
 autoupdate@1.4.1
 babel-compiler@7.1.1
 babel-runtime@1.2.7
@@ -65,10 +63,8 @@ iron:middleware-stack@1.1.0
 iron:router@1.1.2
 iron:url@1.1.0
 jquery@1.11.11
-
 kurounin:pagination@1.2.0
 kurounin:pagination-blaze@1.0.6
-
 launch-screen@1.1.1
 less@2.7.12
 livedata@1.0.18
