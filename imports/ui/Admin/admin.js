@@ -9,6 +9,9 @@ import './dashboardAdmin.js';
 import './addsession.js';
 import './sessionlist.js';
 
+import './facilitatorlist.js';
+import './add_facilitator.js';
+
 Template.admin.events({
     'click .logout': function(event){
 		event.preventDefault();
@@ -16,4 +19,3 @@ Template.admin.events({
 		Router.go('/home/login');
     }
 });
-
