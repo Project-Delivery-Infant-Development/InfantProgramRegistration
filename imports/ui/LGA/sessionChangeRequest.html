@@ -10,12 +10,11 @@
                       </header>
                    
                       <div class="sessionChangeList">
-                        <span class="s-item name">Name</span>
-                        <span class="s-item location">Location</span>
-                        <span class="s-item sessionFor">Session For</span>
-                        <span class="s-item oldDate">Old Date</span>
-                        <span class="s-item newDate">New Date</span>
-                        <span class="s-item mobile">Mobile</span>
+                        <span class="s-item name">From</span>
+                        <span class="s-item location">Type</span>
+                        <span class="s-item sessionFor">From</span>
+                        <span class="s-item oldDate">To</span>
+                        <span class="s-item newDate">Remarks</span>
                         <span class="s-item respond">Respond</span>
                       </div>
 
@@ -24,11 +23,11 @@
                           {{/each}}  
                       <br/>
 
-                    <div class="info-box1">
+                    <!-- <div class="info-box1">
                         To add custom file into the Database, Open Command Prompt with Administrative rights, go to the Project Folder and type 
                         <span class="info-code">meteor mongo</span>. Paste the following code after that 
                         <div class="code-box">db.changeRequestsData.insert({ name: "Hello world!", session: "Sunshine", sessionFor: "0-3 Months", currDate:"13th Jul 2018", newDate: "14th Sep 2018", mobileNo:"1234567890", createdAt: new Date() });</div>
-                    </div>
+                    </div> -->
 
         </div>
         </template>
@@ -36,12 +35,12 @@
         
         <template name="sessionChangeRequestList">
                 <div class="sessionChangeData">
-                        <span class="s-item name">{{name}}</span>
-                        <span class="s-item location">{{session}}</span>
-                        <span class="s-item sessionFor">{{sessionFor}}</span>
-                        <span class="s-item oldDate">{{currDate}}</span>
-                        <span class="s-item newDate">{{newDate}}</span>
-                        <span class="s-item mobile">{{mobileNo}}</span>
+                        <span class="s-item name">{{From}}</span>
+                        <span class="s-item location">{{Type}}</span>
+                        <span class="s-item sessionFor">{{DateFrom}}</span>
+                        <span class="s-item oldDate">{{DateTo}}</span>
+                        <span class="s-item newDate">{{Remarks}}</span>
+                        
                         <span class="s-item respond"><button class="decline">&times; Decline</button> | <button class="approve">✓ Approve</button> | <button class="check">Check Availability</button>
                         </span>
                         </div>

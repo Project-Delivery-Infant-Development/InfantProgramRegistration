@@ -257,3 +257,31 @@ body,html{
 	span.label-object {
 		float: right;
 	}
+	.lgaReportContainer div:first-child,.UserSatisfactionReport div:first-child {
+		width: auto !important;
+		height: 400px !important;
+	}
+	.row-dashboard{
+		width:auto;
+		height:auto !important;
+		max-height:13vw;
+
+	}
+	.dash-section {
+		background-color: rgba(0, 0, 0, 0.12);
+		padding: 30px;
+	}
+	.dash-section h2:after {
+		content: '';
+		background-color: #363636;
+		width: 40px;
+		display: block;
+		position: absolute;
+		padding: 2px;
+		margin-top: 3px;
+		margin-bottom: 3px;
+	}
+	.dash-section h2{
+		font-size:20px !important;
+		margin-bottom:20px;
+	}
