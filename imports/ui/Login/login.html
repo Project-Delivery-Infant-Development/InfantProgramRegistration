@@ -1,39 +1,12 @@
 <template name="login">
-    {{#basicTabs name="temp" tabs=tabs}}
-
-    {{#tabContent slug="ses1"}}
-
-    <style>
-      #wrapper {max-width: 800px; margin:0 auto;}
-    </style>
-
     <body>
-      <div id="wrapper">
-       {{#if currentUser}}
-       <!-- <a href="{{pathFor route='attendence'}}">Facilitator</a>
-       <a href="#">LGA</a> -->
-       {{> dashboard}}
-       {{else}}
-      {{> atForm}}
-      {{/if}}
-        </div>
-      </body>
+        {{#if currentUser}}
+        
+        {{userId}}
+        
+        {{else}}
+        {{> atForm}}
+        {{/if}}
+     </body>
+</template>
 
-      {{/tabContent}}
-
-      {{#tabContent slug="ses2"}}
-      <body>E-mail
-          <input type="text" name="E-mail">
-          Password
-          <input type="password" name ="password">
-          <a href="{{pathFor route='admin'}}">Signin</a>
-      </body>
-      {{/tabContent}}
-      {{/basicTabs}}
-
-    </template>
-
-      <template name="dashboard">
-          {{> parent}}
-
-  </template>    
