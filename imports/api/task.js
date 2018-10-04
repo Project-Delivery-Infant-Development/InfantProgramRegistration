@@ -1,6 +1,7 @@
 import { Mongo } from 'meteor/mongo';
 import SimpleSchema  from 'simpl-schema';
 export const test=new Mongo.Collection('test');
+
 export const Tasks1 = new Mongo.Collection('tasks1');
 export const fac = new Mongo.Collection('fac');
 
@@ -94,9 +95,9 @@ Attendence.schema = new SimpleSchema({
 });
 Attendence.attachSchema(Attendence.schema);
 
-export const ChangeRequests = new Mongo.Collection('changeRequestsData');
 
 export const Parent1 = new Mongo.Collection('parent1');
+export const ChangeRequests = new Mongo.Collection('changeRequestsData');
 export const Facilitators = new Mongo.Collection('facilitatorData');
 export const Satisfactiondata = new Meteor.Collection('Satisfactiondata');
 export const Testing = new Mongo.Collection('testing');
