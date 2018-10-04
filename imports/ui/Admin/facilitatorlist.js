@@ -18,3 +18,8 @@ Template.facilitatorlist.onCreated(function bodyOnCreated(){
             return Addfacilitator.find({});
      }
      });
+Template.facilitatorlist.events({
+        'click .delete' : function(event){
+            Addfacilitator.remove(this._id);
+        }, 
+    });
