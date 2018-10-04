@@ -33,8 +33,16 @@
                             <li><a href="{{pathFor route='satisfaction'}}">user satisfaction Report</a></li>
                         </ul>
                     </li>
-                    <li ><a href="{{pathFor route='facilitators'}}">Facilitators<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
                     <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Facilitators<span style="font-size:16px;" class="pull-right hidden-xs-down showopacity glyphicon glyphicon-tasks"></span></a>
+                            <ul class="dropdown-menu forAnimate" role="menu">
+                                <li><a href="{{pathFor route='addsession'}}">Add Session</a></li>
+                                <li><a href="{{pathFor route='sessionlist'}}">Display Session List</a></li>
+                                <li><a href="#">Add Facilitators</a></li>
+                                <li><a href="#">Display Facilitators List</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Setting<span style="font-size:16px;" class="pull-right hidden-xs-down showopacity glyphicons glyphicons-address-book"></span></a>
                         <ul class="dropdown-menu forAnimate" role="menu">
                             <li><a href="#">Change Password</a></li>

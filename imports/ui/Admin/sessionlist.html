@@ -1,0 +1,30 @@
+<template name="sessionlist">
+        {{>admin}}
+        <div class="container">
+        <h1>View Session</h1>
+        <table style="width:75%">
+                <tr>
+                  <th>Session_Id</th>
+                  <th>For</th> 
+                  <th>LgaId</th>
+                  <th>FacilitatorID</th>
+                  <th>Availability</th>
+                </tr>
+                {{#each sesview}}
+                  {{> sesdisplay}}
+                {{/each}}
+              </table>
+            </div>     
+    </template>
+    
+    <template name="sesdisplay">
+        <tr>
+        <td>{{Session_Id}}</td>
+        <td>{{For}}</td>
+        <td>{{LgaId}}</td>
+        <td>{{FacilitatorID}}</td>
+        <td>{{Availability}}</td>
+        <button class='delete'>Delete</button>
+        </tr>
+    </template>
+    
