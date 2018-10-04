@@ -1,10 +1,8 @@
 import { Mongo } from 'meteor/mongo';
 import SimpleSchema  from 'simpl-schema';
 export const test=new Mongo.Collection('test');
-
+  
 export const Tasks1 = new Mongo.Collection('tasks1');
-export const fac = new Mongo.Collection('fac');
-
 export const Parent = new Mongo.Collection('parent');
 Parent.schema = new SimpleSchema({
       Id:{type: String} ,
@@ -103,6 +101,15 @@ Facilitator.schema=new SimpleSchema({
 });
 Facilitator.attachSchema(Facilitator.schema);
 
+export const Addfacilitator=new Mongo.Collection('addfacilitator');
+Addfacilitator.schema=new SimpleSchema({
+    LgaId:{type: String },
+    FacilitatorId	:{type: String },
+   For:{type: Number}
+   
+});
+Addfacilitator.attachSchema(Addfacilitator.schema);
+
 export const Attendence = new Mongo.Collection('attendence');
 Attendence.schema = new SimpleSchema({
     ParentID:{type: String},
@@ -111,9 +118,9 @@ Attendence.schema = new SimpleSchema({
 });
 Attendence.attachSchema(Attendence.schema);
 
+export const ChangeRequests = new Mongo.Collection('changeRequestsData');
 
 export const Parent1 = new Mongo.Collection('parent1');
-export const ChangeRequests = new Mongo.Collection('changeRequestsData');
 export const Facilitators = new Mongo.Collection('facilitatorData');
 export const Satisfactiondata = new Meteor.Collection('Satisfactiondata');
 export const Testing = new Mongo.Collection('testing');

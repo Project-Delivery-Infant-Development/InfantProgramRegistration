@@ -11,6 +11,8 @@ import '../imports/ui/Others/body.js';
  import '../imports/ui/Login/login.js';
  import '../imports/ui/Admin/atten.js';
  import '../imports/ui/Admin/googlemaps.js';
+ import '../imports/ui/Admin/add_facilitator.js';
+ import '../imports/ui/Admin/facilitatorlist.js';
  import '../imports/ui/Admin/addsession.js';
  import '../imports/ui/Admin/sessionlist.js';
  import '../imports/ui/Admin/satisfaction.js';
@@ -27,5 +29,5 @@ import '../imports/ui/LGA/viewRecords.js';
 import '../imports/ui/LGA/allFacilitators.js';
 import '../imports/ui/LGA/sessionChangeRequest.js';
 import '../imports/ui/Parent/parentGetSession.js';
-
+import '../imports/ui/LGA/lgaReport.js';
 

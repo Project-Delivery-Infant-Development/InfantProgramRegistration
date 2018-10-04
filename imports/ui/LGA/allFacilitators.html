@@ -9,40 +9,55 @@
                               </label>
                       </header>
                    
-                      
-                      <ul class="facilitator">
+                      <table style="width:75%">
+                                <tr>
+                                  <th>Facilitator ID</th>
+                                  <th>Address</th> 
+                                  <th>Pin code</th>
+                                  <th>Phone</th>
+                                  <th>Email</th>
+                                  <th>Session mode</th>
+                                </tr>
+                                {{#each lgaview}}
+                                  {{> lgadisplay1}}
+                                {{/each}}
+                              </table>
+
+                      <!-- <ul class="facilitator">
                           <li>
                                 <span class="delete">Delete</span>
                                 <span class="toggle-checked">Suspend</span>
                             <span class="text less-margin">Name of Facilitator</span>
+
                             </li>
                         {{#each facilitatorData}}
                           {{> facilitatorList}}
                         {{/each}}
-                      </ul>
+                      </ul> -->
                       <a href="{{pathFor route='addFacilitators'}}">Add New Facilitator</a>
         </div>
         </template>
         
         
-        <template name="facilitatorList">
-                
-                <li class="{{#if checked}}checked{{/if}}">
-                    <button class="delete">&times;</button>
-                
-                    <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
-                 
-                    <span class="text more-margin">{{name}}</span>
-                    <span class="text more-margin">{{location}}</span>
-                    <span class="text more-margin">{{tel}}</span>
-                    <span class="text more-margin">{{email}}</span>
-                </li>
-
+        <!-- <template name="facilitatorList">
                 <li class="{{#if checked}}checked{{/if}}">
                     <button class="delete">&times;</button>
                  
                     <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
                  
                     <span class="text more-margin">{{text}}</span>
-                </li>
-              </template>
+                  </li>
+              </template> -->
+
+              <template name="lgadisplay1">
+                        <tr>
+                        <td>{{LgaId}}</td>
+                        <td>{{Address}}</td>
+                        <td>{{Pcode}}</td>
+                        <td>{{Phone}}</td>
+                        <td>{{Email}}</td>
+                        <td>{{Sess_Mode}}</td>
+                        <button class='delete'>Delete</button>
+                        </tr>
+                    </template>
+                    
