@@ -1,6 +1,42 @@
 <template name="lgaDashboard">
     {{> lga_dash}}
 <div class="container">
-LGA Dashboard
+<h1>LGA Dashboard</h1>
+<div class="row row-dashboard">
+    <div class="col-md-12">
+        <div class="dash-section">
+            <h2>Reports</h2>
+            <span>Overview Here</span>
+            <br/>
+            <a href="{{pathFor route='lgaReport'}}">See More</a>
+
+        </div>
+
+    </div>
+</div>
+<div class="row row-dashboard">
+<div class="col-md-6">
+    <div class="dash-section">
+        <h2>Latest Session Change Requests</h2>
+    <span>Overview Here</span>
+    <br/>
+    <a href="{{pathFor route='sessionChangeRequest'}}">See More</a>
+
+</div>
+
+
+</div>
+<div class="col-md-6">
+    <div class="dash-section">
+    <h2>Facilitators List</h2>
+    <span>Overview Here</span>
+    <br/>
+    <a href="{{pathFor route='allFacilitators'}}">See More</a>
+    </div>
+
+</div>
+</div>
+
+
 </div>
 </template>
