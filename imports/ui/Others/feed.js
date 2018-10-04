@@ -28,3 +28,11 @@ function htmlbodyHeightUpdate(){
   			htmlbodyHeightUpdate()
 		});
 	});
+
+	Template.def.events({
+		'click .logout': function(event){
+			event.preventDefault();
+			Meteor.logout();
+			Router.go('/home/login');
+		},
+	});

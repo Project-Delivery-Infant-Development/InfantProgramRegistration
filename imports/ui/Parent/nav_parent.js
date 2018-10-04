@@ -31,7 +31,8 @@ $(document).ready(function () {
 
 Template.nav_parent.events({
     'click .logout': function(event){
-        event.preventDefault();
+		event.preventDefault();
 		Meteor.logout();
+		Router.go('/home/login');
     }
 });

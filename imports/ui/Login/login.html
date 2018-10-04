@@ -1,26 +1,18 @@
-<template name="login">
-    {{#basicTabs name="temp" tabs=tabs}}
-
-    {{#tabContent slug="ses1"}}
-
-    <style>
-      #wrapper {max-width: 800px; margin:0 auto;}
-    </style>
-
+<!-- <template name="login">
     <body>
       <div id="wrapper">
-       {{#if currentUser}}
+       {{#if currentUser}} -->
        <!-- <a href="{{pathFor route='attendence'}}">Facilitator</a>
        <a href="#">LGA</a> -->
-       {{> dashboard}}
-       {{else}}
+       <!-- {{> dashboard}}
+       {{else}} -->
       <!-- {{> atForm}} -->
-      {{> fullPageAtForm}}
-      {{/if}}
-        </div>
-      </body>
+      <!-- {{> fullPageAtForm}}
+      {{/if}} -->
+        <!-- </div>
+      </body> -->
 
-      {{/tabContent}}
+      <!-- {{/tabContent}}
 
       {{#tabContent slug="ses2"}}
       <body>E-mail
@@ -32,9 +24,18 @@
       {{/tabContent}}
       {{/basicTabs}}
 
-    </template>
+    </template> -->
 
-      <template name="dashboard">
-          {{> parent}}
+<template name="login">
+    <body>
+        {{#if currentUser}}
+        
+        {{userId}}
+        {{> loginButtons}}
+        
+        {{else}}
+        {{> atForm}}
+        {{/if}}
+     </body>
+</template>
 
-  </template>    
