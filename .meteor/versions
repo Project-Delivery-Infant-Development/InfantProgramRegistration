@@ -11,10 +11,8 @@ aldeed:collection2@3.0.0
 aldeed:collection2-core@2.1.2
 aldeed:simple-schema@1.5.4
 allow-deny@1.1.0
-
-autopublish@1.0.7
 anychart:anychart@1.4.3
-
+autopublish@1.0.7
 autoupdate@1.4.1
 babel-compiler@7.1.1
 babel-runtime@1.2.7
@@ -29,6 +27,7 @@ caching-html-compiler@1.1.3
 callback-hook@1.1.0
 check@1.3.1
 coffeescript@1.0.17
+dburles:google-maps@1.1.5
 ddp@1.4.0
 ddp-client@2.3.3
 ddp-common@1.4.0
@@ -65,15 +64,14 @@ iron:middleware-stack@1.1.0
 iron:router@1.1.2
 iron:url@1.1.0
 jquery@1.11.11
-
 kurounin:pagination@1.2.0
 kurounin:pagination-blaze@1.0.6
-
 launch-screen@1.1.1
 less@2.7.12
 livedata@1.0.18
 localstorage@1.2.0
 logging@1.1.20
+mdg:geolocation@1.3.0
 mdg:validation-error@0.2.0
 meteor@1.9.2
 meteor-base@1.4.0

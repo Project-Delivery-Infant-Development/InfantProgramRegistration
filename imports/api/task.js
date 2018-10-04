@@ -60,15 +60,31 @@ export const Session = new Mongo.Collection('session');
 Session.schema=new SimpleSchema({
     Session_Id:{type: String },
     For:{type: String },
-    GroupId:{type: String },
-    Facilitator:{type: String },
-    Date:{type: Date },
+    //GroupId:{type: String },
+    FacilitatorID:{type: String },
+    //Date:{type: Date },
     Location:{type: String },
     Status:{type: String },
     T_Registered:{type: Number },
     T_Attended:{type: Number }
 });
 Session.attachSchema(Session.schema);
+
+export const AvailableSession = new Mongo.Collection('availablesession');
+AvailableSession.schema=new SimpleSchema({
+    Session_Id:{type: String },
+    For:{type: Number },
+    LgaId:{type: String },
+    FacilitatorID:{type: String},
+    Availability:{type:Boolean}, 
+    AvailableSlots:{type: Number},
+    //Date:{type: Date },
+    //Location:{type: String },
+    //Status:{type: String },
+    //T_Registered:{type: Number },
+    //T_Attended:{type: Number }
+});
+Session.attachSchema(AvailableSession.schema);
 
 export const Admin=new Mongo.Collection('admin');
 Admin.schema=new SimpleSchema({

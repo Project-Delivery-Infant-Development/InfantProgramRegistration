@@ -220,6 +220,20 @@ Router.route('admin', {
   },
 });
 
+
+Router.route('googlemaps',{
+  templateLayout: 'googlemaps',
+  path: '/admin/googlemaps',
+  template: 'googlemaps',
+  onBeforeFunction: function(){
+    import '../imports/ui/Admin/googlemaps.html';
+    this.next();
+  },
+  action: function(){
+    this.render('googlemaps');
+  },
+});
+
 Router.route('addsession',{
   templateLayout: 'addsession',
   path: '/admin/addsession',
