@@ -220,6 +220,32 @@ Router.route('admin', {
   },
 });
 
+Router.route('addsession',{
+  templateLayout: 'addsession',
+  path: '/admin/addsession',
+  template: 'addsession',
+  onBeforeFunction: function(){
+    import '../imports/ui/Admin/addsession.html';
+    this.next();
+  },
+  action: function(){
+    this.render('addsession');
+  },
+});
+
+Router.route('sessionlist',{
+  templateLayout: 'sessionlist',
+  path: '/admin/sessionlist',
+  template: 'sessionlist',
+  onBeforeFunction: function(){
+    import '../imports/ui/Admin/sessionlist.html';
+    this.next();
+  },
+  action: function(){
+    this.render('sessionlist');
+  },
+});
+
 Router.route('dashboardAdmin',{
   templateLayout: 'dashboardAdmin',
   path: '/admin/dashboardAdmin',
