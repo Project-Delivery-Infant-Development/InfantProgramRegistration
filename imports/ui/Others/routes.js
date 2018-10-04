@@ -396,18 +396,6 @@ Router.route('viewRecords',{
   },
 });
 
-Router.route('lgaReport',{
-  templateLayout: 'lgaReport',
-  path: '/lga/reports',
-  template: 'lgaReport',
-  onBeforeFunction: function(){
-    import '../imports/ui/LGA/lgaReport.html';
-    this.next();
-  },
-  action: function(){
-    this.render('lgaReport');
-  },
-});
 
 Router.route('createDb',{
   templateLayout: 'createDb',

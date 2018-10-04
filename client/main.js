@@ -28,5 +28,5 @@ import '../imports/ui/LGA/viewRecords.js';
 import '../imports/ui/LGA/allFacilitators.js';
 import '../imports/ui/LGA/sessionChangeRequest.js';
 import '../imports/ui/Parent/parentGetSession.js';
-import '../imports/ui/LGA/lgaReport.js';
+
 
