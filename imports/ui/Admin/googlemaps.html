@@ -1,0 +1,14 @@
+<template name="googlemaps">
+  <body>
+        <h1>Map</h1>
+        {{> map}}
+      </body>
+    </template>
+      
+      <template name="map">
+        <div class="map-container">
+            {{> googleMap name="map" options=mapOptions}}
+        </div>
+
+      </template>
+      

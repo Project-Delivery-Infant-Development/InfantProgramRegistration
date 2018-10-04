@@ -37,9 +37,9 @@ google-config-ui
 useraccounts:bootstrap
 accounts-base
 aldeed:simple-schema
-
+dburles:google-maps
+mdg:geolocation
 anychart:anychart
-
 autopublish
 insecure@1.0.7
 session
