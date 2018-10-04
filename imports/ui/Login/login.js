@@ -53,7 +53,25 @@ AccountsTemplates.addField({
   _id: 'name',
   type: 'text',
   required: true,
-  displayName: "Full Name",
+  displayName: "Parent Name",
+  minLength: 1,
+  maxLength: 30,
+});
+
+AccountsTemplates.addField({
+  _id: 'infantName',
+  type: 'text',
+  required: true,
+  displayName: "Infant Full Name",
+  minLength: 1,
+  maxLength: 30,
+});
+
+AccountsTemplates.addField({
+  _id: 'infantAge',
+  type: 'text',
+  required: true,
+  displayName: "Infant Age (in Months)",
   minLength: 1,
   maxLength: 30,
 });
@@ -91,10 +109,7 @@ AccountsTemplates.addField({
   type: "radio",
   displayName: "Your Role",
   select: [
-       {
-      text: "LGA",
-      value: "LGA",
-    }, {
+        {
       text: "Parent",
       value: "Parent",
     },
