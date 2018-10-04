@@ -137,16 +137,16 @@ Router.route('update-email',{
   },
 });
 
-Router.route('register_parent',{
-  templateLayout: 'register_parent',
-  path: '/parents/register_parent',
-  template: 'register_parent',
+Router.route('registerParent',{
+  templateLayout: 'registerParent',
+  path: '/parents/registerParent',
+  template: 'registerParent',
   onBeforeFunction: function(){
-    import '../imports/ui/Parent/parent.html';
+    import '../imports/ui/Parent/registerParent.html';
     this.next();
   },
   action: function(){
-    this.render('register_parent');
+    this.render('registerParent');
   },
 });
 

@@ -1,7 +1,7 @@
 <!-- Main Template-->
 <template name="parent">
     <body>
-        {{#if currentUser}}
+       {{#if currentUser}}
     {{> nav_parent}}
         <img src="/logo.PNG" alt="logo">
         <center><h2>Parent Dashboard</h2></center>
@@ -34,7 +34,9 @@
         <footer>
             <center>&copy; All rights Reserved. Reasearch by Deakin University with </center>         
         </footer>
-        {{/if}}
+        {{else}}
+        Please login to see the content. <a href="{{pathFor route='login'}}"><h3>click here to login</h3></a>
+       {{/if}}
       </body>
 </template>
 
@@ -93,7 +95,7 @@
                 }
               </script>
             </template>
-            <!-- Parent registration -->
+            <!-- Parent registration >
             <template name="register_parent">
               <style>
                 label {
@@ -137,5 +139,5 @@
                 }
               </script>
             </template>
-        
+          -->        
 
