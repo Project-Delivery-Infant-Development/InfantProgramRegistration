@@ -1,0 +1,32 @@
+<template name="addsession">
+    {{>admin}}
+    <h1>Adding Session</h1>
+
+<form class="addses">
+    <label for="Session_Id">Session_Id :</label>
+    <input type="text" name="Session_Id"  placeholder="Session_Id"><br>
+    
+    <label for="For">For :</label>
+    <input type="radio" name="For" value ="3 Months"> 3 Months
+    <input type="radio" name="For" value="6 Months">6 Months
+    <input type="radio" name="For" value ="9 Months"> 9 Months 
+    <input type="radio" name="For" value="12 Months">12 Months
+    <input type="radio" name="For" value ="15 Months"> 15 Months
+    <input type="radio" name="For" value="16 Months">18 Months<br>
+    
+    <label for="LgaId">LgaId :</label>
+    <input type="text" name="LgaId"   placeholder="LgaId"><br>
+    
+    <label for="FacilitatorID">FacilitatorID :</label>
+    <input type="text" name="FacilitatorID"  placeholder="FacilitatorID"><br>
+    
+    <label for="Availability">Availability :</label>
+    <input type="radio" name="Availability" value ="yes"> Yes
+    <input type="radio" name="Availability" value="No">No<br>
+    <label for="AvailableSlots">Slots Booked :</label>{{Count}}/20<br>
+
+    <input type="submit"  value="Add">
+									
+</form>
+   
+</template>
